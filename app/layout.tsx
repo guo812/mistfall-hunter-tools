@@ -21,8 +21,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <meta name="google-site-verification" content="Dnjb2JemYHtDyQPbzM-RMpIkIINPtcF1unhsK5QrVvQ" />
       </head>
       <body>
-        {/* Plausible: self-hosted, anonymous page-views, no PII, no cookies */}
-        <Script defer data-domain="mistfallhunter.co" src="https://plausible.shipsolo.io/js/script.js" strategy="afterInteractive" />
+        {/* Plausible: project-specific privacy-friendly analytics loader, per owner-provided snippet. */}
+        <Script async src="https://plausible.shipsolo.io/js/pa-g1oTQRLR5BQvExBGeJauh.js" strategy="afterInteractive" />
+        <Script id="plausible-init" strategy="afterInteractive">{`
+          window.plausible = window.plausible || function(){(plausible.q = plausible.q || []).push(arguments)};
+          plausible.init = plausible.init || function(i){plausible.o = i || {}};
+          plausible.init();
+        `}</Script>
         {/* GA4: G-GJRSQJV4XE, loaded by default per owner decision 2026-08-10, opt-out via Privacy page */}
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-GJRSQJV4XE" strategy="afterInteractive" />
         <Script id="ga4-init" strategy="afterInteractive">{`
