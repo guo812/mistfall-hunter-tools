@@ -1,9 +1,9 @@
 import type { MetadataRoute } from 'next';
 
-// Temporary release safeguard: public access is available, but crawling remains
-// disabled until the Privacy-page implementation is reconciled with production.
+// 10R12 release: public crawling enabled; sitemap advertised; no path-level disallow.
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: { userAgent: '*', disallow: '/' },
+    rules: { userAgent: '*', allow: '/' },
+    sitemap: 'https://mistfallhunter.co/sitemap.xml',
   };
 }
