@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 type ClassInfo = { id: string; name: string; role: string; summary: string; stances: string[] };
 type Poi = { id: string; map: string; name: string; category: string; x: number; y: number; description: string };
+type Item = { id: string; slug: string; name: string; type: string; rarity: string; level: number; summary: string; stats: { power: number; defense: number; value: number }; acquisition: { kind: string; map: string; label: string; confidence: string }[]; lastVerified: string };
 
 const classes: ClassInfo[] = [
   { id: 'mercenary', name: 'Mercenary', role: 'Frontline', summary: 'Durable melee pressure and space control.', stances: ['Assault', 'Guard'] },
@@ -38,6 +39,62 @@ function BuildPlanner() {
   </div>;
 }
 
+function SquadBuilder() {
+  const [mode, setMode] = useState<'duo' | 'trio'>('duo');
+  const [selected, setSelected] = useState<string[]>(['mercenary', 'seer']);
+  const [notice, setNotice] = useState('');
+  const requiredCount = mode === 'duo' ? 2 : 3;
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const nextMode = params.get('mode') === 'trio' ? 'trio' : 'duo';
+    const ids = (params.get('classes') || '').split(',').filter((id) => classes.some((entry) => entry.id === id));
+    setMode(nextMode);
+    if (ids.length === (nextMode === 'trio' ? 3 : 2)) setSelected(ids);
+  }, []);
+
+  const chooseMode = (nextMode: 'duo' | 'trio') => {
+    setMode(nextMode);
+    setSelected((current) => nextMode === 'duo' ? current.slice(0, 2) : [...current, ...classes.map((entry) => entry.id).filter((id) => !current.includes(id))].slice(0, 3));
+  };
+  const toggleClass = (id: string) => setSelected((current) => {
+    if (current.includes(id)) return current.length > 2 ? current.filter((entry) => entry !== id) : current;
+    return current.length < requiredCount ? [...current, id] : [...current.slice(1), id];
+  });
+  const picks = selected.map((id) => classes.find((entry) => entry.id === id)!).filter(Boolean);
+  const covered = Array.from(new Set(picks.map((entry) => entry.role)));
+  const missing = ['Frontline', 'Burst', 'Support'].filter((role) => !covered.includes(role));
+  const synergy = missing.length ? `Coverage is missing ${missing.join(' and ')}. Consider ${missing.includes('Support') ? 'Seer for utility and sustain' : missing.includes('Frontline') ? 'Mercenary or Withered Knight to hold space' : 'Sorcerer or Blackarrow for reliable pressure'}.` : 'The squad covers frontline, pressure, and support. Assign the engage call, damage angle, and reset decision before queueing.';
+  const share = useMemo(() => typeof window === 'undefined' ? '' : `${window.location.origin}/squad-builder?${new URLSearchParams({ mode, classes: selected.join(',') }).toString()}`, [mode, selected]);
+  const copyShare = async () => {
+    window.history.replaceState(null, '', `/squad-builder?${new URLSearchParams({ mode, classes: selected.join(',') }).toString()}`);
+    setNotice(await copyText(share) ? 'Share URL copied. Reload this link to restore the squad.' : `Copy this URL: ${share}`);
+  };
+
+  return <div className="tool tool-rich squad-tool" aria-label="Squad Builder interactive tool">
+    <fieldset className="mode-toggle"><legend>Squad size</legend>{(['duo', 'trio'] as const).map((entry) => <label key={entry}><input type="radio" name="squad-mode" checked={mode === entry} onChange={() => chooseMode(entry)} /> {entry === 'duo' ? 'Duo' : 'Trio'}</label>)}</fieldset>
+    <p className="label">Choose {requiredCount} classes</p><div className="class-picker squad-picker" role="group" aria-label={`Pick ${requiredCount} squad classes`}>{classes.map((entry) => <button key={entry.id} type="button" className={selected.includes(entry.id) ? 'class-choice active' : 'class-choice'} onClick={() => toggleClass(entry.id)} aria-pressed={selected.includes(entry.id)}><img src={classImage(entry.id)} alt="" /><span>{entry.name}</span><small>{entry.role}</small></button>)}</div>
+    <div className="result" aria-live="polite"><strong>{mode === 'duo' ? 'Duo' : 'Trio'} coverage:</strong> {picks.map((entry) => entry.name).join(' + ')} cover {covered.join(', ')}.<p>{synergy}</p></div>
+    <div className="action-row"><button type="button" className="button primary" onClick={copyShare}>Copy Share URL</button><span className="share-status" aria-live="polite">{notice}</span></div>
+  </div>;
+}
+
+function ItemExplorer({ variant }: { variant: 'loot' | 'items' }) {
+  const [records, setRecords] = useState<Item[]>([]);
+  const [query, setQuery] = useState('');
+  const [type, setType] = useState('all');
+  const [rarity, setRarity] = useState('all');
+  const [map, setMap] = useState('all');
+  const [expanded, setExpanded] = useState<string | null>(null);
+  useEffect(() => { fetch('/data/items.json').then((response) => response.json()).then((data: Item[]) => setRecords(data)).catch(() => setRecords([])); }, []);
+  const maps = Array.from(new Set(records.flatMap((item) => item.acquisition.map((path) => path.map))));
+  const filtered = records.filter((item) => item.name.toLowerCase().includes(query.toLowerCase()) && (variant === 'loot' ? (map === 'all' || item.acquisition.some((path) => path.map === map)) : (type === 'all' || item.type === type) && (rarity === 'all' || item.rarity === rarity)));
+  return <div className="tool tool-rich item-explorer" aria-label={variant === 'loot' ? 'Loot Finder interactive tool' : 'Items database interactive tool'}>
+    <div className="filter-grid"><label>Item name<input value={query} onChange={(event) => setQuery(event.target.value)} placeholder={variant === 'loot' ? 'Search e.g. Ironfang' : 'Search items'} /></label>{variant === 'loot' ? <label>Map (optional)<select value={map} onChange={(event) => setMap(event.target.value)}><option value="all">All maps</option>{maps.map((entry) => <option key={entry} value={entry}>{entry}</option>)}</select></label> : <><label>Category<select value={type} onChange={(event) => setType(event.target.value)}><option value="all">All categories</option>{['weapon', 'armor', 'gem', 'consumable'].map((entry) => <option key={entry} value={entry}>{entry}</option>)}</select></label><label>Rarity<select value={rarity} onChange={(event) => setRarity(event.target.value)}><option value="all">All rarities</option>{['common', 'uncommon', 'rare', 'epic', 'legendary'].map((entry) => <option key={entry} value={entry}>{entry}</option>)}</select></label></>}</div>
+    <p className="filter-count" aria-live="polite">{filtered.length} of {records.length || 48} items shown</p><div className="table-wrap"><table><thead><tr><th>Item</th><th>Category</th><th>Rarity</th><th>{variant === 'loot' ? 'Acquisition path' : 'Details'}</th></tr></thead><tbody>{filtered.map((item) => <><tr key={item.id}><td><strong>{item.name}</strong><br /><small>{item.summary}</small></td><td>{item.type}</td><td>{item.rarity}</td><td>{variant === 'loot' ? item.acquisition.map((path) => <div key={`${item.id}-${path.label}`}>{path.label} · {path.kind}</div>) : <button type="button" className="detail-button" onClick={() => setExpanded(expanded === item.id ? null : item.id)} aria-expanded={expanded === item.id}>{expanded === item.id ? 'Hide details' : 'View details'}</button>}</td></tr>{variant === 'items' && expanded === item.id ? <tr className="detail-row" key={`${item.id}-detail`}><td colSpan={4}><strong>{item.name} stats</strong> — Power {item.stats.power}, Defense {item.stats.defense}, Value {item.stats.value}. Acquisition: {item.acquisition.map((path) => path.label).join('; ')}. Last verified {item.lastVerified}.</td></tr> : null}</>)}</tbody></table></div>{filtered.length === 0 ? <p className="empty-state">No seed items matched those filters. Clear a filter to return to all 48 records.</p> : null}
+  </div>;
+}
+
 function MapTool() {
   const [pois, setPois] = useState<Poi[]>([]); const [layers, setLayers] = useState<string[]>(['extraction', 'boss', 'loot', 'poi']); const [scale, setScale] = useState(1); const [offset, setOffset] = useState({ x: 0, y: 0 }); const [drag, setDrag] = useState<{x:number;y:number}|null>(null); const [selected, setSelected] = useState<Poi | null>(null);
   useEffect(() => { fetch('/data/map-pois.json').then((response) => response.json()).then(setPois).catch(() => setPois([])); }, []);
@@ -57,4 +114,4 @@ function TierList() { const [mode, setMode] = useState('Solo'); const ordered = 
 const objectives = ['Choose a map and extraction', 'Set a primary route', 'Set a backup extraction', 'Check your weapon', 'Check armor durability', 'Pack healing', 'Pack a mobility option', 'Choose a loot priority', 'Choose a boss threshold', 'Check squad roles', 'Share the route', 'Set a retreat call', 'Set a stop-loss', 'Review settings', 'Check inventory space', 'Confirm the first objective', 'Confirm the final extraction', 'Queue when ready'];
 function Checklist() { const [checked, setChecked] = useState<string[]>([]); useEffect(() => { try { setChecked(JSON.parse(localStorage.getItem('mistfall-checklist') || '[]')); } catch {} }, []); const toggle = (item: string) => setChecked((current) => { const next = current.includes(item) ? current.filter((entry) => entry !== item) : [...current, item]; localStorage.setItem('mistfall-checklist', JSON.stringify(next)); return next; }); const pct = Math.round((checked.length / objectives.length) * 100); return <div className="tool tool-rich"><div className="check-progress"><span style={{ width: `${pct}%` }} /></div><p><strong>{checked.length}/{objectives.length}</strong> objectives complete · {pct}%</p><div className="check-grid">{objectives.map((item) => <label key={item}><input type="checkbox" checked={checked.includes(item)} onChange={() => toggle(item)} /> {item}</label>)}</div><div className="action-row"><button type="button" className="button secondary" onClick={() => { localStorage.removeItem('mistfall-checklist'); setChecked([]); }}>Reset checklist</button>{pct === 100 ? <strong className="ready">Ready to extract — all objectives complete.</strong> : null}</div></div>; }
 
-export function ToolPanel({ tool }: { tool: string }) { if (tool === 'build-planner') return <BuildPlanner />; if (tool === 'map') return <MapTool />; if (tool === 'matchups') return <Matchups />; if (tool === 'class-quiz') return <Quiz />; if (tool === 'settings') return <Settings />; if (tool === 'tier-list') return <TierList />; if (tool === 'checklist') return <Checklist />; return <div className="tool"><p>Local decision tool. Select a guide from the navigation to continue.</p></div>; }
+export function ToolPanel({ tool }: { tool: string }) { if (tool === 'build-planner') return <BuildPlanner />; if (tool === 'squad-builder') return <SquadBuilder />; if (tool === 'loot-finder') return <ItemExplorer variant="loot" />; if (tool === 'items') return <ItemExplorer variant="items" />; if (tool === 'map') return <MapTool />; if (tool === 'matchups') return <Matchups />; if (tool === 'class-quiz') return <Quiz />; if (tool === 'settings') return <Settings />; if (tool === 'tier-list') return <TierList />; if (tool === 'checklist') return <Checklist />; return <div className="tool"><p>Local decision tool. Select a guide from the navigation to continue.</p></div>; }
