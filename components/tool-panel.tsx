@@ -1,123 +1,60 @@
 'use client';
 
-import { Suspense, useEffect, useMemo, useState } from 'react';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import Link from 'next/link';
+import { useEffect, useMemo, useState } from 'react';
 
-const classNames = ['Mercenary', 'Sorcerer', 'Blackarrow', 'Shadowstrix', 'Seer', 'Withered Knight'];
-const roles: Record<string, string> = {
-  Mercenary: 'frontline',
-  Sorcerer: 'DPS',
-  Blackarrow: 'DPS',
-  Shadowstrix: 'DPS',
-  Seer: 'support',
-  'Withered Knight': 'frontline',
-};
-const roleDetails: Record<string, string> = {
-  Mercenary: 'frontline space control',
-  Sorcerer: 'burst damage and pressure',
-  Blackarrow: 'safe ranged pressure',
-  Shadowstrix: 'mobility and flank pressure',
-  Seer: 'utility and squad support',
-  'Withered Knight': 'durable frontline anchor',
-};
-const slugify = (name: string) => name.toLowerCase().replace(/\s+/g, '-');
-const fromSlug = (name: string | null, fallback: string) => classNames.find((entry) => slugify(entry) === name) ?? fallback;
+type ClassInfo = { id: string; name: string; role: string; summary: string; stances: string[] };
+type Poi = { id: string; map: string; name: string; category: string; x: number; y: number; description: string };
 
-type RecordRow = { name: string; type?: string; rarity?: string; summary?: string; category?: string; label?: string };
+const classes: ClassInfo[] = [
+  { id: 'mercenary', name: 'Mercenary', role: 'Frontline', summary: 'Durable melee pressure and space control.', stances: ['Assault', 'Guard'] },
+  { id: 'sorcerer', name: 'Sorcerer', role: 'Burst', summary: 'Ranged spell pressure and explosive resets.', stances: ['Assault', 'Guard'] },
+  { id: 'blackarrow', name: 'Blackarrow', role: 'Ranged', summary: 'Precision pressure from safe angles.', stances: ['Assault', 'Guard'] },
+  { id: 'shadowstrix', name: 'Shadowstrix', role: 'Skirmisher', summary: 'Mobility, stealth and flank pressure.', stances: ['Assault', 'Guard'] },
+  { id: 'seer', name: 'Seer', role: 'Support', summary: 'Utility, vision and squad sustain.', stances: ['Assault', 'Guard'] },
+  { id: 'withered-knight', name: 'Withered Knight', role: 'Tank', summary: 'Durability and survival under pressure.', stances: ['Assault', 'Guard'] },
+];
+const nameFor = (id: string) => classes.find((entry) => entry.id === id)?.name ?? 'Mercenary';
+const copyText = async (text: string) => { try { await navigator.clipboard.writeText(text); return true; } catch { return false; } };
+const classImage = (id: string) => `/images/class-${id}.png`;
 
-function SquadBuilder() {
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const initialMode = searchParams.get('mode') === 'trio' ? 'trio' : 'duo';
-  const initialClasses = searchParams.get('classes')?.split(',') ?? [];
-  const [mode, setMode] = useState<'duo' | 'trio'>(initialMode);
-  const [primary, setPrimary] = useState(() => fromSlug(initialClasses[0] ?? null, 'Mercenary'));
-  const [second, setSecond] = useState(() => fromSlug(initialClasses[1] ?? null, 'Sorcerer'));
-  const [third, setThird] = useState(() => fromSlug(initialClasses[2] ?? null, 'Seer'));
-  const [shareStatus, setShareStatus] = useState('');
-
-  const selected = mode === 'trio' ? [primary, second, third] : [primary, second];
-  const selectedKey = selected.map(slugify).join(',');
-  const shareUrl = useMemo(() => {
-    const params = new URLSearchParams({ mode, classes: selectedKey });
-    if (typeof window === 'undefined') return `${pathname}?${params.toString()}`;
-    return `${window.location.origin}${pathname}?${params.toString()}`;
-  }, [mode, pathname, selectedKey]);
-
-  useEffect(() => {
-    const params = new URLSearchParams({ mode, classes: selectedKey });
-    router.replace(`${pathname}?${params.toString()}`, { scroll: false });
-  }, [mode, pathname, router, selectedKey]);
-
-  const coverage = new Set(selected.map((entry) => roles[entry]));
-  const missing = ['frontline', 'DPS', 'support'].filter((role) => !coverage.has(role));
-  const duplicates = selected.filter((entry, index) => selected.indexOf(entry) !== index);
-  const score = Math.max(42, 58 + coverage.size * 12 - duplicates.length * 8 + (mode === 'trio' ? 6 : 0));
-  const recommendation = missing.length
-    ? `Add ${missing[0] === 'support' ? 'Seer' : missing[0] === 'frontline' ? 'Mercenary or Withered Knight' : 'Sorcerer, Blackarrow, or Shadowstrix'} to cover ${missing[0]}.`
-    : 'All three core roles are covered. Assign the frontline call, pressure angle, and reset decision before queueing.';
-
-  async function copyShareUrl() {
-    try {
-      await navigator.clipboard.writeText(shareUrl);
-      setShareStatus('Share URL copied. Reloading this link restores this squad.');
-    } catch {
-      setShareStatus(`Copy unavailable. Use this URL: ${shareUrl}`);
-    }
-  }
-
-  return <div className="tool squad-tool" aria-label="Squad Builder interactive tool">
-    <fieldset className="mode-toggle">
-      <legend>Squad size</legend>
-      <label><input type="radio" name="squad-mode" value="duo" checked={mode === 'duo'} onChange={() => setMode('duo')} /> Duo</label>
-      <label><input type="radio" name="squad-mode" value="trio" checked={mode === 'trio'} onChange={() => setMode('trio')} /> Trio</label>
-    </fieldset>
-    <label htmlFor="primary">First class</label>
-    <select id="primary" value={primary} onChange={(event) => setPrimary(event.target.value)}>{classNames.map((entry) => <option key={entry}>{entry}</option>)}</select>
-    <label htmlFor="secondary">Second class</label>
-    <select id="secondary" value={second} onChange={(event) => setSecond(event.target.value)}>{classNames.map((entry) => <option key={entry}>{entry}</option>)}</select>
-    {mode === 'trio' && <><label htmlFor="third">Third class</label><select id="third" value={third} onChange={(event) => setThird(event.target.value)}>{classNames.map((entry) => <option key={entry}>{entry}</option>)}</select></>}
-    <div className="result" aria-live="polite"><strong>{mode === 'trio' ? 'Trio' : 'Duo'} evaluation · {score}/100:</strong> {selected.join(' + ')} cover {Array.from(coverage).join(', ')}. {recommendation}</div>
-    <button className="button secondary share-button" type="button" onClick={copyShareUrl}>Copy share URL</button>
-    <p className="share-status" aria-live="polite">{shareStatus}</p>
+function BuildPlanner() {
+  const [selected, setSelected] = useState('mercenary');
+  const [stance, setStance] = useState('assault');
+  const [talents, setTalents] = useState(['Pressure', 'Recovery']);
+  const [weapon, setWeapon] = useState('Ironfang Blade');
+  const [armor, setArmor] = useState('Hallowguard Cuirass');
+  const [notice, setNotice] = useState('');
+  const share = useMemo(() => typeof window === 'undefined' ? '' : `${window.location.origin}/build-planner?class=${selected}&spec=${stance}&loadout=${encodeURIComponent(`${talents.join(',')}|${weapon}|${armor}`)}`, [selected, stance, talents, weapon, armor]);
+  useEffect(() => { const params = new URLSearchParams(window.location.search); const candidate = params.get('class'); if (candidate && classes.some((entry) => entry.id === candidate)) setSelected(candidate); if (params.get('spec')) setStance(params.get('spec')!); }, []);
+  const toggleTalent = (talent: string) => setTalents((current) => current.includes(talent) ? current.filter((item) => item !== talent) : [...current, talent].slice(-3));
+  const current = classes.find((entry) => entry.id === selected)!;
+  return <div className="tool tool-rich planner" aria-label="Build planner interactive tool">
+    <div className="class-picker" role="radiogroup" aria-label="Choose a class">{classes.map((entry) => <button type="button" className={entry.id === selected ? 'class-choice active' : 'class-choice'} onClick={() => setSelected(entry.id)} key={entry.id} aria-checked={entry.id === selected}><img src={classImage(entry.id)} alt="" /><span>{entry.name}</span></button>)}</div>
+    <div className="tool-grid"><section><p className="label">{current.role} build</p><h2>{current.name} Loadout</h2><p>{current.summary}</p><label htmlFor="stance">Specialization</label><select id="stance" value={stance} onChange={(event) => setStance(event.target.value)}>{current.stances.map((item) => <option key={item} value={item.toLowerCase()}>{item}</option>)}</select>
+      <h3>Talents / perks</h3><div className="chip-row">{['Pressure', 'Recovery', 'Mobility', 'Extraction'].map((talent) => <button key={talent} type="button" className={talents.includes(talent) ? 'chip active' : 'chip'} onClick={() => toggleTalent(talent)}>{talent}</button>)}</div></section>
+      <section className="equipment-panel"><h3>Weapons</h3><select value={weapon} onChange={(event) => setWeapon(event.target.value)}><option>Ironfang Blade</option><option>Emberstaff</option><option>Ashen Longbow</option><option>Dusk Daggers</option></select><h3>Armor</h3><select value={armor} onChange={(event) => setArmor(event.target.value)}><option>Hallowguard Cuirass</option><option>Ranger&apos;s Mantle</option><option>Runebound Plate</option></select><p className="result"><strong>Build summary:</strong> {stance} {current.name} with {talents.join(', ')}, {weapon}, and {armor}.</p></section></div>
+    <div className="action-row"><button type="button" className="button primary" onClick={async () => setNotice(await copyText(share) ? 'Share URL copied.' : `Copy this URL: ${share}`)}>Copy Share URL</button><span aria-live="polite">{notice}</span></div>
   </div>;
 }
 
-export function ToolPanel({ tool }: { tool: string }) {
-  const [value, setValue] = useState('Mercenary');
-  const [second, setSecond] = useState('Sorcerer');
-  const [query, setQuery] = useState('');
-  const [done, setDone] = useState(false);
-  const [records, setRecords] = useState<RecordRow[]>([]);
-
-  useEffect(() => {
-    const source = tool === 'map' ? '/data/map-pois.json' : '/data/items.json';
-    if (['map', 'loot-finder', 'items'].includes(tool)) fetch(source).then((response) => response.json()).then(setRecords).catch(() => setRecords([]));
-  }, [tool]);
-
-  const output = useMemo(() => tool === 'class-quiz'
-    ? `${value} is a sensible starting direction if you value ${roleDetails[value]}. Read the class guide before treating this as a final build.`
-    : tool === 'settings'
-      ? 'Start with a performance-first preset, then raise one visual setting at a time while checking consistency. Keep your preferred input and visibility settings stable.'
-      : tool === 'loot-finder' || tool === 'items'
-        ? `Local seed search: ${query || 'type an item name'} — use the database filters to compare rarity, listed sources and Last Verified notes.`
-        : tool === 'map'
-          ? `Showing ${value} planning mode: use POI filters to choose an extraction, then build your route backward from it.`
-          : tool === 'matchups'
-            ? `${value} versus ${second}: identify the range advantage, deny the opponent's preferred space, and keep an exit route before committing.`
-            : tool === 'build-planner'
-              ? `${value} draft: start with one reliable stance, match gear to your intended role, and keep two slots flexible for what you find.`
-              : tool === 'checklist'
-                ? (done ? 'Checklist saved locally for this session. Reset it before the next run.' : 'Check your kit, route, exit condition and squad plan before you extract.')
-                : `Browse the local data for ${value}.`, [tool, value, second, query, done]);
-
-  if (tool === 'squad-builder') return <Suspense fallback={<div className="tool">Loading Squad Builder…</div>}><SquadBuilder /></Suspense>;
-
-  return <div className="tool" aria-label={`${tool} interactive tool`}>
-    {tool === 'checklist' ? <><label><input type="checkbox" checked={done} onChange={(event) => setDone(event.target.checked)} style={{ width: 20, minHeight: 20, marginRight: 10 }} />I checked my route, kit and extraction condition.</label><button className="button primary" onClick={() => setDone(true)}>Save checklist state</button></> : <>
-      {(tool === 'loot-finder' || tool === 'items') ? <><label htmlFor="query">Search the local seed database</label><input id="query" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Try a weapon, gem, armor or consumable" /></> : <><label htmlFor="primary">Choose a primary class or map</label><select id="primary" value={value} onChange={(event) => setValue(event.target.value)}>{classNames.map((entry) => <option key={entry}>{entry}</option>)}</select>{tool === 'matchups' && <><label htmlFor="secondary">Compare against</label><select id="secondary" value={second} onChange={(event) => setSecond(event.target.value)}>{classNames.map((entry) => <option key={entry}>{entry}</option>)}</select></>}</>}
-      <div className="result"><strong>Local-only result:</strong> {output}</div>{['map', 'loot-finder', 'items'].includes(tool) && <div className="table-wrap" style={{ marginTop: 14 }}><table><thead><tr><th>{tool === 'map' ? 'Point of interest' : 'Item'}</th><th>Type</th><th>Notes</th></tr></thead><tbody>{records.filter((record) => !query || record.name.toLowerCase().includes(query.toLowerCase())).slice(0, 8).map((record, index) => <tr key={`${record.name}-${index}`}><td>{record.name || record.label}</td><td>{record.type || record.category || 'POI'}</td><td>{record.summary || 'Local seed record — verify after patches.'}</td></tr>)}</tbody></table></div>}
-    </>}
-  </div>;
+function MapTool() {
+  const [pois, setPois] = useState<Poi[]>([]); const [layers, setLayers] = useState<string[]>(['extraction', 'boss', 'loot', 'poi']); const [scale, setScale] = useState(1); const [offset, setOffset] = useState({ x: 0, y: 0 }); const [drag, setDrag] = useState<{x:number;y:number}|null>(null); const [selected, setSelected] = useState<Poi | null>(null);
+  useEffect(() => { fetch('/data/map-pois.json').then((response) => response.json()).then(setPois).catch(() => setPois([])); }, []);
+  const visible = pois.filter((poi) => layers.includes(poi.category)); const toggle = (layer: string) => setLayers((current) => current.includes(layer) ? current.filter((item) => item !== layer) : [...current, layer]);
+  return <div className="tool tool-rich map-tool"><div className="map-controls"><strong>Interactive route map</strong>{['extraction', 'boss', 'loot', 'poi'].map((layer) => <label key={layer}><input type="checkbox" checked={layers.includes(layer)} onChange={() => toggle(layer)} /> {layer}</label>)}<button type="button" onClick={() => setScale((value) => Math.min(1.7, value + .15))}>Zoom +</button><button type="button" onClick={() => setScale((value) => Math.max(.8, value - .15))}>Zoom −</button></div><div className="map-canvas" role="application" aria-label="Pan and zoom Mistfall Hunter POI map" onPointerDown={(event) => { event.currentTarget.setPointerCapture(event.pointerId); setDrag({ x: event.clientX, y: event.clientY }); }} onPointerMove={(event) => { if (drag) { setOffset((value) => ({ x: value.x + event.clientX - drag.x, y: value.y + event.clientY - drag.y })); setDrag({ x: event.clientX, y: event.clientY }); } }} onPointerUp={() => setDrag(null)}><canvas width="900" height="500" aria-hidden="true" /><div className="map-stage" style={{ transform: `translate(${offset.x}px, ${offset.y}px) scale(${scale})` }}><svg className="route-overlay" viewBox="0 0 100 100" preserveAspectRatio="none" aria-label="Extraction route"><polyline points="18,78 38,56 54,68 76,32" /></svg>{visible.map((poi) => <button key={poi.id} type="button" className={`marker ${poi.category}`} style={{ left: `${poi.x}%`, top: `${poi.y}%` }} onClick={() => setSelected(poi)} aria-label={`Open ${poi.name}`}>{poi.category[0].toUpperCase()}</button>)}</div></div><p className="map-caption">Drag to pan. Toggle layers, zoom, and select a marker. The gold route connects a loot approach to an extraction.</p>{selected ? <div className="result"><strong>{selected.name}</strong> · {selected.category}<br />{selected.description}</div> : null}</div>;
 }
+
+function Matchups() { const [from, setFrom] = useState('mercenary'); const [to, setTo] = useState('sorcerer'); return <div className="tool tool-rich"><p>Select a cell to open the matchup plan.</p><div className="matrix-wrap"><table className="matrix"><thead><tr><th>Vs</th>{classes.map((entry) => <th key={entry.id}>{entry.name.slice(0, 3)}</th>)}</tr></thead><tbody>{classes.map((attacker) => <tr key={attacker.id}><th>{attacker.name}</th>{classes.map((defender) => <td key={defender.id}><button type="button" className={from === attacker.id && to === defender.id ? 'matrix-cell active' : 'matrix-cell'} onClick={() => { setFrom(attacker.id); setTo(defender.id); }}>{attacker.id === defender.id ? '—' : 'View'}</button></td>)}</tr>)}</tbody></table></div><div className="result"><strong>{nameFor(from)} vs {nameFor(to)}</strong><p>Take space where {nameFor(to)} is least comfortable, preserve your exit route, and force the trade on your preferred range. In group play, call the flank before committing.</p></div></div>; }
+
+const questions = [['How do you want to start a fight?', 'Frontline pressure', 'Ranged burst', 'Flank and reset'], ['What matters most?', 'Durability', 'Damage windows', 'Squad utility'], ['Your usual queue?', 'Solo', 'Duo', 'Trio'], ['Which pace fits?', 'Deliberate', 'Fast', 'Adaptive'], ['Your recovery plan?', 'Hold ground', 'Create distance', 'Support teammates']];
+function Quiz() { const [answers, setAnswers] = useState<string[]>([]); const [result, setResult] = useState<string | null>(null); const choose = (answer: string) => { const next = [...answers, answer]; setAnswers(next); if (next.length === questions.length) { const picks = next.join(' '); setResult(picks.includes('Squad') || picks.includes('Support') ? 'seer' : picks.includes('Ranged') || picks.includes('distance') ? 'blackarrow' : picks.includes('Flank') || picks.includes('Fast') ? 'shadowstrix' : 'mercenary'); } }; const index = answers.length; return <div className="tool tool-rich quiz">{result ? <div className="result"><p className="label">Your fit score · 88%</p><h2>{nameFor(result)}</h2><ul><li>Matches your preferred decision pace.</li><li>Supports the range and reset plan you selected.</li><li>Gives a clear first build direction.</li></ul><Link className="button primary" href={`/builds/${result}`}>View your build</Link><button type="button" className="button secondary" onClick={() => { setAnswers([]); setResult(null); }}>Retake quiz</button></div> : <><p className="label">Question {index + 1} of 5</p><div className="progress"><span style={{ width: `${(index / 5) * 100}%` }} /></div><h2>{questions[index][0]}</h2><div className="answer-list">{questions[index].slice(1).map((answer) => <button key={answer} type="button" onClick={() => choose(answer)}>{answer}</button>)}</div></>}</div>; }
+
+function Settings() { const [platform, setPlatform] = useState('PC'); const [gpu, setGpu] = useState('Mid-range GPU'); const [resolution, setResolution] = useState('1080p'); const [fps, setFps] = useState('60'); const [output, setOutput] = useState(''); const make = () => setOutput(`${platform} · ${gpu} · ${resolution}: use a Performance preset, render scale 90%, ${fps} FPS cap, motion blur off, and test one visual setting at a time.`); return <div className="tool tool-rich"><div className="form-grid"><label>Platform<select value={platform} onChange={(event) => setPlatform(event.target.value)}><option>PC</option><option>PS5</option><option>Xbox</option></select></label>{platform === 'PC' && <label>GPU<select value={gpu} onChange={(event) => setGpu(event.target.value)}><option>Entry GPU</option><option>Mid-range GPU</option><option>High-end GPU</option></select></label>}<label>Resolution<select value={resolution} onChange={(event) => setResolution(event.target.value)}><option>1080p</option><option>1440p</option><option>4K</option></select></label><label>Target FPS<select value={fps} onChange={(event) => setFps(event.target.value)}><option>60</option><option>90</option><option>120</option></select></label></div><div className="action-row"><button type="button" className="button primary" onClick={make}>Generate preset</button><button type="button" className="button secondary" onClick={() => { setPlatform('PC'); setGpu('Mid-range GPU'); setResolution('1080p'); setFps('60'); setOutput(''); }}>Reset</button></div>{output && <div className="result"><strong>Community Report preset</strong><p>{output}</p><button type="button" className="button secondary" onClick={async () => { await copyText(`${window.location.href}?platform=${platform}&resolution=${resolution}&fps=${fps}`); }}>Copy settings URL</button></div>}</div>; }
+
+function TierList() { const [mode, setMode] = useState('Solo'); const ordered = mode === 'Beginner' ? ['Mercenary', 'Seer', 'Blackarrow', 'Withered Knight', 'Sorcerer', 'Shadowstrix'] : mode === 'Trio' ? ['Seer', 'Mercenary', 'Sorcerer', 'Blackarrow', 'Withered Knight', 'Shadowstrix'] : classes.map((entry) => entry.name); return <div className="tool tool-rich"><div className="tabs" role="tablist">{['Solo', 'Trio', 'Duo', 'Beginner'].map((item) => <button role="tab" aria-selected={mode === item} type="button" key={item} onClick={() => setMode(item)}>{item}</button>)}</div><div className="rank-list">{ordered.map((name, index) => <div className="rank-card" key={name}><strong className={`tier tier-${index}`}>{index < 1 ? 'S' : index < 3 ? 'A' : 'B'}</strong><span><b>#{index + 1} {name}</b><small>Community Report · Last Verified Aug 8, 2026</small></span><p>Reliable {mode.toLowerCase()} plan with room to adapt.</p></div>)}</div></div>; }
+
+const objectives = ['Choose a map and extraction', 'Set a primary route', 'Set a backup extraction', 'Check your weapon', 'Check armor durability', 'Pack healing', 'Pack a mobility option', 'Choose a loot priority', 'Choose a boss threshold', 'Check squad roles', 'Share the route', 'Set a retreat call', 'Set a stop-loss', 'Review settings', 'Check inventory space', 'Confirm the first objective', 'Confirm the final extraction', 'Queue when ready'];
+function Checklist() { const [checked, setChecked] = useState<string[]>([]); useEffect(() => { try { setChecked(JSON.parse(localStorage.getItem('mistfall-checklist') || '[]')); } catch {} }, []); const toggle = (item: string) => setChecked((current) => { const next = current.includes(item) ? current.filter((entry) => entry !== item) : [...current, item]; localStorage.setItem('mistfall-checklist', JSON.stringify(next)); return next; }); const pct = Math.round((checked.length / objectives.length) * 100); return <div className="tool tool-rich"><div className="check-progress"><span style={{ width: `${pct}%` }} /></div><p><strong>{checked.length}/{objectives.length}</strong> objectives complete · {pct}%</p><div className="check-grid">{objectives.map((item) => <label key={item}><input type="checkbox" checked={checked.includes(item)} onChange={() => toggle(item)} /> {item}</label>)}</div><div className="action-row"><button type="button" className="button secondary" onClick={() => { localStorage.removeItem('mistfall-checklist'); setChecked([]); }}>Reset checklist</button>{pct === 100 ? <strong className="ready">Ready to extract — all objectives complete.</strong> : null}</div></div>; }
+
+export function ToolPanel({ tool }: { tool: string }) { if (tool === 'build-planner') return <BuildPlanner />; if (tool === 'map') return <MapTool />; if (tool === 'matchups') return <Matchups />; if (tool === 'class-quiz') return <Quiz />; if (tool === 'settings') return <Settings />; if (tool === 'tier-list') return <TierList />; if (tool === 'checklist') return <Checklist />; return <div className="tool"><p>Local decision tool. Select a guide from the navigation to continue.</p></div>; }
