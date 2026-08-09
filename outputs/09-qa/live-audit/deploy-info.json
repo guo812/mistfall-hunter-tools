@@ -1,0 +1,29 @@
+{
+  "release": "10R8",
+  "productionUrl": "https://mistfallhunter.co",
+  "workersDevUrl": "https://mistfall-hunter-tools.zjjhgtw.workers.dev",
+  "workerName": "mistfall-hunter-tools",
+  "workerVersionId": "933831ab-3627-446b-bf7c-4667a898f013",
+  "sourceCommit": "061bb14cb854f916968406c3a0a665cc0a9c8f4d",
+  "deployedAt": "2026-08-09T14:31:23Z",
+  "deployCommand": "npm run deploy",
+  "deployLogExcerpt": [
+    "next build: compiled successfully; generated 62 static pages",
+    "OpenNext build complete; Worker saved in .open-next/worker.js",
+    "wrangler: uploaded mistfall-hunter-tools",
+    "deployed trigger: https://mistfall-hunter-tools.zjjhgtw.workers.dev",
+    "Current Version ID: 933831ab-3627-446b-bf7c-4667a898f013"
+  ],
+  "productionSmoke": {
+    "checkedAt": "2026-08-09T14:31:23Z",
+    "status": 200,
+    "h1": "Mistfall Hunter Tools, Builds & Tier List",
+    "canonical": "https://mistfallhunter.co/",
+    "descriptionPresent": true,
+    "horizontalOverflow": false
+  },
+  "notes": [
+    "The project deploy script is build -> opennext:build -> wrangler deploy. This project has no patch-opennext-worker.mjs requirement; OpenNext reported its own code patches applied.",
+    "10R9 independent QA remains the release acceptance gate."
+  ]
+}
