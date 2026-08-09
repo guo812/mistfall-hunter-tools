@@ -1,0 +1,440 @@
+{
+  "/": {
+    "title_len": 88,
+    "title": "Mistfall Hunter Tools, Builds &amp; Tier List (Updated Aug 2026) | Mistfall Hunter Tools",
+    "h1": "Mistfall Hunter Tools, Builds &amp; Tier List",
+    "h2_count": 2,
+    "h3_faq_count": 10,
+    "words_incl_shell": 238,
+    "ld_blocks": 2,
+    "ld_types": [
+      "WebSite",
+      "SearchAction"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co",
+    "unofficial_footer": true,
+    "td_rows": 0
+  },
+  "/class-quiz": {
+    "title_len": 73,
+    "title": "Mistfall Hunter Class Quiz — Find Your Best Class | Mistfall Hunter Tools",
+    "h1": "Mistfall Hunter Class Quiz — Find Your Best Class",
+    "h2_count": 5,
+    "h3_faq_count": 9,
+    "words_incl_shell": 459,
+    "ld_blocks": 2,
+    "ld_types": [
+      "WebApplication"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/class-quiz",
+    "unofficial_footer": true,
+    "td_rows": 0
+  },
+  "/settings": {
+    "title_len": 69,
+    "title": "Mistfall Hunter Best Settings &amp; FPS Guide | Mistfall Hunter Tools",
+    "h1": "Mistfall Hunter Best Settings &amp; FPS Guide",
+    "h2_count": 5,
+    "h3_faq_count": 9,
+    "words_incl_shell": 456,
+    "ld_blocks": 2,
+    "ld_types": [
+      "WebApplication"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/settings",
+    "unofficial_footer": true,
+    "td_rows": 0
+  },
+  "/tier-list": {
+    "title_len": 49,
+    "title": "Mistfall Hunter Tier List | Mistfall Hunter Tools",
+    "h1": "Mistfall Hunter Tier List",
+    "h2_count": 5,
+    "h3_faq_count": 9,
+    "words_incl_shell": 431,
+    "ld_blocks": 2,
+    "ld_types": [
+      "WebApplication"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/tier-list",
+    "unofficial_footer": true,
+    "td_rows": 0
+  },
+  "/loot-finder": {
+    "title_len": 51,
+    "title": "Mistfall Hunter Loot Finder | Mistfall Hunter Tools",
+    "h1": "Mistfall Hunter Loot Finder",
+    "h2_count": 5,
+    "h3_faq_count": 9,
+    "words_incl_shell": 440,
+    "ld_blocks": 2,
+    "ld_types": [
+      "WebApplication"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/loot-finder",
+    "unofficial_footer": true,
+    "td_rows": 0
+  },
+  "/items": {
+    "title_len": 54,
+    "title": "Mistfall Hunter Items Database | Mistfall Hunter Tools",
+    "h1": "Mistfall Hunter Items Database",
+    "h2_count": 5,
+    "h3_faq_count": 9,
+    "words_incl_shell": 438,
+    "ld_blocks": 2,
+    "ld_types": [
+      "WebApplication"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/items",
+    "unofficial_footer": true,
+    "td_rows": 0
+  },
+  "/checklist": {
+    "title_len": 60,
+    "title": "Mistfall Hunter Extraction Checklist | Mistfall Hunter Tools",
+    "h1": "Mistfall Hunter Extraction Checklist",
+    "h2_count": 5,
+    "h3_faq_count": 9,
+    "words_incl_shell": 418,
+    "ld_blocks": 2,
+    "ld_types": [
+      "WebApplication"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/checklist",
+    "unofficial_footer": true,
+    "td_rows": 0
+  },
+  "/squad-builder": {
+    "title_len": 58,
+    "title": "Mistfall Hunter Squad Comp Builder | Mistfall Hunter Tools",
+    "h1": "Mistfall Hunter Squad Comp Builder",
+    "h2_count": 5,
+    "h3_faq_count": 9,
+    "words_incl_shell": 496,
+    "ld_blocks": 2,
+    "ld_types": [
+      "WebApplication"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/squad-builder",
+    "unofficial_footer": true,
+    "td_rows": 0
+  },
+  "/matchups": {
+    "title_len": 58,
+    "title": "Mistfall Hunter PvP Matchup Matrix | Mistfall Hunter Tools",
+    "h1": "Mistfall Hunter PvP Matchup Matrix",
+    "h2_count": 5,
+    "h3_faq_count": 9,
+    "words_incl_shell": 474,
+    "ld_blocks": 2,
+    "ld_types": [
+      "WebApplication"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/matchups",
+    "unofficial_footer": true,
+    "td_rows": 0
+  },
+  "/build-planner": {
+    "title_len": 53,
+    "title": "Mistfall Hunter Build Planner | Mistfall Hunter Tools",
+    "h1": "Mistfall Hunter Build Planner",
+    "h2_count": 5,
+    "h3_faq_count": 9,
+    "words_incl_shell": 464,
+    "ld_blocks": 2,
+    "ld_types": [
+      "WebApplication"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/build-planner",
+    "unofficial_footer": true,
+    "td_rows": 0
+  },
+  "/map": {
+    "title_len": 55,
+    "title": "Mistfall Hunter Interactive Map | Mistfall Hunter Tools",
+    "h1": "Mistfall Hunter Interactive Map",
+    "h2_count": 5,
+    "h3_faq_count": 9,
+    "words_incl_shell": 455,
+    "ld_blocks": 2,
+    "ld_types": [
+      "WebApplication"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/map",
+    "unofficial_footer": true,
+    "td_rows": 0
+  },
+  "/guides/getting-started": {
+    "title_len": 54,
+    "title": "Mistfall Hunter Beginner Guide | Mistfall Hunter Tools",
+    "h1": "Mistfall Hunter Beginner Guide",
+    "h2_count": 5,
+    "h3_faq_count": 9,
+    "words_incl_shell": 520,
+    "ld_blocks": 2,
+    "ld_types": [
+      "Article"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/guides/getting-started",
+    "unofficial_footer": true,
+    "td_rows": 9
+  },
+  "/classes/mercenary": {
+    "title_len": 61,
+    "title": "Mistfall Hunter Mercenary Class Guide | Mistfall Hunter Tools",
+    "h1": "Mistfall Hunter Mercenary Class Guide",
+    "h2_count": 5,
+    "h3_faq_count": 9,
+    "words_incl_shell": 527,
+    "ld_blocks": 2,
+    "ld_types": [
+      "Article"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/classes/mercenary",
+    "unofficial_footer": true,
+    "td_rows": 9
+  },
+  "/builds/sorcerer": {
+    "title_len": 60,
+    "title": "Mistfall Hunter Sorcerer Build Guide | Mistfall Hunter Tools",
+    "h1": "Mistfall Hunter Sorcerer Build Guide",
+    "h2_count": 5,
+    "h3_faq_count": 9,
+    "words_incl_shell": 520,
+    "ld_blocks": 2,
+    "ld_types": [
+      "Article"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/builds/sorcerer",
+    "unofficial_footer": true,
+    "td_rows": 9
+  },
+  "/tier-list/duo": {
+    "title_len": 53,
+    "title": "Mistfall Hunter Duo Tier List | Mistfall Hunter Tools",
+    "h1": "Mistfall Hunter Duo Tier List",
+    "h2_count": 5,
+    "h3_faq_count": 9,
+    "words_incl_shell": 524,
+    "ld_blocks": 2,
+    "ld_types": [
+      "Article"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/tier-list/duo",
+    "unofficial_footer": true,
+    "td_rows": 9
+  },
+  "/maps/hallowgrove": {
+    "title_len": 61,
+    "title": "Mistfall Hunter Hallowgrove Map Guide | Mistfall Hunter Tools",
+    "h1": "Mistfall Hunter Hallowgrove Map Guide",
+    "h2_count": 5,
+    "h3_faq_count": 9,
+    "words_incl_shell": 522,
+    "ld_blocks": 2,
+    "ld_types": [
+      "Article"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/maps/hallowgrove",
+    "unofficial_footer": true,
+    "td_rows": 9
+  },
+  "/bosses/salmar": {
+    "title_len": 57,
+    "title": "Mistfall Hunter Salmar Boss Guide | Mistfall Hunter Tools",
+    "h1": "Mistfall Hunter Salmar Boss Guide",
+    "h2_count": 5,
+    "h3_faq_count": 9,
+    "words_incl_shell": 521,
+    "ld_blocks": 2,
+    "ld_types": [
+      "Article"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/bosses/salmar",
+    "unofficial_footer": true,
+    "td_rows": 9
+  },
+  "/codes/rewards": {
+    "title_len": 59,
+    "title": "Mistfall Hunter Codes &amp; Rewards | Mistfall Hunter Tools",
+    "h1": "Mistfall Hunter Codes &amp; Rewards",
+    "h2_count": 5,
+    "h3_faq_count": 9,
+    "words_incl_shell": 523,
+    "ld_blocks": 2,
+    "ld_types": [
+      "Article"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/codes/rewards",
+    "unofficial_footer": true,
+    "td_rows": 9
+  },
+  "/guides/duo": {
+    "title_len": 49,
+    "title": "Mistfall Hunter Duo Guide | Mistfall Hunter Tools",
+    "h1": "Mistfall Hunter Duo Guide",
+    "h2_count": 5,
+    "h3_faq_count": 9,
+    "words_incl_shell": 520,
+    "ld_blocks": 2,
+    "ld_types": [
+      "Article"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/guides/duo",
+    "unofficial_footer": true,
+    "td_rows": 9
+  },
+  "/about": {
+    "title_len": 32,
+    "title": "About Us | Mistfall Hunter Tools",
+    "h1": "About Us",
+    "h2_count": 0,
+    "h3_faq_count": 0,
+    "words_incl_shell": 170,
+    "ld_blocks": 2,
+    "ld_types": [
+      "Article"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/about",
+    "unofficial_footer": true,
+    "td_rows": 0
+  },
+  "/privacy": {
+    "title_len": 38,
+    "title": "Privacy Policy | Mistfall Hunter Tools",
+    "h1": "Privacy Policy",
+    "h2_count": 0,
+    "h3_faq_count": 0,
+    "words_incl_shell": 152,
+    "ld_blocks": 2,
+    "ld_types": [
+      "Article"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/privacy",
+    "unofficial_footer": true,
+    "td_rows": 0
+  },
+  "/terms": {
+    "title_len": 40,
+    "title": "Terms of Service | Mistfall Hunter Tools",
+    "h1": "Terms of Service",
+    "h2_count": 0,
+    "h3_faq_count": 0,
+    "words_incl_shell": 162,
+    "ld_blocks": 2,
+    "ld_types": [
+      "Article"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/terms",
+    "unofficial_footer": true,
+    "td_rows": 0
+  },
+  "/contact": {
+    "title_len": 31,
+    "title": "Contact | Mistfall Hunter Tools",
+    "h1": "Contact",
+    "h2_count": 0,
+    "h3_faq_count": 0,
+    "words_incl_shell": 128,
+    "ld_blocks": 2,
+    "ld_types": [
+      "Article"
+    ],
+    "FAQPage_ld": 0,
+    "Organization_ld": 0,
+    "Breadcrumb_ld": 0,
+    "ItemList_ld": 0,
+    "canonical": "https://mistfallhunter.co/contact",
+    "unofficial_footer": true,
+    "td_rows": 0
+  }
+}

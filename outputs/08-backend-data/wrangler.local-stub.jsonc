@@ -1,0 +1,10 @@
+{
+  // Local architecture stub only. Not a deployable configuration and contains no resource IDs.
+  "name": "mistfall-hunter",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-08-08",
+  "d1_databases": [{"binding": "DB", "database_name": "TODO_OWNER_AUTHORIZED_D1", "database_id": "TODO_NO_REMOTE_RESOURCE_CREATED"}],
+  "r2_buckets": [{"binding": "ASSETS", "bucket_name": "TODO_OWNER_AUTHORIZED_R2"}],
+  "vars": {"DATA_MODE": "static-seed"},
+  "notes": ["No remote D1/R2/Workers mutation authorized.", "Production Worker should select static JSON on DB failure to preserve anonymous fail-open reads.", "No auth, OAuth, Stripe, sessions, or user data endpoints in V1."]
+}

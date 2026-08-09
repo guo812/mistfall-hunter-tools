@@ -1,0 +1,524 @@
+[
+  {
+    "classId": "mercenary",
+    "stances": [
+      {
+        "id": "assault",
+        "nodes": [
+          {
+            "id": "mercenary-assault-1",
+            "name": "Mercenary Assault 1",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "mercenary-assault-2",
+            "name": "Mercenary Assault 2",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "mercenary-assault-3",
+            "name": "Mercenary Assault 3",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "mercenary-assault-4",
+            "name": "Mercenary Assault 4",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "mercenary-assault-5",
+            "name": "Mercenary Assault 5",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "mercenary-assault-6",
+            "name": "Mercenary Assault 6",
+            "cost": 1,
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "guard",
+        "nodes": [
+          {
+            "id": "mercenary-guard-1",
+            "name": "Mercenary Guard 1",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "mercenary-guard-2",
+            "name": "Mercenary Guard 2",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "mercenary-guard-3",
+            "name": "Mercenary Guard 3",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "mercenary-guard-4",
+            "name": "Mercenary Guard 4",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "mercenary-guard-5",
+            "name": "Mercenary Guard 5",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "mercenary-guard-6",
+            "name": "Mercenary Guard 6",
+            "cost": 1,
+            "tier": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "classId": "sorcerer",
+    "stances": [
+      {
+        "id": "assault",
+        "nodes": [
+          {
+            "id": "sorcerer-assault-1",
+            "name": "Sorcerer Assault 1",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "sorcerer-assault-2",
+            "name": "Sorcerer Assault 2",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "sorcerer-assault-3",
+            "name": "Sorcerer Assault 3",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "sorcerer-assault-4",
+            "name": "Sorcerer Assault 4",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "sorcerer-assault-5",
+            "name": "Sorcerer Assault 5",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "sorcerer-assault-6",
+            "name": "Sorcerer Assault 6",
+            "cost": 1,
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "guard",
+        "nodes": [
+          {
+            "id": "sorcerer-guard-1",
+            "name": "Sorcerer Guard 1",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "sorcerer-guard-2",
+            "name": "Sorcerer Guard 2",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "sorcerer-guard-3",
+            "name": "Sorcerer Guard 3",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "sorcerer-guard-4",
+            "name": "Sorcerer Guard 4",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "sorcerer-guard-5",
+            "name": "Sorcerer Guard 5",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "sorcerer-guard-6",
+            "name": "Sorcerer Guard 6",
+            "cost": 1,
+            "tier": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "classId": "blackarrow",
+    "stances": [
+      {
+        "id": "assault",
+        "nodes": [
+          {
+            "id": "blackarrow-assault-1",
+            "name": "Blackarrow Assault 1",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "blackarrow-assault-2",
+            "name": "Blackarrow Assault 2",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "blackarrow-assault-3",
+            "name": "Blackarrow Assault 3",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "blackarrow-assault-4",
+            "name": "Blackarrow Assault 4",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "blackarrow-assault-5",
+            "name": "Blackarrow Assault 5",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "blackarrow-assault-6",
+            "name": "Blackarrow Assault 6",
+            "cost": 1,
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "guard",
+        "nodes": [
+          {
+            "id": "blackarrow-guard-1",
+            "name": "Blackarrow Guard 1",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "blackarrow-guard-2",
+            "name": "Blackarrow Guard 2",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "blackarrow-guard-3",
+            "name": "Blackarrow Guard 3",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "blackarrow-guard-4",
+            "name": "Blackarrow Guard 4",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "blackarrow-guard-5",
+            "name": "Blackarrow Guard 5",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "blackarrow-guard-6",
+            "name": "Blackarrow Guard 6",
+            "cost": 1,
+            "tier": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "classId": "shadowstrix",
+    "stances": [
+      {
+        "id": "assault",
+        "nodes": [
+          {
+            "id": "shadowstrix-assault-1",
+            "name": "Shadowstrix Assault 1",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "shadowstrix-assault-2",
+            "name": "Shadowstrix Assault 2",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "shadowstrix-assault-3",
+            "name": "Shadowstrix Assault 3",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "shadowstrix-assault-4",
+            "name": "Shadowstrix Assault 4",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "shadowstrix-assault-5",
+            "name": "Shadowstrix Assault 5",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "shadowstrix-assault-6",
+            "name": "Shadowstrix Assault 6",
+            "cost": 1,
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "guard",
+        "nodes": [
+          {
+            "id": "shadowstrix-guard-1",
+            "name": "Shadowstrix Guard 1",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "shadowstrix-guard-2",
+            "name": "Shadowstrix Guard 2",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "shadowstrix-guard-3",
+            "name": "Shadowstrix Guard 3",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "shadowstrix-guard-4",
+            "name": "Shadowstrix Guard 4",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "shadowstrix-guard-5",
+            "name": "Shadowstrix Guard 5",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "shadowstrix-guard-6",
+            "name": "Shadowstrix Guard 6",
+            "cost": 1,
+            "tier": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "classId": "seer",
+    "stances": [
+      {
+        "id": "assault",
+        "nodes": [
+          {
+            "id": "seer-assault-1",
+            "name": "Seer Assault 1",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "seer-assault-2",
+            "name": "Seer Assault 2",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "seer-assault-3",
+            "name": "Seer Assault 3",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "seer-assault-4",
+            "name": "Seer Assault 4",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "seer-assault-5",
+            "name": "Seer Assault 5",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "seer-assault-6",
+            "name": "Seer Assault 6",
+            "cost": 1,
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "guard",
+        "nodes": [
+          {
+            "id": "seer-guard-1",
+            "name": "Seer Guard 1",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "seer-guard-2",
+            "name": "Seer Guard 2",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "seer-guard-3",
+            "name": "Seer Guard 3",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "seer-guard-4",
+            "name": "Seer Guard 4",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "seer-guard-5",
+            "name": "Seer Guard 5",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "seer-guard-6",
+            "name": "Seer Guard 6",
+            "cost": 1,
+            "tier": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "classId": "withered-knight",
+    "stances": [
+      {
+        "id": "assault",
+        "nodes": [
+          {
+            "id": "withered-knight-assault-1",
+            "name": "Withered Knight Assault 1",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "withered-knight-assault-2",
+            "name": "Withered Knight Assault 2",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "withered-knight-assault-3",
+            "name": "Withered Knight Assault 3",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "withered-knight-assault-4",
+            "name": "Withered Knight Assault 4",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "withered-knight-assault-5",
+            "name": "Withered Knight Assault 5",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "withered-knight-assault-6",
+            "name": "Withered Knight Assault 6",
+            "cost": 1,
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "guard",
+        "nodes": [
+          {
+            "id": "withered-knight-guard-1",
+            "name": "Withered Knight Guard 1",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "withered-knight-guard-2",
+            "name": "Withered Knight Guard 2",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "withered-knight-guard-3",
+            "name": "Withered Knight Guard 3",
+            "cost": 1,
+            "tier": 1
+          },
+          {
+            "id": "withered-knight-guard-4",
+            "name": "Withered Knight Guard 4",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "withered-knight-guard-5",
+            "name": "Withered Knight Guard 5",
+            "cost": 1,
+            "tier": 2
+          },
+          {
+            "id": "withered-knight-guard-6",
+            "name": "Withered Knight Guard 6",
+            "cost": 1,
+            "tier": 2
+          }
+        ]
+      }
+    ]
+  }
+]

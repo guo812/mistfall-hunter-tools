@@ -1,0 +1,196 @@
+{
+  "schema_version": "10r8-tool-contract-check/v1",
+  "scope": "read-only local contract audit; no remote fetch or Cloudflare resource mutation",
+  "remoteFetch": false,
+  "tool_route_count": 10,
+  "results": [
+    {
+      "tool": "/build-planner",
+      "status": "gap",
+      "pass": false,
+      "data_fields_present": [
+        "classes.id/name/stances",
+        "talent-trees.classId/stances/nodes",
+        "items.type=weapon|armor"
+      ],
+      "shareable_url_shape": "required: ?class=<id>&specialization=<id>&talents=<csv>&weapon=<id>&armor=<id>; current UI: none for build planner",
+      "storage_contract": "tool-route-contracts: local share state; no specific localStorage key declared",
+      "checks": {
+        "six_classes": true,
+        "talent_nodes": true,
+        "weapon_and_armor_seed": true,
+        "required_share_url_implemented_in_ui": false,
+        "mercenary_contract_shape_round_trips": true
+      },
+      "gaps": [
+        "No specialization/perk/loadout fields in the local seed contract.",
+        "Current UI does not encode/decode the required build-planner URL fields; only the proposed contract sample round-trips."
+      ],
+      "evidence": [
+        "seed/classes.json",
+        "seed/talent-trees.json",
+        "seed/items.json",
+        "components/tool-panel.tsx"
+      ]
+    },
+    {
+      "tool": "/map",
+      "status": "gap",
+      "pass": false,
+      "data_fields_present": [
+        "id/map/name/category/x/y/description",
+        "categories: poi/extraction/boss/loot"
+      ],
+      "shareable_url_shape": "none declared",
+      "storage_contract": "local seed read only; no localStorage key declared",
+      "checks": {
+        "poi_count_at_least_24": true,
+        "four_local_categories": true,
+        "coordinates_in_percent_bounds": true,
+        "pan_zoom_bounds_declared": false
+      },
+      "gaps": [
+        "No pan/zoom bounds contract is declared.",
+        "No explicit Event layer; fourth layer is local category `loot` (not Event)."
+      ],
+      "evidence": [
+        "seed/map-pois.json",
+        "tool-route-contracts.json"
+      ]
+    },
+    {
+      "tool": "/matchups",
+      "status": "gap",
+      "pass": false,
+      "data_fields_present": [
+        "classes.id/name/role/summary only"
+      ],
+      "shareable_url_shape": "none declared",
+      "storage_contract": "tool-route-contracts says frontend editorial matchup copy; no persisted client state declared",
+      "checks": {
+        "six_classes": true,
+        "matrix_6x6_present": false,
+        "all_36_cells_have_analysis": false
+      },
+      "gaps": [
+        "No 6\u00d76 matchup matrix artifact exists.",
+        "No per-cell analysis text contract exists."
+      ],
+      "evidence": [
+        "seed/classes.json",
+        "tool-route-contracts.json",
+        "components/tool-panel.tsx"
+      ]
+    },
+    {
+      "tool": "/class-quiz",
+      "status": "gap",
+      "pass": false,
+      "data_fields_present": [
+        "classes.id/name/role/summary"
+      ],
+      "shareable_url_shape": "recommended build target required: /builds/<class>; current contract does not declare quiz result link state",
+      "storage_contract": "anonymous local answers/results only per tool-route-contracts storageBoundary; no key declared",
+      "checks": {
+        "five_questions_present": false,
+        "weighted_scoring_present": false,
+        "reasons_list_present": false,
+        "recommended_build_link_contract_present": false
+      },
+      "gaps": [
+        "No five-question bank or weighted scoring data exists.",
+        "No reasons-list data or recommended build-link contract exists."
+      ],
+      "evidence": [
+        "seed/classes.json",
+        "tool-route-contracts.json"
+      ]
+    },
+    {
+      "tool": "/settings",
+      "status": "gap",
+      "pass": false,
+      "data_fields_present": [
+        "no settings seed/rules artifact"
+      ],
+      "shareable_url_shape": "required URL-encoded platform/gpu/resolution/fps state; none declared",
+      "storage_contract": "tool-route-contracts says local rules only; no key declared",
+      "checks": {
+        "pc_ps5_xbox_presets": false,
+        "gpu_buckets": false,
+        "resolution_buckets": false,
+        "target_fps_buckets": false,
+        "share_url": false
+      },
+      "gaps": [
+        "No platform preset, GPU/resolution/FPS bucket, or encoded-share contract exists."
+      ],
+      "evidence": [
+        "tool-route-contracts.json"
+      ]
+    },
+    {
+      "tool": "/tier-list",
+      "status": "gap",
+      "pass": false,
+      "data_fields_present": [
+        "classes.id/name/role/summary only"
+      ],
+      "shareable_url_shape": "none declared",
+      "storage_contract": "frontend editorial ranking stated; no persistence key declared",
+      "checks": {
+        "four_modes": false,
+        "six_classes_per_mode": false,
+        "rationale_per_ranking": false
+      },
+      "gaps": [
+        "No Solo/Trio/Duo/Beginner ranking data artifact exists.",
+        "No per-class rationale data exists."
+      ],
+      "evidence": [
+        "seed/classes.json",
+        "tool-route-contracts.json"
+      ]
+    },
+    {
+      "tool": "/checklist",
+      "status": "gap",
+      "pass": false,
+      "data_fields_present": [
+        "no checklist objectives artifact"
+      ],
+      "shareable_url_shape": "not applicable",
+      "storage_contract": "required: named localStorage key, serialized checked ids, reset removeItem path; current contract only says local checklist",
+      "checks": {
+        "objective_count_15_to_20": false,
+        "grouped_objectives": false,
+        "local_storage_key_documented": false,
+        "reset_path_documented": false
+      },
+      "gaps": [
+        "No 15\u201320 objective list or grouping data exists.",
+        "No localStorage key/value/reset contract is documented."
+      ],
+      "evidence": [
+        "tool-route-contracts.json",
+        "components/tool-panel.tsx"
+      ]
+    }
+  ],
+  "summary": {
+    "tools_checked": 7,
+    "pass_count": 0,
+    "gap_count": 7,
+    "gap_tools": [
+      "/build-planner",
+      "/map",
+      "/matchups",
+      "/class-quiz",
+      "/settings",
+      "/tier-list",
+      "/checklist"
+    ],
+    "mercenary_build_planner_contract_sample_round_trip": true,
+    "production_build_planner_share_url_round_trip": false
+  }
+}

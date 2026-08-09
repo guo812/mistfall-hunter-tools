@@ -1,0 +1,151 @@
+{
+  "ok": true,
+  "checks": {
+    "redirects_no_follow": {
+      "/privacy": {
+        "status": 200,
+        "location": ""
+      },
+      "/terms": {
+        "status": 200,
+        "location": ""
+      },
+      "/contact": {
+        "status": 200,
+        "location": ""
+      },
+      "/about": {
+        "status": 200,
+        "location": ""
+      },
+      "/404": {
+        "status": 404,
+        "location": ""
+      },
+      "/robots.txt": {
+        "status": 200,
+        "location": ""
+      },
+      "/sitemap.xml": {
+        "status": 200,
+        "location": ""
+      }
+    },
+    "ssr_contracts": {
+      "/items": {
+        "tr_rows_visible": 48,
+        "want": "48 seed rows"
+      },
+      "/loot-finder": {
+        "tr_rows_visible": 48,
+        "want": "48 seed rows"
+      },
+      "/map": {
+        "poi_li_markers_total": 24,
+        "poi_unique_names": 12,
+        "seed_count": 24,
+        "sample": [
+          "Boss Arena 2",
+          "Crossroads 8",
+          "Extraction Gate 1",
+          "Hidden Path 10",
+          "High Ground 5",
+          "Ritual Site 11",
+          "Safe Camp 12",
+          "Shrine 7"
+        ]
+      }
+    },
+    "sitemap": {
+      "loc_count": 58,
+      "all_200": true,
+      "no_404_or_api": true,
+      "status_codes": {
+        "200": 58
+      }
+    },
+    "robots": {
+      "allow_root": true,
+      "disallow_api": true,
+      "disallow_404": true,
+      "sitemap": true
+    },
+    "schema_wiring": {
+      "content": {
+        "routes": 43,
+        "failures": []
+      },
+      "tool": {
+        "routes": 10,
+        "failures": []
+      },
+      "home": {
+        "routes": 1,
+        "failures": []
+      },
+      "trust": {
+        "routes": 4,
+        "failures": []
+      }
+    },
+    "indexability": {
+      "noindex_on_indexable_routes": [],
+      "404_status": 404,
+      "404_noindex": true
+    },
+    "og_twitter": {
+      "/": {
+        "og:title": true,
+        "og:description": true,
+        "twitter:card": true
+      },
+      "/class-quiz": {
+        "og:title": true,
+        "og:description": true,
+        "twitter:card": true
+      },
+      "/guides/tips": {
+        "og:title": true,
+        "og:description": true,
+        "twitter:card": true
+      },
+      "/tier-list": {
+        "og:title": true,
+        "og:description": true,
+        "twitter:card": true
+      },
+      "/about": {
+        "og:title": true,
+        "og:description": true,
+        "twitter:card": true
+      }
+    },
+    "banned_token_family_selftest": {
+      "probes": {
+        "[DATA-PENDING": true,
+        "DATA-PENDING": true,
+        "DATA_PENDING": true,
+        "DATA PENDING": true,
+        "[DATA: xyz]": true,
+        "[DATA-item]": true,
+        "TBD": true,
+        "TODO": true,
+        "FIXME": true,
+        "lorem ipsum dolor": true,
+        "SAMPLE TEXT": true,
+        "XXX": true,
+        "TBC": true,
+        "COMING SOON": true,
+        "UNDER CONSTRUCTION": true,
+        "N/A": true,
+        "\u4e2d\u6587": true,
+        "Mistfall Hunter is free to play": false,
+        "Trust Labels": false,
+        "Last Verified": false,
+        "placeholder attribute test": true
+      },
+      "all_as_expected": true
+    }
+  }
+}
+OVERALL_OK: True

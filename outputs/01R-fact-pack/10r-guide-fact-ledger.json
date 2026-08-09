@@ -1,0 +1,660 @@
+{
+  "schema_version": "1.0",
+  "project": "mistfall-hunter",
+  "task": "t_d504a13a",
+  "scope": "Read-only research and local evidence writing for 11 specified guide repairs only.",
+  "retrieved_on": "2026-08-09",
+  "coverage": {
+    "required_routes": 11,
+    "route_sections": 11,
+    "verified_claims": 17,
+    "data_pending_entries": 11
+  },
+  "source_catalog": {
+    "S1": {
+      "title": "Mistfall Hunter - Dark Fantasy Extraction ARPG",
+      "url": "https://mistfallhunter.com/",
+      "date": "undated (accessed 2026-08-09)",
+      "tier": "Tier 1 — official game website"
+    },
+    "S2": {
+      "title": "Mistfall Hunter — Steam Store Page",
+      "url": "https://store.steampowered.com/app/3282300/Mistfall_Hunter/",
+      "date": "2026-07-29 release date shown",
+      "tier": "Tier 1 — official Steam store listing"
+    },
+    "S3": {
+      "title": "Extract From the Gyldenmist: Mistfall Hunter Arrives on Xbox",
+      "url": "https://news.xbox.com/en-us/2026/07/30/mistfall-hunter-available-now/",
+      "date": "2026-07-30",
+      "tier": "Tier 1 — Xbox Wire article by Bellring Games senior marketing manager"
+    },
+    "S4": {
+      "title": "August 6 Live Update",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840310314341184",
+      "date": "2026-08-06",
+      "tier": "Tier 1 — official Steam community announcement"
+    },
+    "S5": {
+      "title": "Roadmap and Launch Rewards: Wave 3",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840310314339221",
+      "date": "2026-08-05",
+      "tier": "Tier 1 — official Steam community announcement"
+    },
+    "S6": {
+      "title": "Launch Rewards & July 30 Update",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1839676055885911",
+      "date": "2026-07-30",
+      "tier": "Tier 1 — official Steam community announcement"
+    },
+    "S7": {
+      "title": "BETA 2 Release Date Announcement and Development Log",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1795917897471938",
+      "date": "2025-04-08",
+      "tier": "Tier 1 — official Steam community announcement (historical beta; not launch-state proof)"
+    }
+  },
+  "route_policy": {
+    "/guides/camp-upgrades": {
+      "angle": "Evidence-led camp audit: explain the historical beta camp categories, then turn the page into a decision log rather than a fabricated optimal order.",
+      "allowed": [
+        "Historical beta material described resource-funded camp upgrades that affected Springhorn healing, Warehouse capacity and Gylden Jar limit.",
+        "Use a personal “verify in the current build before spending” checklist; qualify all current-tree, price, order, permanence, and reset claims."
+      ],
+      "prohibited": [
+        "Do not claim a current upgrade tree, cost, best order, account-wide behavior, seasonal wipe behavior, or permanent status.",
+        "Do not call beta values current."
+      ],
+      "claims": [
+        [
+          "A 2025 beta development log described camp upgrades using gathered resources, including Springhorn healing, Warehouse capacity and Gylden Jar limit; it is historical beta evidence only and cannot establish live costs, order, permanence, or wipe behavior.",
+          "S7"
+        ]
+      ]
+    },
+    "/guides/controller-vs-kbm": {
+      "angle": "Input-method setup and patch-awareness: compare player comfort/testing workflow without declaring aim assist, input switching, or class-specific superiority.",
+      "allowed": [
+        "Controller-related bugs were addressed in official July 30/August 6 updates.",
+        "Recommend testing a familiar aim/turn scenario after a patch and recording personal comfort."
+      ],
+      "prohibited": [
+        "Do not claim aim assist exists, its strength, KBM/controller mid-game switching, default bindings, or a best input per class."
+      ],
+      "claims": [
+        [
+          "The August 6 official update includes controller-related fixes and a PS/Xbox friends-list crash fix; that supports patch-sensitive wording, not universal controller-performance conclusions.",
+          "S4"
+        ],
+        [
+          "The July 30 official update documented console reconnect, PS5 display, controller UI and Xbox-PC prompt issues; it does not publish a current PS5/Xbox graphics-mode, FOV, sensitivity, crossplay, or aim-assist specification.",
+          "S6"
+        ]
+      ]
+    },
+    "/guides/dual-weapon-stances": {
+      "angle": "Confirmed system overview: describe two stances per class and mid-battle switching, then direct readers to current in-game tooltips for exact skill/cooldown details.",
+      "allowed": [
+        "Six classes each have two unique weapon stances.",
+        "Official store marketing describes switching fighting styles during battle."
+      ],
+      "prohibited": [
+        "Do not name stance bonuses, cooldowns, swap costs, interrupt rules, class-specific optimal stances, or exact skill lists."
+      ],
+      "claims": [
+        [
+          "The official Steam listing says the game has six classes, each with two unique weapon stances, and presents switching fighting styles mid-battle as a feature.",
+          "S2"
+        ]
+      ]
+    },
+    "/guides/gold-farming": {
+      "angle": "Extraction-risk ledger: distinguish secured returns from speculative loot; make no gold-per-hour, route, flip, vendor, or auction claim.",
+      "allowed": [
+        "The official loop involves gathering loot and extracting it safely; carried spoils are at risk on death.",
+        "Use a player-maintained “what was secured vs lost” run log as editorial advice, clearly not an official economy formula."
+      ],
+      "prohibited": [
+        "Do not claim gold sources, currency values, gold/hour, chest yield, best loot route, auction house/fees/flips, vendors, or profitability."
+      ],
+      "claims": [
+        [
+          "Mistfall Hunter is a third-person PvPvE extraction ARPG where players may hunt alone or with allies; death can cost the spoils carried in that run.",
+          "S1"
+        ],
+        [
+          "Official material identifies Returner Woodling / Soul of Return as an extraction route back to camp; do not state that it is the only currently available extraction method.",
+          "S1"
+        ]
+      ]
+    },
+    "/guides/keys-treasure": {
+      "angle": "Treasure-risk orientation: verified official material confirms treasure and spoils in ruins, but the route must withhold key locations, room lists and drop tables.",
+      "allowed": [
+        "Official site says ruins contain treasures guarded by Corroded or Mist Lords.",
+        "State that a player should verify a key/door interaction in the current client before committing a risky route."
+      ],
+      "prohibited": [
+        "Do not claim keys drop from named sources, treasure-room coordinates, lock requirements, loot tables, event spawns, or key value."
+      ],
+      "claims": [
+        [
+          "Official site describes treasures in ruins guarded by Corroded or Mist Lords; it does not document keys, rooms, locations, or loot tables.",
+          "S1"
+        ]
+      ]
+    },
+    "/guides/pc-settings": {
+      "angle": "PC stability test protocol: use repeatable local testing, and clearly separate display/input/network troubleshooting from unsupported in-game settings claims.",
+      "allowed": [
+        "The official July 30 update planned/required a client update and later notes show active stability work.",
+        "Recommend changing one setting at a time and using the game’s current menu/tooltips as the authority."
+      ],
+      "prohibited": [
+        "Do not publish GPU presets, FPS caps, render scale, DLSS/FSR status, system requirements as launch-current, FOV ranges, or guaranteed FPS."
+      ],
+      "claims": [
+        [
+          "Official updates document ongoing client/stability work, so performance advice must be version- and hardware-qualified.",
+          "S4"
+        ]
+      ]
+    },
+    "/guides/ps5-settings": {
+      "angle": "PS5 verification checklist: confirm availability/platform evidence, then help the reader test display and connection symptoms without inventing PS5 menu options.",
+      "allowed": [
+        "The official website has a PlayStation destination link, and the July 30 update references a PS5 deck-screen display issue.",
+        "Recommend checking the current console/game menu after patches."
+      ],
+      "prohibited": [
+        "Do not claim a PS5 graphics mode, FPS, FOV slider, crossplay status, controller aim assist, resolution, HDR behavior, or best sensitivity."
+      ],
+      "claims": [
+        [
+          "The official site links to PlayStation, and the July 30 update references a PS5-specific display issue; neither source publishes a current PS5 settings matrix.",
+          "S1"
+        ],
+        [
+          "The July 30 official update documented console reconnect, PS5 display, controller UI and Xbox-PC prompt issues; it does not publish a current PS5/Xbox graphics-mode, FOV, sensitivity, crossplay, or aim-assist specification.",
+          "S6"
+        ]
+      ]
+    },
+    "/guides/pvp-survival": {
+      "angle": "Fair-play and extraction-risk framing: focus on deciding whether to disengage, but do not invent matchup counters, rankings or combat rules.",
+      "allowed": [
+        "Official materials frame rival Gyldhunters as a threat and describe death as risking carried spoils.",
+        "Recommend using cover, information and an exit plan as general editorial safety heuristics, labeled non-official player advice."
+      ],
+      "prohibited": [
+        "Do not claim best PvP class, matchup advantage, third-party detection, damage breakpoints, ranked rules, aim assist, or guaranteed escape tactics."
+      ],
+      "claims": [
+        [
+          "Mistfall Hunter is a third-person PvPvE extraction ARPG where players may hunt alone or with allies; death can cost the spoils carried in that run.",
+          "S1"
+        ],
+        [
+          "Official material identifies Returner Woodling / Soul of Return as an extraction route back to camp; do not state that it is the only currently available extraction method.",
+          "S1"
+        ]
+      ]
+    },
+    "/guides/scavenger-squads": {
+      "angle": "Legitimate squad coordination: ground the page in official solo/three-player squad framing and distinguish it from unauthorized pre-arranged teaming.",
+      "allowed": [
+        "Official material presents solo or three-player squad play.",
+        "State that coordination should use the game’s legitimate party systems and follow current fair-play rules."
+      ],
+      "prohibited": [
+        "Do not claim “scavenger squads” are an official mode, their matchmaking rules, a loot split formula, profit rate, or risk-free routes."
+      ],
+      "claims": [
+        [
+          "Official material presents solo play and three-player squads; do not convert this marketing description into a claim about every matchmaking queue or party restriction.",
+          "S2"
+        ]
+      ]
+    },
+    "/guides/solo-survival": {
+      "angle": "Solo extraction decision-making: build around known solo support and patch/roadmap volatility rather than a fixed best-class prescription.",
+      "allowed": [
+        "Official material supports hunting alone.",
+        "The August 5 roadmap announced a future Brandrgarde Solo Mode, explicitly as a planned addition."
+      ],
+      "prohibited": [
+        "Do not claim current solo queue availability, named solo map rules, best solo class, spawn changes, solo-only extraction rules, or balance values."
+      ],
+      "claims": [
+        [
+          "Official material presents solo play and three-player squads; do not convert this marketing description into a claim about every matchmaking queue or party restriction.",
+          "S2"
+        ],
+        [
+          "The August 5 official roadmap announced a planned Brandrgarde Solo Mode for Normal and Cataclysm difficulties in mid-Season 1; it is an announcement, not evidence that the mode was already live when posted.",
+          "S5"
+        ]
+      ]
+    },
+    "/guides/xbox-settings": {
+      "angle": "Xbox availability + patch-aware console test routine: cite launch availability, then prohibit unsupported option lists.",
+      "allowed": [
+        "Xbox Wire says the game launched on Xbox Series X|S and Xbox on PC, with Xbox/PC Game Pass availability.",
+        "The July 30 update references an Xbox-PC exit prompt issue; official updates show current behavior can change."
+      ],
+      "prohibited": [
+        "Do not claim Xbox Series S/X graphics modes, FPS, FOV, crossplay, input latency, aim assist, HDR, resolution, or recommended sensitivity."
+      ],
+      "claims": [
+        [
+          "Xbox Wire says the game launched on Xbox Series X|S, Xbox on PC, Xbox Game Pass and PC Game Pass on July 29, 2026.",
+          "S3"
+        ],
+        [
+          "The July 30 official update documented console reconnect, PS5 display, controller UI and Xbox-PC prompt issues; it does not publish a current PS5/Xbox graphics-mode, FOV, sensitivity, crossplay, or aim-assist specification.",
+          "S6"
+        ]
+      ]
+    }
+  },
+  "claims": [
+    {
+      "id": "camp-upgrades-01",
+      "route": "/guides/camp-upgrades",
+      "exact_claim": "A 2025 beta development log described camp upgrades using gathered resources, including Springhorn healing, Warehouse capacity and Gylden Jar limit; it is historical beta evidence only and cannot establish live costs, order, permanence, or wipe behavior.",
+      "source": {
+        "title": "BETA 2 Release Date Announcement and Development Log",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1795917897471938",
+        "date": "2025-04-08",
+        "tier": "Tier 1 — official Steam community announcement (historical beta; not launch-state proof)"
+      },
+      "source_id": "S7",
+      "verification_status": "VERIFIED",
+      "editorial_use": "Allowed only with the qualification contained in exact_claim."
+    },
+    {
+      "id": "camp-upgrades-PENDING",
+      "route": "/guides/camp-upgrades",
+      "exact_claim": "Route-specific mechanic/detail is withheld pending a current first-party source or reproducible in-client verification.",
+      "source": {
+        "title": "10R-F source-gap assessment",
+        "url": null,
+        "date": "2026-08-09",
+        "tier": "Local research assessment"
+      },
+      "source_id": "LOCAL",
+      "verification_status": "DATA-PENDING",
+      "editorial_use": "Do not convert the withheld detail into a factual statement."
+    },
+    {
+      "id": "controller-vs-kbm-01",
+      "route": "/guides/controller-vs-kbm",
+      "exact_claim": "The August 6 official update includes controller-related fixes and a PS/Xbox friends-list crash fix; that supports patch-sensitive wording, not universal controller-performance conclusions.",
+      "source": {
+        "title": "August 6 Live Update",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840310314341184",
+        "date": "2026-08-06",
+        "tier": "Tier 1 — official Steam community announcement"
+      },
+      "source_id": "S4",
+      "verification_status": "VERIFIED",
+      "editorial_use": "Allowed only with the qualification contained in exact_claim."
+    },
+    {
+      "id": "controller-vs-kbm-02",
+      "route": "/guides/controller-vs-kbm",
+      "exact_claim": "The July 30 official update documented console reconnect, PS5 display, controller UI and Xbox-PC prompt issues; it does not publish a current PS5/Xbox graphics-mode, FOV, sensitivity, crossplay, or aim-assist specification.",
+      "source": {
+        "title": "Launch Rewards & July 30 Update",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1839676055885911",
+        "date": "2026-07-30",
+        "tier": "Tier 1 — official Steam community announcement"
+      },
+      "source_id": "S6",
+      "verification_status": "VERIFIED",
+      "editorial_use": "Allowed only with the qualification contained in exact_claim."
+    },
+    {
+      "id": "controller-vs-kbm-PENDING",
+      "route": "/guides/controller-vs-kbm",
+      "exact_claim": "Route-specific mechanic/detail is withheld pending a current first-party source or reproducible in-client verification.",
+      "source": {
+        "title": "10R-F source-gap assessment",
+        "url": null,
+        "date": "2026-08-09",
+        "tier": "Local research assessment"
+      },
+      "source_id": "LOCAL",
+      "verification_status": "DATA-PENDING",
+      "editorial_use": "Do not convert the withheld detail into a factual statement."
+    },
+    {
+      "id": "dual-weapon-stances-01",
+      "route": "/guides/dual-weapon-stances",
+      "exact_claim": "The official Steam listing says the game has six classes, each with two unique weapon stances, and presents switching fighting styles mid-battle as a feature.",
+      "source": {
+        "title": "Mistfall Hunter — Steam Store Page",
+        "url": "https://store.steampowered.com/app/3282300/Mistfall_Hunter/",
+        "date": "2026-07-29 release date shown",
+        "tier": "Tier 1 — official Steam store listing"
+      },
+      "source_id": "S2",
+      "verification_status": "VERIFIED",
+      "editorial_use": "Allowed only with the qualification contained in exact_claim."
+    },
+    {
+      "id": "dual-weapon-stances-PENDING",
+      "route": "/guides/dual-weapon-stances",
+      "exact_claim": "Route-specific mechanic/detail is withheld pending a current first-party source or reproducible in-client verification.",
+      "source": {
+        "title": "10R-F source-gap assessment",
+        "url": null,
+        "date": "2026-08-09",
+        "tier": "Local research assessment"
+      },
+      "source_id": "LOCAL",
+      "verification_status": "DATA-PENDING",
+      "editorial_use": "Do not convert the withheld detail into a factual statement."
+    },
+    {
+      "id": "gold-farming-01",
+      "route": "/guides/gold-farming",
+      "exact_claim": "Mistfall Hunter is a third-person PvPvE extraction ARPG where players may hunt alone or with allies; death can cost the spoils carried in that run.",
+      "source": {
+        "title": "Mistfall Hunter - Dark Fantasy Extraction ARPG",
+        "url": "https://mistfallhunter.com/",
+        "date": "undated (accessed 2026-08-09)",
+        "tier": "Tier 1 — official game website"
+      },
+      "source_id": "S1",
+      "verification_status": "VERIFIED",
+      "editorial_use": "Allowed only with the qualification contained in exact_claim."
+    },
+    {
+      "id": "gold-farming-02",
+      "route": "/guides/gold-farming",
+      "exact_claim": "Official material identifies Returner Woodling / Soul of Return as an extraction route back to camp; do not state that it is the only currently available extraction method.",
+      "source": {
+        "title": "Mistfall Hunter - Dark Fantasy Extraction ARPG",
+        "url": "https://mistfallhunter.com/",
+        "date": "undated (accessed 2026-08-09)",
+        "tier": "Tier 1 — official game website"
+      },
+      "source_id": "S1",
+      "verification_status": "VERIFIED",
+      "editorial_use": "Allowed only with the qualification contained in exact_claim."
+    },
+    {
+      "id": "gold-farming-PENDING",
+      "route": "/guides/gold-farming",
+      "exact_claim": "Route-specific mechanic/detail is withheld pending a current first-party source or reproducible in-client verification.",
+      "source": {
+        "title": "10R-F source-gap assessment",
+        "url": null,
+        "date": "2026-08-09",
+        "tier": "Local research assessment"
+      },
+      "source_id": "LOCAL",
+      "verification_status": "DATA-PENDING",
+      "editorial_use": "Do not convert the withheld detail into a factual statement."
+    },
+    {
+      "id": "keys-treasure-01",
+      "route": "/guides/keys-treasure",
+      "exact_claim": "Official site describes treasures in ruins guarded by Corroded or Mist Lords; it does not document keys, rooms, locations, or loot tables.",
+      "source": {
+        "title": "Mistfall Hunter - Dark Fantasy Extraction ARPG",
+        "url": "https://mistfallhunter.com/",
+        "date": "undated (accessed 2026-08-09)",
+        "tier": "Tier 1 — official game website"
+      },
+      "source_id": "S1",
+      "verification_status": "VERIFIED",
+      "editorial_use": "Allowed only with the qualification contained in exact_claim."
+    },
+    {
+      "id": "keys-treasure-PENDING",
+      "route": "/guides/keys-treasure",
+      "exact_claim": "Route-specific mechanic/detail is withheld pending a current first-party source or reproducible in-client verification.",
+      "source": {
+        "title": "10R-F source-gap assessment",
+        "url": null,
+        "date": "2026-08-09",
+        "tier": "Local research assessment"
+      },
+      "source_id": "LOCAL",
+      "verification_status": "DATA-PENDING",
+      "editorial_use": "Do not convert the withheld detail into a factual statement."
+    },
+    {
+      "id": "pc-settings-01",
+      "route": "/guides/pc-settings",
+      "exact_claim": "Official updates document ongoing client/stability work, so performance advice must be version- and hardware-qualified.",
+      "source": {
+        "title": "August 6 Live Update",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840310314341184",
+        "date": "2026-08-06",
+        "tier": "Tier 1 — official Steam community announcement"
+      },
+      "source_id": "S4",
+      "verification_status": "VERIFIED",
+      "editorial_use": "Allowed only with the qualification contained in exact_claim."
+    },
+    {
+      "id": "pc-settings-PENDING",
+      "route": "/guides/pc-settings",
+      "exact_claim": "Route-specific mechanic/detail is withheld pending a current first-party source or reproducible in-client verification.",
+      "source": {
+        "title": "10R-F source-gap assessment",
+        "url": null,
+        "date": "2026-08-09",
+        "tier": "Local research assessment"
+      },
+      "source_id": "LOCAL",
+      "verification_status": "DATA-PENDING",
+      "editorial_use": "Do not convert the withheld detail into a factual statement."
+    },
+    {
+      "id": "ps5-settings-01",
+      "route": "/guides/ps5-settings",
+      "exact_claim": "The official site links to PlayStation, and the July 30 update references a PS5-specific display issue; neither source publishes a current PS5 settings matrix.",
+      "source": {
+        "title": "Mistfall Hunter - Dark Fantasy Extraction ARPG",
+        "url": "https://mistfallhunter.com/",
+        "date": "undated (accessed 2026-08-09)",
+        "tier": "Tier 1 — official game website"
+      },
+      "source_id": "S1",
+      "verification_status": "VERIFIED",
+      "editorial_use": "Allowed only with the qualification contained in exact_claim."
+    },
+    {
+      "id": "ps5-settings-02",
+      "route": "/guides/ps5-settings",
+      "exact_claim": "The July 30 official update documented console reconnect, PS5 display, controller UI and Xbox-PC prompt issues; it does not publish a current PS5/Xbox graphics-mode, FOV, sensitivity, crossplay, or aim-assist specification.",
+      "source": {
+        "title": "Launch Rewards & July 30 Update",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1839676055885911",
+        "date": "2026-07-30",
+        "tier": "Tier 1 — official Steam community announcement"
+      },
+      "source_id": "S6",
+      "verification_status": "VERIFIED",
+      "editorial_use": "Allowed only with the qualification contained in exact_claim."
+    },
+    {
+      "id": "ps5-settings-PENDING",
+      "route": "/guides/ps5-settings",
+      "exact_claim": "Route-specific mechanic/detail is withheld pending a current first-party source or reproducible in-client verification.",
+      "source": {
+        "title": "10R-F source-gap assessment",
+        "url": null,
+        "date": "2026-08-09",
+        "tier": "Local research assessment"
+      },
+      "source_id": "LOCAL",
+      "verification_status": "DATA-PENDING",
+      "editorial_use": "Do not convert the withheld detail into a factual statement."
+    },
+    {
+      "id": "pvp-survival-01",
+      "route": "/guides/pvp-survival",
+      "exact_claim": "Mistfall Hunter is a third-person PvPvE extraction ARPG where players may hunt alone or with allies; death can cost the spoils carried in that run.",
+      "source": {
+        "title": "Mistfall Hunter - Dark Fantasy Extraction ARPG",
+        "url": "https://mistfallhunter.com/",
+        "date": "undated (accessed 2026-08-09)",
+        "tier": "Tier 1 — official game website"
+      },
+      "source_id": "S1",
+      "verification_status": "VERIFIED",
+      "editorial_use": "Allowed only with the qualification contained in exact_claim."
+    },
+    {
+      "id": "pvp-survival-02",
+      "route": "/guides/pvp-survival",
+      "exact_claim": "Official material identifies Returner Woodling / Soul of Return as an extraction route back to camp; do not state that it is the only currently available extraction method.",
+      "source": {
+        "title": "Mistfall Hunter - Dark Fantasy Extraction ARPG",
+        "url": "https://mistfallhunter.com/",
+        "date": "undated (accessed 2026-08-09)",
+        "tier": "Tier 1 — official game website"
+      },
+      "source_id": "S1",
+      "verification_status": "VERIFIED",
+      "editorial_use": "Allowed only with the qualification contained in exact_claim."
+    },
+    {
+      "id": "pvp-survival-PENDING",
+      "route": "/guides/pvp-survival",
+      "exact_claim": "Route-specific mechanic/detail is withheld pending a current first-party source or reproducible in-client verification.",
+      "source": {
+        "title": "10R-F source-gap assessment",
+        "url": null,
+        "date": "2026-08-09",
+        "tier": "Local research assessment"
+      },
+      "source_id": "LOCAL",
+      "verification_status": "DATA-PENDING",
+      "editorial_use": "Do not convert the withheld detail into a factual statement."
+    },
+    {
+      "id": "scavenger-squads-01",
+      "route": "/guides/scavenger-squads",
+      "exact_claim": "Official material presents solo play and three-player squads; do not convert this marketing description into a claim about every matchmaking queue or party restriction.",
+      "source": {
+        "title": "Mistfall Hunter — Steam Store Page",
+        "url": "https://store.steampowered.com/app/3282300/Mistfall_Hunter/",
+        "date": "2026-07-29 release date shown",
+        "tier": "Tier 1 — official Steam store listing"
+      },
+      "source_id": "S2",
+      "verification_status": "VERIFIED",
+      "editorial_use": "Allowed only with the qualification contained in exact_claim."
+    },
+    {
+      "id": "scavenger-squads-PENDING",
+      "route": "/guides/scavenger-squads",
+      "exact_claim": "Route-specific mechanic/detail is withheld pending a current first-party source or reproducible in-client verification.",
+      "source": {
+        "title": "10R-F source-gap assessment",
+        "url": null,
+        "date": "2026-08-09",
+        "tier": "Local research assessment"
+      },
+      "source_id": "LOCAL",
+      "verification_status": "DATA-PENDING",
+      "editorial_use": "Do not convert the withheld detail into a factual statement."
+    },
+    {
+      "id": "solo-survival-01",
+      "route": "/guides/solo-survival",
+      "exact_claim": "Official material presents solo play and three-player squads; do not convert this marketing description into a claim about every matchmaking queue or party restriction.",
+      "source": {
+        "title": "Mistfall Hunter — Steam Store Page",
+        "url": "https://store.steampowered.com/app/3282300/Mistfall_Hunter/",
+        "date": "2026-07-29 release date shown",
+        "tier": "Tier 1 — official Steam store listing"
+      },
+      "source_id": "S2",
+      "verification_status": "VERIFIED",
+      "editorial_use": "Allowed only with the qualification contained in exact_claim."
+    },
+    {
+      "id": "solo-survival-02",
+      "route": "/guides/solo-survival",
+      "exact_claim": "The August 5 official roadmap announced a planned Brandrgarde Solo Mode for Normal and Cataclysm difficulties in mid-Season 1; it is an announcement, not evidence that the mode was already live when posted.",
+      "source": {
+        "title": "Roadmap and Launch Rewards: Wave 3",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840310314339221",
+        "date": "2026-08-05",
+        "tier": "Tier 1 — official Steam community announcement"
+      },
+      "source_id": "S5",
+      "verification_status": "VERIFIED",
+      "editorial_use": "Allowed only with the qualification contained in exact_claim."
+    },
+    {
+      "id": "solo-survival-PENDING",
+      "route": "/guides/solo-survival",
+      "exact_claim": "Route-specific mechanic/detail is withheld pending a current first-party source or reproducible in-client verification.",
+      "source": {
+        "title": "10R-F source-gap assessment",
+        "url": null,
+        "date": "2026-08-09",
+        "tier": "Local research assessment"
+      },
+      "source_id": "LOCAL",
+      "verification_status": "DATA-PENDING",
+      "editorial_use": "Do not convert the withheld detail into a factual statement."
+    },
+    {
+      "id": "xbox-settings-01",
+      "route": "/guides/xbox-settings",
+      "exact_claim": "Xbox Wire says the game launched on Xbox Series X|S, Xbox on PC, Xbox Game Pass and PC Game Pass on July 29, 2026.",
+      "source": {
+        "title": "Extract From the Gyldenmist: Mistfall Hunter Arrives on Xbox",
+        "url": "https://news.xbox.com/en-us/2026/07/30/mistfall-hunter-available-now/",
+        "date": "2026-07-30",
+        "tier": "Tier 1 — Xbox Wire article by Bellring Games senior marketing manager"
+      },
+      "source_id": "S3",
+      "verification_status": "VERIFIED",
+      "editorial_use": "Allowed only with the qualification contained in exact_claim."
+    },
+    {
+      "id": "xbox-settings-02",
+      "route": "/guides/xbox-settings",
+      "exact_claim": "The July 30 official update documented console reconnect, PS5 display, controller UI and Xbox-PC prompt issues; it does not publish a current PS5/Xbox graphics-mode, FOV, sensitivity, crossplay, or aim-assist specification.",
+      "source": {
+        "title": "Launch Rewards & July 30 Update",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1839676055885911",
+        "date": "2026-07-30",
+        "tier": "Tier 1 — official Steam community announcement"
+      },
+      "source_id": "S6",
+      "verification_status": "VERIFIED",
+      "editorial_use": "Allowed only with the qualification contained in exact_claim."
+    },
+    {
+      "id": "xbox-settings-PENDING",
+      "route": "/guides/xbox-settings",
+      "exact_claim": "Route-specific mechanic/detail is withheld pending a current first-party source or reproducible in-client verification.",
+      "source": {
+        "title": "10R-F source-gap assessment",
+        "url": null,
+        "date": "2026-08-09",
+        "tier": "Local research assessment"
+      },
+      "source_id": "LOCAL",
+      "verification_status": "DATA-PENDING",
+      "editorial_use": "Do not convert the withheld detail into a factual statement."
+    }
+  ],
+  "global_guardrails": [
+    "All setting values, platform features and game-mechanic values not expressly cited are DATA-PENDING.",
+    "The 08 backend seed is editorial/local and is not evidence for live gameplay mechanics.",
+    "Historical beta material is labeled historical and cannot establish launch-current behavior.",
+    "Do not write “best,” “fastest,” “guaranteed,” or precise economic/ranking claims from this pack."
+  ]
+}

@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /404
+
+Sitemap: https://mistfallhunter.co/sitemap.xml

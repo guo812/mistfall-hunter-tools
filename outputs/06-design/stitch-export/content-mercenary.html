@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mistfall Hunter Mercenary Class Guide</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-container": "#004379",
+                        "on-error": "#690005",
+                        "secondary": "#67df70",
+                        "surface-bright": "#383845",
+                        "on-tertiary-fixed": "#001c38",
+                        "tertiary-fixed": "#d3e4ff",
+                        "surface-container-low": "#1a1a27",
+                        "on-tertiary-fixed-variant": "#004882",
+                        "background": "#12121e",
+                        "surface-container-high": "#292936",
+                        "secondary-fixed-dim": "#67df70",
+                        "tertiary": "#a8ccff",
+                        "on-secondary-container": "#00320a",
+                        "on-tertiary": "#00315c",
+                        "on-background": "#e3e0f2",
+                        "surface-tint": "#efbd8a",
+                        "primary-fixed-dim": "#efbd8a",
+                        "primary-container": "#d4a574",
+                        "on-secondary-fixed": "#002105",
+                        "surface-container": "#1f1e2b",
+                        "error": "#ffb4ab",
+                        "on-primary": "#472a03",
+                        "on-error-container": "#ffdad6",
+                        "inverse-surface": "#e3e0f2",
+                        "secondary-container": "#27a640",
+                        "on-surface-variant": "#d4c4b7",
+                        "on-surface": "#e3e0f2",
+                        "on-primary-fixed": "#2c1700",
+                        "surface-dim": "#12121e",
+                        "tertiary-fixed-dim": "#a2c9ff",
+                        "surface-variant": "#343341",
+                        "outline-variant": "#50453b",
+                        "inverse-primary": "#7c572d",
+                        "on-secondary-fixed-variant": "#005317",
+                        "outline": "#9c8e82",
+                        "tertiary-container": "#72b1ff",
+                        "surface": "#12121e",
+                        "primary-fixed": "#ffdcbc",
+                        "surface-container-lowest": "#0d0d19",
+                        "primary": "#f2c08d",
+                        "inverse-on-surface": "#2f2f3c",
+                        "on-primary-fixed-variant": "#614018",
+                        "error-container": "#93000a",
+                        "surface-container-highest": "#343341",
+                        "on-secondary": "#00390d",
+                        "secondary-fixed": "#83fc89",
+                        "on-primary-container": "#5b3a13"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "mobile_margin": "1rem",
+                        "container_padding": "1.5rem",
+                        "max_content_width": "680px",
+                        "inline_gap": "0.75rem",
+                        "element_gap": "1.5rem",
+                        "section_gap": "3rem"
+                    },
+                    fontFamily: {
+                        "headline-lg-mobile": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-base": ["Inter"],
+                        "headline-sm": ["Inter"]
+                    },
+                    fontSize: {
+                        "headline-lg-mobile": ["26px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-base": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "1.4", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #0a0a0f; color: #e3e0f2; }
+        .surface-card { background-color: #141420; border: 1px solid #2a2a3a; }
+        .text-gold { color: #d4a574; }
+        .bg-gold { background-color: #d4a574; }
+        .border-gold { border-color: #d4a574; }
+        .text-verified { color: #3fb950; }
+        .bg-verified { background-color: #3fb950; }
+        .text-warning { color: #f85149; }
+        .bg-warning { background-color: #f85149; }
+        .border-dark { border-color: #2a2a3a; }
+        
+        .tier-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 12px;
+        }
+        .tier-s { background-color: #d4a574; color: #0a0a0f; }
+        .tier-a { background-color: #3fb950; color: white; }
+        .tier-d { background-color: #f85149; color: white; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-base antialiased min-h-screen flex flex-col md:flex-row">
+<!-- Mobile TopNav (from JSON) -->
+<nav class="md:hidden fixed top-0 w-full z-50 flex justify-between items-center px-mobile_margin h-16 bg-background/95 backdrop-blur-md border-b border-outline-variant dark:border-outline-variant">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary tracking-tighter">MISTFALL HUNTER</div>
+<button class="text-primary dark:text-primary"><span class="material-symbols-outlined" data-icon="menu">menu</span></button>
+</nav>
+<!-- SideNavBar (from JSON) -->
+<aside class="hidden lg:flex flex-col pt-20 pb-8 h-screen border-r border-outline-variant fixed left-0 w-64 bg-surface-container dark:bg-surface-container overflow-y-auto">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3 mb-4">
+<img alt="Mercenary Class Icon" class="w-10 h-10 rounded-DEFAULT object-cover" data-alt="A small, stylized icon of a fantasy mercenary shield, metallic with glowing runes, set against a dark textured background in a high-contrast dark fantasy gaming UI style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6u2pf29OcAOl0L7NJQElZP2ik5mh5cf94Pcjbmf3YBA_dKS1bN__S_bYu8KOSwjKz96IAZyau4e6JE4esRC87kPAoaBEsE19CrhZiDoUqqTsCfHILVrMt1f40VDxtF6tjX8-zMrACqHIjHOyuM20yU22baxZkH1dUxUVodFFrTxZLIRe4giOMlMOln_asENtERu7DFpqcv3zyrMPfcS_EcC0p9mBe94WzxLq8aPO2PBenErlH0CMqfKrwYENSqmtGPd7WBQL-ovw"/>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Mercenary Guide</h2>
+<p class="font-label-caps text-label-caps text-on-surface-variant">V1.0.4 Tactical Dossier</p>
+</div>
+</div>
+<button class="w-full py-2 px-4 bg-transparent border border-outline-variant text-on-surface hover:border-primary/50 transition-all rounded-DEFAULT font-label-caps text-label-caps flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="download">download</span> Download PDF
+            </button>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 bg-primary-container text-on-primary-container font-bold border-l-4 border-primary rounded-r-DEFAULT transition-all scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+<span class="font-label-caps text-label-caps">Class Overview</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container-high border-l-4 border-transparent hover:border-primary/50 transition-all rounded-r-DEFAULT" href="#">
+<span class="material-symbols-outlined" data-icon="swords">swords</span>
+<span class="font-label-caps text-label-caps">Active Skills</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container-high border-l-4 border-transparent hover:border-primary/50 transition-all rounded-r-DEFAULT" href="#">
+<span class="material-symbols-outlined" data-icon="military_tech">military_tech</span>
+<span class="font-label-caps text-label-caps">Passive Talents</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container-high border-l-4 border-transparent hover:border-primary/50 transition-all rounded-r-DEFAULT" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-label-caps text-label-caps">Gear Priorities</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container-high border-l-4 border-transparent hover:border-primary/50 transition-all rounded-r-DEFAULT" href="#">
+<span class="material-symbols-outlined" data-icon="Ads_click">drive_file_rename_outline</span>
+<span class="font-label-caps text-label-caps">Tactical Combos</span>
+</a>
+</nav>
+<div class="px-4 mt-8 pt-4 border-t border-outline-variant space-y-2">
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]" data-icon="rate_review">rate_review</span>
+<span class="font-label-caps text-label-caps">Feedback</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]" data-icon="bug_report">bug_report</span>
+<span class="font-label-caps text-label-caps">Report Error</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 lg:ml-64 pt-20 lg:pt-0 pb-section_gap flex justify-center">
+<!-- Center Reading Column -->
+<div class="w-full max-w-[680px] px-mobile_margin md:px-container_padding lg:py-16">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant mb-6">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Classes</a>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+<span class="text-on-surface">Mercenary</span>
+</nav>
+<!-- Header -->
+<header class="mb-section_gap">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-gold mb-4">Mistfall Hunter Mercenary Class Guide</h1>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-verified text-[16px]" data-icon="check_circle">check_circle</span>
+<span class="font-body-sm text-body-sm text-verified font-medium">Last Verified: August 2026 · Verified</span>
+</div>
+<p class="font-body-base text-body-base text-on-surface-variant border-l-2 border-primary pl-4 italic">
+                    The Mercenary is Mistfall Hunter's frontline bruiser — strong up close, built to hold space and protect teammates.
+                </p>
+</header>
+<!-- 1. Overview -->
+<section class="mb-section_gap" id="overview">
+<h2 class="font-headline-md text-headline-md text-on-surface border-b border-dark pb-2 mb-4">Mercenary Overview</h2>
+<div class="space-y-4 font-body-base text-body-base text-on-surface-variant">
+<p>The Mercenary thrives in the chaos of close-quarters combat. Equipped with heavy armor and devastating melee weaponry, this class excels at disrupting enemy formations and absorbing damage that would otherwise decimate more fragile allies. Their kit is designed around sustain and crowd control, making them an indispensable anchor for any coordinated trio.</p>
+<p>Mastering the Mercenary requires a deep understanding of positioning and stamina management. While they possess immense raw power, their mobility is limited. A skilled Mercenary dictates the pace of the engagement, forcing enemies to fight on their terms while providing crucial peeling for their backline damage dealers.</p>
+</div>
+</section>
+<!-- CTA Bar -->
+<div class="flex flex-col sm:flex-row gap-4 mb-section_gap pt-8 border-t border-dark">
+<button class="bg-gold text-[#0a0a0f] font-bold py-3 px-6 rounded-DEFAULT hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="quiz">quiz</span> Take the Class Quiz
+                </button>
+<button class="bg-transparent border border-dark text-on-surface hover:border-primary transition-colors py-3 px-6 rounded-DEFAULT flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span> View Mercenary Builds
+                </button>
+</div>
+<!-- Footer (from JSON) -->
+<footer class="w-full max-w-[680px] mx-auto mt-section_gap py-section_gap border-t border-outline-variant text-left bg-surface-container-lowest dark:bg-surface-container-lowest">
+<div class="font-headline-sm text-headline-sm text-primary mb-4">Mistfall Hunter Tools</div>
+<div class="flex flex-wrap gap-4 mb-6">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-opacity opacity-80 hover:opacity-100" href="#">About</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-opacity opacity-80 hover:opacity-100" href="#">Privacy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-opacity opacity-80 hover:opacity-100" href="#">Terms</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-opacity opacity-80 hover:opacity-100" href="#">Contact</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-70">
+                    © 2026 Mistfall Hunter Tools. Not affiliated with Bellring Games or Skystone Games.
+                </p>
+</footer>
+</div>
+<!-- Utility Right Space (Empty for fixed width readability model) -->
+<div class="hidden xl:block w-64 shrink-0"></div>
+</main>
+</body></html>

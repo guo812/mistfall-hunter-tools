@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mistfall Hunter Tools, Builds &amp; Tier List</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#2c1700",
+                        "on-primary-fixed-variant": "#614018",
+                        "surface-variant": "#35343a",
+                        "on-primary": "#472a03",
+                        "surface-container-highest": "#35343a",
+                        "on-primary-container": "#5b3a13",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#e4e1e9",
+                        "inverse-primary": "#7c572d",
+                        "on-surface-variant": "#d4c4b7",
+                        "surface-bright": "#39383e",
+                        "surface-container-lowest": "#0e0e13",
+                        "tertiary": "#cac7d8",
+                        "on-secondary": "#003257",
+                        "primary-fixed-dim": "#efbd8a",
+                        "error-container": "#93000a",
+                        "inverse-on-surface": "#303036",
+                        "primary-container": "#d4a574",
+                        "surface-container": "#1f1f25",
+                        "surface-container-low": "#1b1b20",
+                        "secondary-container": "#0098f7",
+                        "tertiary-fixed-dim": "#c7c5d6",
+                        "tertiary-container": "#aeacbd",
+                        "secondary-fixed": "#d0e4ff",
+                        "secondary-fixed-dim": "#9dcaff",
+                        "secondary": "#9dcaff",
+                        "on-tertiary": "#2f2f3c",
+                        "surface": "#131318",
+                        "inverse-surface": "#e4e1e9",
+                        "on-tertiary-fixed": "#1a1a27",
+                        "tertiary-fixed": "#e3e0f2",
+                        "surface-container-high": "#2a292f",
+                        "surface-tint": "#efbd8a",
+                        "surface-dim": "#131318",
+                        "outline": "#9c8e82",
+                        "on-tertiary-fixed-variant": "#464553",
+                        "on-secondary-fixed-variant": "#00497b",
+                        "error": "#ffb4ab",
+                        "on-error": "#690005",
+                        "on-secondary-container": "#002e50",
+                        "outline-variant": "#50453b",
+                        "primary-fixed": "#ffdcbc",
+                        "on-secondary-fixed": "#001d35",
+                        "background": "#0a0a0f",
+                        "on-background": "#e4e1e9",
+                        "on-tertiary-container": "#41404e",
+                        "primary": "#f2c08d"
+                    },
+                    "fontFamily": {
+                        "h1": ["Inter"],
+                        "h2": ["Inter"],
+                        "body-base": ["Inter"],
+                        "body-secondary": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h1": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "h2": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-base": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-secondary": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        :root {
+            --gold: #d4a574;
+            --bg-deep: #0a0a0f;
+        }
+        .hero-bg {
+            background: radial-gradient(ellipse 80% 60% at 50% 30%, rgba(212,165,116,0.12) 0%, rgba(10,10,15,0.95) 60%, #0a0a0f 100%);
+        }
+        .hero-image {
+            position: absolute;
+            inset: 0;
+            background: url('images/hero-main.png') center/cover no-repeat;
+        }
+        .hero-mask {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 50% 30%, rgba(212,165,116,0.14) 0%, transparent 55%),
+                linear-gradient(180deg, rgba(10,10,15,0.55) 0%, rgba(10,10,15,0.25) 40%, rgba(10,10,15,0.85) 100%);
+        }
+        .hero-visual {
+            background:
+                radial-gradient(circle at 20% 50%, rgba(212,165,116,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(212,165,116,0.05) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(10,10,15,0) 40%, rgba(10,10,15,0.6) 100%);
+        }
+        .gold-line { border-left: 2px solid var(--gold); }
+        .gold-glow { box-shadow: 0 0 20px rgba(212,165,116,0.15); }
+        .news-card { transition: border-color 0.2s; }
+        .news-card:hover { border-color: rgba(212,165,116,0.4); }
+        .hot-label {
+            background: linear-gradient(135deg, rgba(212,165,116,0.2), rgba(212,165,116,0.05));
+            border: 1px solid rgba(212,165,116,0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-base antialiased min-h-screen">
+
+<!-- Desktop TopAppBar -->
+<header class="bg-surface dark:bg-surface fixed top-0 w-full z-50 h-[56px] border-b border-white/10 flex items-center justify-between px-6">
+<div class="flex items-center gap-4">
+<div class="font-h1 text-h1 font-bold text-primary dark:text-primary">
+            Mistfall Hunter Tools
+        </div>
+<nav class="flex gap-6 ml-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-secondary" href="/guides/tips">Guides</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-secondary" href="/tier-list/solo">Tier List</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-secondary" href="/classes/mercenary">Classes</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-secondary" href="/class-quiz">Class Quiz</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-secondary" href="/builds/mercenary">Builds</a>
+</nav>
+</div>
+<a class="text-secondary-container hover:opacity-80 transition-opacity font-body-base flex items-center h-[44px] px-4 rounded bg-[#1a9fff]/10" href="#">
+        Play on Steam
+    </a>
+</header>
+
+<main class="max-w-[960px] mx-auto px-6 pt-[72px]">
+
+<!-- ═══════════ HERO — Immersive Game Visual + CTA ═══════════ -->
+<section class="relative hero-bg py-[56px] px-8 text-center border-b border-white/5 rounded-lg overflow-hidden my-6">
+<div class="hero-image absolute inset-0"></div>
+<div class="hero-mask absolute inset-0"></div>
+<div class="absolute inset-0 opacity-[0.06]" style="background:
+    radial-gradient(ellipse 30% 50% at 25% 40%, #d4a574 0%, transparent 70%),
+    radial-gradient(ellipse 30% 40% at 75% 60%, #d4a574 0%, transparent 70%);
+    pointer-events:none;"></div>
+<div class="relative z-10 flex flex-col items-center gap-[16px] max-w-[680px] mx-auto">
+<h1 class="text-[32px] leading-[40px] font-bold text-on-surface" style="text-shadow: 0 0 20px rgba(212,165,116,0.15);">Mistfall Hunter Tools, Builds &amp; Tier List</h1>
+<p class="text-on-surface-variant text-[16px] leading-[24px]">Free guides, class builds, boss walkthroughs and interactive tools — everything to pick, build, squad up and extract smarter.</p>
+<div class="flex gap-4 mt-[16px]">
+<a class="px-8 h-[48px] bg-primary-container text-[#0a0a0f] font-bold rounded flex items-center justify-center hover:opacity-90 transition-opacity gold-glow" href="/guides/tips">
+                Browse Guides
+            </a>
+<a class="px-8 h-[48px] bg-transparent border border-primary-container text-primary-container font-bold rounded flex items-center justify-center hover:bg-primary-container/10 transition-colors" href="/classes/mercenary">
+                Explore Classes
+            </a>
+</div>
+<a class="text-secondary-container font-body-secondary flex items-center justify-center h-[44px] px-2" href="https://store.steampowered.com/app/3282300/Mistfall_Hunter/">Play on Steam</a>
+</div>
+</section>
+
+<!-- ═══════════ SEARCH INTENT HUBS — What Hunters Search For ═══════════ -->
+<section class="mb-10">
+<h2 class="font-h2 text-h2 text-on-surface mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">search</span>
+        What Hunters Search For
+    </h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<a class="bg-surface-container rounded-lg p-5 border border-white/10 hover:border-primary-container/40 transition-colors block" href="/guides/tips">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="auto_stories" data-weight="fill">auto_stories</span>
+<h3 class="font-body-base text-body-base font-bold text-on-surface mb-1">Guides &amp; Tips</h3>
+<p class="font-body-secondary text-body-secondary text-on-surface-variant">Beginner guides, extraction tips, leveling and how-to-play.</p>
+</a>
+<a class="bg-surface-container rounded-lg p-5 border border-white/10 hover:border-primary-container/40 transition-colors block" href="/classes/mercenary">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="shield_person" data-weight="fill">shield_person</span>
+<h3 class="font-body-base text-body-base font-bold text-on-surface mb-1">Classes &amp; Builds</h3>
+<p class="font-body-secondary text-body-secondary text-on-surface-variant">All 6 classes with best builds, stances and tier rankings.</p>
+</a>
+<a class="bg-surface-container rounded-lg p-5 border border-white/10 hover:border-primary-container/40 transition-colors block" href="/bosses/cursed-moonwane">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="trophy" data-weight="fill">trophy</span>
+<h3 class="font-body-base text-body-base font-bold text-on-surface mb-1">Bosses &amp; Walkthroughs</h3>
+<p class="font-body-secondary text-body-secondary text-on-surface-variant">How to beat every boss, map routes and extraction points.</p>
+</a>
+<a class="bg-surface-container rounded-lg p-5 border border-white/10 hover:border-primary-container/40 transition-colors block" href="/tier-list/solo">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="military_tech" data-weight="fill">military_tech</span>
+<h3 class="font-body-base text-body-base font-bold text-on-surface mb-1">Meta &amp; Tier List</h3>
+<p class="font-body-secondary text-body-secondary text-on-surface-variant">Solo, Duo, Trio and beginner rankings updated for the current patch.</p>
+</a>
+</div>
+</section>
+
+<!-- ═══════════ GAME HOTSPOTS ═══════════ -->
+<section class="mb-10">
+<h2 class="font-h2 text-h2 text-on-surface mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+        This Week in Mistfall Hunter
+    </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Hotspot 1 -->
+<div class="news-card bg-surface-container rounded-lg p-5 border border-white/10 gold-line">
+<div class="flex items-center gap-2 mb-2">
+<span class="font-label-caps text-label-caps text-primary">LATEST VERSION</span>
+<span class="font-label-caps text-label-caps text-accent-green text-[10px]">v1.0.4</span>
+</div>
+<p class="font-body-base text-body-base font-bold text-on-surface mb-1">Patch 1.0.4 — Mercenary Rework</p>
+<p class="font-body-secondary text-body-secondary text-on-surface-variant">Mercenary passive overhaul and new map rotation. Check what changed for your class.</p>
+</div>
+<!-- Hotspot 2 -->
+<div class="news-card bg-surface-container rounded-lg p-5 border border-white/10 gold-line">
+<div class="flex items-center gap-2 mb-2">
+<span class="font-label-caps text-label-caps text-primary">HOT BUILD</span>
+<span class="font-label-caps text-label-caps text-[#f85149] text-[10px]">TRENDING</span>
+</div>
+<p class="font-body-base text-body-base font-bold text-on-surface mb-1">Sorcerer Frost Burn — 84% Win Rate</p>
+<p class="font-body-secondary text-body-secondary text-on-surface-variant">Dominating high-tier extractions this week. Full build guide with gear priorities.</p>
+</div>
+<!-- Hotspot 3 -->
+<div class="news-card bg-surface-container rounded-lg p-5 border border-white/10 gold-line">
+<div class="flex items-center gap-2 mb-2">
+<span class="font-label-caps text-label-caps text-primary">META SHIFT</span>
+<span class="font-label-caps text-label-caps text-accent-blue text-[10px]">S-TIER</span>
+</div>
+<p class="font-body-base text-body-base font-bold text-on-surface mb-1">Shadow Rises to S-Tier in Duos</p>
+<p class="font-body-secondary text-body-secondary text-on-surface-variant">Updated tier list for all modes. Shadow + Ranger is the new top duo comp.</p>
+</div>
+</div>
+</section>
+
+<!-- ═══════════ PLAYER QUESTIONS ═══════════ -->
+<section class="mb-10 border-t border-white/5 pt-10">
+<h2 class="font-h2 text-h2 text-on-surface mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">forum</span>
+        What Hunters Are Asking
+    </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<a class="bg-surface-container rounded-lg p-5 border border-white/10 hover:border-primary-container/40 transition-colors block" href="#">
+<div class="shrink-0 w-[28px] h-[28px] rounded bg-primary-container text-[#0a0a0f] flex items-center justify-center font-bold text-[14px] mb-2">1</div>
+<h3 class="font-body-base text-body-base font-bold text-on-surface mb-1">Which class is best for beginners?</h3>
+<p class="font-body-secondary text-body-secondary text-on-surface-variant">Mercenary and Shadow are the top new-player picks in Patch 1.0.4.</p>
+</a>
+<a class="bg-surface-container rounded-lg p-5 border border-white/10 hover:border-primary-container/40 transition-colors block" href="#">
+<div class="shrink-0 w-[28px] h-[28px] rounded bg-primary-container text-[#0a0a0f] flex items-center justify-center font-bold text-[14px] mb-2">2</div>
+<h3 class="font-body-base text-body-base font-bold text-on-surface mb-1">Best FPS settings for performance?</h3>
+<p class="font-body-secondary text-body-secondary text-on-surface-variant">Optimize for 144+ FPS without losing visibility. Updated for current patch.</p>
+</a>
+<a class="bg-surface-container rounded-lg p-5 border border-white/10 hover:border-primary-container/40 transition-colors block" href="#">
+<div class="shrink-0 w-[28px] h-[28px] rounded bg-primary-container text-[#0a0a0f] flex items-center justify-center font-bold text-[14px] mb-2">3</div>
+<h3 class="font-body-base text-body-base font-bold text-on-surface mb-1">Best duo comps this season?</h3>
+<p class="font-body-secondary text-body-secondary text-on-surface-variant">Mercenary + Sorcerer and Shadow + Ranger are the top two.</p>
+</a>
+</div>
+</section>
+
+<!-- ═══════════ QUICK STATS ═══════════ -->
+<section class="mb-10 border-t border-white/5 pt-10">
+<div class="grid grid-cols-4 gap-4">
+<div class="bg-surface-container rounded-lg p-5 border border-white/10 flex flex-col items-center justify-center h-[90px]">
+<span class="text-primary text-[28px] font-bold">6</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant mt-1">Classes</span>
+</div>
+<div class="bg-surface-container rounded-lg p-5 border border-white/10 flex flex-col items-center justify-center h-[90px]">
+<span class="text-primary text-[28px] font-bold">12</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant mt-1">Stances</span>
+</div>
+<div class="bg-surface-container rounded-lg p-5 border border-white/10 flex flex-col items-center justify-center h-[90px]">
+<span class="text-primary text-[28px] font-bold">10</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant mt-1">Tools</span>
+</div>
+<div class="bg-surface-container rounded-lg p-5 border border-white/10 flex flex-col items-center justify-center h-[90px]">
+<span class="text-primary text-[28px] font-bold">48</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant mt-1">Guides</span>
+</div>
+</div>
+</section>
+
+<!-- ═══════════ NEW PLAYER STEPS ═══════════ -->
+<section class="mb-10 border-t border-white/5 pt-10">
+<h2 class="font-h2 text-h2 text-on-surface mb-4">New to Mistfall Hunter?</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-surface-container rounded-lg p-5 border border-white/10 flex gap-4 items-start">
+<div class="w-[36px] h-[36px] rounded-full bg-primary-container text-[#0a0a0f] flex items-center justify-center font-bold shrink-0">1</div>
+<div>
+<h3 class="font-body-base text-body-base font-bold text-on-surface">Pick a Class</h3>
+<p class="font-body-secondary text-body-secondary text-on-surface-variant mt-1">Take our quiz to find the class that fits your playstyle.</p>
+</div>
+</div>
+<div class="bg-surface-container rounded-lg p-5 border border-white/10 flex gap-4 items-start">
+<div class="w-[36px] h-[36px] rounded-full bg-primary-container text-[#0a0a0f] flex items-center justify-center font-bold shrink-0">2</div>
+<div>
+<h3 class="font-body-base text-body-base font-bold text-on-surface">Find a Build</h3>
+<p class="font-body-secondary text-body-secondary text-on-surface-variant mt-1">Browse community-voted builds for optimal performance.</p>
+</div>
+</div>
+<div class="bg-surface-container rounded-lg p-5 border border-white/10 flex gap-4 items-start">
+<div class="w-[36px] h-[36px] rounded-full bg-primary-container text-[#0a0a0f] flex items-center justify-center font-bold shrink-0">3</div>
+<div>
+<h3 class="font-body-base text-body-base font-bold text-on-surface">Learn the Maps</h3>
+<p class="font-body-secondary text-body-secondary text-on-surface-variant mt-1">Study extraction points and high-tier loot zones.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ═══════════ TOOLS ═══════════ -->
+<section class="mb-10 border-t border-white/5 pt-10">
+<h2 class="font-h2 text-h2 text-on-surface mb-4">Tools</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-surface-container rounded-lg p-4 border border-white/10 flex flex-col h-[110px] hover:border-primary-container/50 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="calculate" data-weight="fill">calculate</span>
+<h3 class="font-label-caps text-label-caps text-on-surface truncate">Build Calculator</h3>
+<p class="font-body-secondary text-[12px] leading-tight text-on-surface-variant mt-1">Plan stats and gear.</p>
+</div>
+<div class="bg-surface-container rounded-lg p-4 border border-white/10 flex flex-col h-[110px] hover:border-primary-container/50 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="map" data-weight="fill">map</span>
+<h3 class="font-label-caps text-label-caps text-on-surface truncate">Interactive Map</h3>
+<p class="font-body-secondary text-[12px] leading-tight text-on-surface-variant mt-1">Find loot and extracts.</p>
+</div>
+<div class="bg-surface-container rounded-lg p-4 border border-white/10 flex flex-col h-[110px] hover:border-primary-container/50 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="military_tech" data-weight="fill">military_tech</span>
+<h3 class="font-label-caps text-label-caps text-on-surface truncate">Tier List</h3>
+<p class="font-body-secondary text-[12px] leading-tight text-on-surface-variant mt-1">Meta rankings updated.</p>
+</div>
+<div class="bg-surface-container rounded-lg p-4 border border-white/10 flex flex-col h-[110px] hover:border-primary-container/50 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="group" data-weight="fill">group</span>
+<h3 class="font-label-caps text-label-caps text-on-surface truncate">Squad Finder</h3>
+<p class="font-body-secondary text-[12px] leading-tight text-on-surface-variant mt-1">Connect with hunters.</p>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface-dim w-full border-t border-outline-variant mt-10">
+<div class="max-w-[960px] mx-auto py-8 px-6 flex flex-col items-center gap-3">
+<p class="font-body-secondary text-body-secondary text-on-surface-variant text-center">
+        Unofficial fan resource. Not affiliated with Bellring Games or Skystone Games.
+    </p>
+<div class="flex gap-6">
+<a class="font-body-secondary text-body-secondary text-on-surface-variant hover:text-primary transition-colors h-[44px] flex items-center" href="#">About</a>
+<a class="font-body-secondary text-body-secondary text-on-surface-variant hover:text-primary transition-colors h-[44px] flex items-center" href="#">Privacy</a>
+<a class="font-body-secondary text-body-secondary text-on-surface-variant hover:text-primary transition-colors h-[44px] flex items-center" href="#">Terms</a>
+<a class="font-body-secondary text-body-secondary text-on-surface-variant hover:text-primary transition-colors h-[44px] flex items-center" href="#">Contact</a>
+</div>
+<p class="font-body-secondary text-[11px] leading-tight text-on-surface-variant opacity-60">© 2026 Mistfall Hunter Tools</p>
+</div>
+</footer>
+
+</body></html>

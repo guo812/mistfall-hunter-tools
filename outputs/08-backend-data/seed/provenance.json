@@ -1,0 +1,20 @@
+{
+  "dataset": "mistfall-hunter-v1-local-seed",
+  "generatedAt": "2026-08-08",
+  "method": "editorial deterministic local seed",
+  "remoteFetch": false,
+  "license": "site-authored structure; gameplay facts require future source-ledger verification",
+  "sourceLedger": [
+    {
+      "id": "seed-v1-editorial-2026-08-08",
+      "sourceType": "local-editorial-seed",
+      "sourceUrl": null,
+      "collectedAt": "2026-08-08",
+      "verifiedAt": "2026-08-08",
+      "usage": "V1 frontend states and API interface testing",
+      "assetLedgerRef": "inputs/04-compliance/reuse-ledger.md",
+      "confidence": "community",
+      "notes": "No remote scraping performed by stage 08."
+    }
+  ]
+}

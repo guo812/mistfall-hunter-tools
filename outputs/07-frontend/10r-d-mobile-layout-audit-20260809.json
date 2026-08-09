@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "width": 360,
+      "scrollWidth": 360,
+      "hero": {
+        "x": 12,
+        "y": 78,
+        "width": 336,
+        "height": 460,
+        "top": 78,
+        "right": 348,
+        "bottom": 538,
+        "left": 12
+      },
+      "primary": {
+        "x": 29.703125,
+        "y": 431.25,
+        "width": 300.59375,
+        "height": 44,
+        "top": 431.25,
+        "right": 330.296875,
+        "bottom": 475.25,
+        "left": 29.703125
+      },
+      "header": {
+        "x": 12,
+        "y": 0,
+        "width": 336,
+        "height": 60,
+        "top": 0,
+        "right": 348,
+        "bottom": 60,
+        "left": 12
+      },
+      "pass": true,
+      "viewport": 360
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "hero": {
+        "x": 12,
+        "y": 78,
+        "width": 366,
+        "height": 460,
+        "top": 78,
+        "right": 378,
+        "bottom": 538,
+        "left": 12
+      },
+      "primary": {
+        "x": 31.203125,
+        "y": 412.890625,
+        "width": 327.59375,
+        "height": 44,
+        "top": 412.890625,
+        "right": 358.796875,
+        "bottom": 456.890625,
+        "left": 31.203125
+      },
+      "header": {
+        "x": 12,
+        "y": 0,
+        "width": 366,
+        "height": 60,
+        "top": 0,
+        "right": 378,
+        "bottom": 60,
+        "left": 12
+      },
+      "pass": true,
+      "viewport": 390
+    },
+    {
+      "width": 430,
+      "scrollWidth": 430,
+      "hero": {
+        "x": 12,
+        "y": 78,
+        "width": 406,
+        "height": 460,
+        "top": 78,
+        "right": 418,
+        "bottom": 538,
+        "left": 12
+      },
+      "primary": {
+        "x": 39.109375,
+        "y": 426.5,
+        "width": 191.296875,
+        "height": 44,
+        "top": 426.5,
+        "right": 230.40625,
+        "bottom": 470.5,
+        "left": 39.109375
+      },
+      "header": {
+        "x": 12,
+        "y": 0,
+        "width": 406,
+        "height": 60,
+        "top": 0,
+        "right": 418,
+        "bottom": 60,
+        "left": 12
+      },
+      "pass": true,
+      "viewport": 430
+    }
+  ]
+}

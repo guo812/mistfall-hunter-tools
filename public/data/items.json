@@ -1,0 +1,1154 @@
+[
+  {
+    "id": "item-001",
+    "slug": "ironfang-blade-1",
+    "name": "Ironfang Blade 1",
+    "type": "weapon",
+    "rarity": "common",
+    "level": 1,
+    "summary": "V1 reference weapon for planning and loot lookup.",
+    "stats": {
+      "power": 10,
+      "defense": 3,
+      "value": 50
+    },
+    "acquisition": [
+      {
+        "kind": "boss",
+        "map": "hallowgrove",
+        "label": "Hallowgrove boss route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-002",
+    "slug": "ashen-longbow-1",
+    "name": "Ashen Longbow 1",
+    "type": "weapon",
+    "rarity": "uncommon",
+    "level": 2,
+    "summary": "V1 reference weapon for planning and loot lookup.",
+    "stats": {
+      "power": 11,
+      "defense": 4,
+      "value": 65
+    },
+    "acquisition": [
+      {
+        "kind": "chest",
+        "map": "brandrgarde",
+        "label": "Brandrgarde chest route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-003",
+    "slug": "emberstaff-1",
+    "name": "Emberstaff 1",
+    "type": "weapon",
+    "rarity": "rare",
+    "level": 3,
+    "summary": "V1 reference weapon for planning and loot lookup.",
+    "stats": {
+      "power": 12,
+      "defense": 5,
+      "value": 80
+    },
+    "acquisition": [
+      {
+        "kind": "vendor",
+        "map": "hallowgrove",
+        "label": "Hallowgrove vendor route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-004",
+    "slug": "dusk-daggers-1",
+    "name": "Dusk Daggers 1",
+    "type": "weapon",
+    "rarity": "epic",
+    "level": 4,
+    "summary": "V1 reference weapon for planning and loot lookup.",
+    "stats": {
+      "power": 13,
+      "defense": 6,
+      "value": 95
+    },
+    "acquisition": [
+      {
+        "kind": "crafting",
+        "map": "brandrgarde",
+        "label": "Brandrgarde crafting route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-005",
+    "slug": "hallowguard-helm-1",
+    "name": "Hallowguard Helm 1",
+    "type": "armor",
+    "rarity": "legendary",
+    "level": 5,
+    "summary": "V1 reference armor for planning and loot lookup.",
+    "stats": {
+      "power": 14,
+      "defense": 7,
+      "value": 110
+    },
+    "acquisition": [
+      {
+        "kind": "boss",
+        "map": "hallowgrove",
+        "label": "Hallowgrove boss route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-006",
+    "slug": "hallowguard-cuirass-1",
+    "name": "Hallowguard Cuirass 1",
+    "type": "armor",
+    "rarity": "common",
+    "level": 6,
+    "summary": "V1 reference armor for planning and loot lookup.",
+    "stats": {
+      "power": 15,
+      "defense": 8,
+      "value": 125
+    },
+    "acquisition": [
+      {
+        "kind": "chest",
+        "map": "brandrgarde",
+        "label": "Brandrgarde chest route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-007",
+    "slug": "rangers-mantle-1",
+    "name": "Ranger's Mantle 1",
+    "type": "armor",
+    "rarity": "uncommon",
+    "level": 7,
+    "summary": "V1 reference armor for planning and loot lookup.",
+    "stats": {
+      "power": 16,
+      "defense": 9,
+      "value": 140
+    },
+    "acquisition": [
+      {
+        "kind": "vendor",
+        "map": "hallowgrove",
+        "label": "Hallowgrove vendor route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-008",
+    "slug": "warden-boots-1",
+    "name": "Warden Boots 1",
+    "type": "armor",
+    "rarity": "rare",
+    "level": 8,
+    "summary": "V1 reference armor for planning and loot lookup.",
+    "stats": {
+      "power": 17,
+      "defense": 10,
+      "value": 155
+    },
+    "acquisition": [
+      {
+        "kind": "crafting",
+        "map": "brandrgarde",
+        "label": "Brandrgarde crafting route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-009",
+    "slug": "cinder-gem-1",
+    "name": "Cinder Gem 1",
+    "type": "gem",
+    "rarity": "epic",
+    "level": 9,
+    "summary": "V1 reference gem for planning and loot lookup.",
+    "stats": {
+      "power": 18,
+      "defense": 11,
+      "value": 170
+    },
+    "acquisition": [
+      {
+        "kind": "boss",
+        "map": "hallowgrove",
+        "label": "Hallowgrove boss route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-010",
+    "slug": "mist-gem-1",
+    "name": "Mist Gem 1",
+    "type": "gem",
+    "rarity": "legendary",
+    "level": 10,
+    "summary": "V1 reference gem for planning and loot lookup.",
+    "stats": {
+      "power": 19,
+      "defense": 12,
+      "value": 185
+    },
+    "acquisition": [
+      {
+        "kind": "chest",
+        "map": "brandrgarde",
+        "label": "Brandrgarde chest route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-011",
+    "slug": "thorn-gem-1",
+    "name": "Thorn Gem 1",
+    "type": "gem",
+    "rarity": "common",
+    "level": 11,
+    "summary": "V1 reference gem for planning and loot lookup.",
+    "stats": {
+      "power": 20,
+      "defense": 13,
+      "value": 200
+    },
+    "acquisition": [
+      {
+        "kind": "vendor",
+        "map": "hallowgrove",
+        "label": "Hallowgrove vendor route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-012",
+    "slug": "moon-gem-1",
+    "name": "Moon Gem 1",
+    "type": "gem",
+    "rarity": "uncommon",
+    "level": 12,
+    "summary": "V1 reference gem for planning and loot lookup.",
+    "stats": {
+      "power": 21,
+      "defense": 14,
+      "value": 215
+    },
+    "acquisition": [
+      {
+        "kind": "crafting",
+        "map": "brandrgarde",
+        "label": "Brandrgarde crafting route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-013",
+    "slug": "field-tonic-1",
+    "name": "Field Tonic 1",
+    "type": "consumable",
+    "rarity": "rare",
+    "level": 13,
+    "summary": "V1 reference consumable for planning and loot lookup.",
+    "stats": {
+      "power": 22,
+      "defense": 3,
+      "value": 230
+    },
+    "acquisition": [
+      {
+        "kind": "boss",
+        "map": "hallowgrove",
+        "label": "Hallowgrove boss route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-014",
+    "slug": "wound-salve-1",
+    "name": "Wound Salve 1",
+    "type": "consumable",
+    "rarity": "epic",
+    "level": 14,
+    "summary": "V1 reference consumable for planning and loot lookup.",
+    "stats": {
+      "power": 23,
+      "defense": 4,
+      "value": 245
+    },
+    "acquisition": [
+      {
+        "kind": "chest",
+        "map": "brandrgarde",
+        "label": "Brandrgarde chest route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-015",
+    "slug": "smoke-flask-1",
+    "name": "Smoke Flask 1",
+    "type": "consumable",
+    "rarity": "legendary",
+    "level": 15,
+    "summary": "V1 reference consumable for planning and loot lookup.",
+    "stats": {
+      "power": 24,
+      "defense": 5,
+      "value": 260
+    },
+    "acquisition": [
+      {
+        "kind": "vendor",
+        "map": "hallowgrove",
+        "label": "Hallowgrove vendor route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-016",
+    "slug": "ward-elixir-1",
+    "name": "Ward Elixir 1",
+    "type": "consumable",
+    "rarity": "common",
+    "level": 16,
+    "summary": "V1 reference consumable for planning and loot lookup.",
+    "stats": {
+      "power": 25,
+      "defense": 6,
+      "value": 275
+    },
+    "acquisition": [
+      {
+        "kind": "crafting",
+        "map": "brandrgarde",
+        "label": "Brandrgarde crafting route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-017",
+    "slug": "ironfang-blade-2",
+    "name": "Ironfang Blade 2",
+    "type": "weapon",
+    "rarity": "uncommon",
+    "level": 17,
+    "summary": "V1 reference weapon for planning and loot lookup.",
+    "stats": {
+      "power": 26,
+      "defense": 7,
+      "value": 290
+    },
+    "acquisition": [
+      {
+        "kind": "boss",
+        "map": "hallowgrove",
+        "label": "Hallowgrove boss route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-018",
+    "slug": "ashen-longbow-2",
+    "name": "Ashen Longbow 2",
+    "type": "weapon",
+    "rarity": "rare",
+    "level": 18,
+    "summary": "V1 reference weapon for planning and loot lookup.",
+    "stats": {
+      "power": 27,
+      "defense": 8,
+      "value": 305
+    },
+    "acquisition": [
+      {
+        "kind": "chest",
+        "map": "brandrgarde",
+        "label": "Brandrgarde chest route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-019",
+    "slug": "emberstaff-2",
+    "name": "Emberstaff 2",
+    "type": "weapon",
+    "rarity": "epic",
+    "level": 19,
+    "summary": "V1 reference weapon for planning and loot lookup.",
+    "stats": {
+      "power": 28,
+      "defense": 9,
+      "value": 320
+    },
+    "acquisition": [
+      {
+        "kind": "vendor",
+        "map": "hallowgrove",
+        "label": "Hallowgrove vendor route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-020",
+    "slug": "dusk-daggers-2",
+    "name": "Dusk Daggers 2",
+    "type": "weapon",
+    "rarity": "legendary",
+    "level": 20,
+    "summary": "V1 reference weapon for planning and loot lookup.",
+    "stats": {
+      "power": 29,
+      "defense": 10,
+      "value": 335
+    },
+    "acquisition": [
+      {
+        "kind": "crafting",
+        "map": "brandrgarde",
+        "label": "Brandrgarde crafting route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-021",
+    "slug": "hallowguard-helm-2",
+    "name": "Hallowguard Helm 2",
+    "type": "armor",
+    "rarity": "common",
+    "level": 1,
+    "summary": "V1 reference armor for planning and loot lookup.",
+    "stats": {
+      "power": 30,
+      "defense": 11,
+      "value": 350
+    },
+    "acquisition": [
+      {
+        "kind": "boss",
+        "map": "hallowgrove",
+        "label": "Hallowgrove boss route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-022",
+    "slug": "hallowguard-cuirass-2",
+    "name": "Hallowguard Cuirass 2",
+    "type": "armor",
+    "rarity": "uncommon",
+    "level": 2,
+    "summary": "V1 reference armor for planning and loot lookup.",
+    "stats": {
+      "power": 31,
+      "defense": 12,
+      "value": 365
+    },
+    "acquisition": [
+      {
+        "kind": "chest",
+        "map": "brandrgarde",
+        "label": "Brandrgarde chest route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-023",
+    "slug": "rangers-mantle-2",
+    "name": "Ranger's Mantle 2",
+    "type": "armor",
+    "rarity": "rare",
+    "level": 3,
+    "summary": "V1 reference armor for planning and loot lookup.",
+    "stats": {
+      "power": 32,
+      "defense": 13,
+      "value": 380
+    },
+    "acquisition": [
+      {
+        "kind": "vendor",
+        "map": "hallowgrove",
+        "label": "Hallowgrove vendor route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-024",
+    "slug": "warden-boots-2",
+    "name": "Warden Boots 2",
+    "type": "armor",
+    "rarity": "epic",
+    "level": 4,
+    "summary": "V1 reference armor for planning and loot lookup.",
+    "stats": {
+      "power": 33,
+      "defense": 14,
+      "value": 395
+    },
+    "acquisition": [
+      {
+        "kind": "crafting",
+        "map": "brandrgarde",
+        "label": "Brandrgarde crafting route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-025",
+    "slug": "cinder-gem-2",
+    "name": "Cinder Gem 2",
+    "type": "gem",
+    "rarity": "legendary",
+    "level": 5,
+    "summary": "V1 reference gem for planning and loot lookup.",
+    "stats": {
+      "power": 34,
+      "defense": 3,
+      "value": 410
+    },
+    "acquisition": [
+      {
+        "kind": "boss",
+        "map": "hallowgrove",
+        "label": "Hallowgrove boss route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-026",
+    "slug": "mist-gem-2",
+    "name": "Mist Gem 2",
+    "type": "gem",
+    "rarity": "common",
+    "level": 6,
+    "summary": "V1 reference gem for planning and loot lookup.",
+    "stats": {
+      "power": 35,
+      "defense": 4,
+      "value": 425
+    },
+    "acquisition": [
+      {
+        "kind": "chest",
+        "map": "brandrgarde",
+        "label": "Brandrgarde chest route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-027",
+    "slug": "thorn-gem-2",
+    "name": "Thorn Gem 2",
+    "type": "gem",
+    "rarity": "uncommon",
+    "level": 7,
+    "summary": "V1 reference gem for planning and loot lookup.",
+    "stats": {
+      "power": 36,
+      "defense": 5,
+      "value": 440
+    },
+    "acquisition": [
+      {
+        "kind": "vendor",
+        "map": "hallowgrove",
+        "label": "Hallowgrove vendor route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-028",
+    "slug": "moon-gem-2",
+    "name": "Moon Gem 2",
+    "type": "gem",
+    "rarity": "rare",
+    "level": 8,
+    "summary": "V1 reference gem for planning and loot lookup.",
+    "stats": {
+      "power": 37,
+      "defense": 6,
+      "value": 455
+    },
+    "acquisition": [
+      {
+        "kind": "crafting",
+        "map": "brandrgarde",
+        "label": "Brandrgarde crafting route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-029",
+    "slug": "field-tonic-2",
+    "name": "Field Tonic 2",
+    "type": "consumable",
+    "rarity": "epic",
+    "level": 9,
+    "summary": "V1 reference consumable for planning and loot lookup.",
+    "stats": {
+      "power": 38,
+      "defense": 7,
+      "value": 470
+    },
+    "acquisition": [
+      {
+        "kind": "boss",
+        "map": "hallowgrove",
+        "label": "Hallowgrove boss route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-030",
+    "slug": "wound-salve-2",
+    "name": "Wound Salve 2",
+    "type": "consumable",
+    "rarity": "legendary",
+    "level": 10,
+    "summary": "V1 reference consumable for planning and loot lookup.",
+    "stats": {
+      "power": 39,
+      "defense": 8,
+      "value": 485
+    },
+    "acquisition": [
+      {
+        "kind": "chest",
+        "map": "brandrgarde",
+        "label": "Brandrgarde chest route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-031",
+    "slug": "smoke-flask-2",
+    "name": "Smoke Flask 2",
+    "type": "consumable",
+    "rarity": "common",
+    "level": 11,
+    "summary": "V1 reference consumable for planning and loot lookup.",
+    "stats": {
+      "power": 40,
+      "defense": 9,
+      "value": 500
+    },
+    "acquisition": [
+      {
+        "kind": "vendor",
+        "map": "hallowgrove",
+        "label": "Hallowgrove vendor route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-032",
+    "slug": "ward-elixir-2",
+    "name": "Ward Elixir 2",
+    "type": "consumable",
+    "rarity": "uncommon",
+    "level": 12,
+    "summary": "V1 reference consumable for planning and loot lookup.",
+    "stats": {
+      "power": 41,
+      "defense": 10,
+      "value": 515
+    },
+    "acquisition": [
+      {
+        "kind": "crafting",
+        "map": "brandrgarde",
+        "label": "Brandrgarde crafting route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-033",
+    "slug": "ironfang-blade-3",
+    "name": "Ironfang Blade 3",
+    "type": "weapon",
+    "rarity": "rare",
+    "level": 13,
+    "summary": "V1 reference weapon for planning and loot lookup.",
+    "stats": {
+      "power": 42,
+      "defense": 11,
+      "value": 530
+    },
+    "acquisition": [
+      {
+        "kind": "boss",
+        "map": "hallowgrove",
+        "label": "Hallowgrove boss route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-034",
+    "slug": "ashen-longbow-3",
+    "name": "Ashen Longbow 3",
+    "type": "weapon",
+    "rarity": "epic",
+    "level": 14,
+    "summary": "V1 reference weapon for planning and loot lookup.",
+    "stats": {
+      "power": 43,
+      "defense": 12,
+      "value": 545
+    },
+    "acquisition": [
+      {
+        "kind": "chest",
+        "map": "brandrgarde",
+        "label": "Brandrgarde chest route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-035",
+    "slug": "emberstaff-3",
+    "name": "Emberstaff 3",
+    "type": "weapon",
+    "rarity": "legendary",
+    "level": 15,
+    "summary": "V1 reference weapon for planning and loot lookup.",
+    "stats": {
+      "power": 44,
+      "defense": 13,
+      "value": 560
+    },
+    "acquisition": [
+      {
+        "kind": "vendor",
+        "map": "hallowgrove",
+        "label": "Hallowgrove vendor route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-036",
+    "slug": "dusk-daggers-3",
+    "name": "Dusk Daggers 3",
+    "type": "weapon",
+    "rarity": "common",
+    "level": 16,
+    "summary": "V1 reference weapon for planning and loot lookup.",
+    "stats": {
+      "power": 45,
+      "defense": 14,
+      "value": 575
+    },
+    "acquisition": [
+      {
+        "kind": "crafting",
+        "map": "brandrgarde",
+        "label": "Brandrgarde crafting route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-037",
+    "slug": "hallowguard-helm-3",
+    "name": "Hallowguard Helm 3",
+    "type": "armor",
+    "rarity": "uncommon",
+    "level": 17,
+    "summary": "V1 reference armor for planning and loot lookup.",
+    "stats": {
+      "power": 46,
+      "defense": 3,
+      "value": 590
+    },
+    "acquisition": [
+      {
+        "kind": "boss",
+        "map": "hallowgrove",
+        "label": "Hallowgrove boss route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-038",
+    "slug": "hallowguard-cuirass-3",
+    "name": "Hallowguard Cuirass 3",
+    "type": "armor",
+    "rarity": "rare",
+    "level": 18,
+    "summary": "V1 reference armor for planning and loot lookup.",
+    "stats": {
+      "power": 47,
+      "defense": 4,
+      "value": 605
+    },
+    "acquisition": [
+      {
+        "kind": "chest",
+        "map": "brandrgarde",
+        "label": "Brandrgarde chest route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-039",
+    "slug": "rangers-mantle-3",
+    "name": "Ranger's Mantle 3",
+    "type": "armor",
+    "rarity": "epic",
+    "level": 19,
+    "summary": "V1 reference armor for planning and loot lookup.",
+    "stats": {
+      "power": 48,
+      "defense": 5,
+      "value": 620
+    },
+    "acquisition": [
+      {
+        "kind": "vendor",
+        "map": "hallowgrove",
+        "label": "Hallowgrove vendor route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-040",
+    "slug": "warden-boots-3",
+    "name": "Warden Boots 3",
+    "type": "armor",
+    "rarity": "legendary",
+    "level": 20,
+    "summary": "V1 reference armor for planning and loot lookup.",
+    "stats": {
+      "power": 49,
+      "defense": 6,
+      "value": 635
+    },
+    "acquisition": [
+      {
+        "kind": "crafting",
+        "map": "brandrgarde",
+        "label": "Brandrgarde crafting route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-041",
+    "slug": "cinder-gem-3",
+    "name": "Cinder Gem 3",
+    "type": "gem",
+    "rarity": "common",
+    "level": 1,
+    "summary": "V1 reference gem for planning and loot lookup.",
+    "stats": {
+      "power": 50,
+      "defense": 7,
+      "value": 650
+    },
+    "acquisition": [
+      {
+        "kind": "boss",
+        "map": "hallowgrove",
+        "label": "Hallowgrove boss route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-042",
+    "slug": "mist-gem-3",
+    "name": "Mist Gem 3",
+    "type": "gem",
+    "rarity": "uncommon",
+    "level": 2,
+    "summary": "V1 reference gem for planning and loot lookup.",
+    "stats": {
+      "power": 51,
+      "defense": 8,
+      "value": 665
+    },
+    "acquisition": [
+      {
+        "kind": "chest",
+        "map": "brandrgarde",
+        "label": "Brandrgarde chest route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-043",
+    "slug": "thorn-gem-3",
+    "name": "Thorn Gem 3",
+    "type": "gem",
+    "rarity": "rare",
+    "level": 3,
+    "summary": "V1 reference gem for planning and loot lookup.",
+    "stats": {
+      "power": 52,
+      "defense": 9,
+      "value": 680
+    },
+    "acquisition": [
+      {
+        "kind": "vendor",
+        "map": "hallowgrove",
+        "label": "Hallowgrove vendor route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-044",
+    "slug": "moon-gem-3",
+    "name": "Moon Gem 3",
+    "type": "gem",
+    "rarity": "epic",
+    "level": 4,
+    "summary": "V1 reference gem for planning and loot lookup.",
+    "stats": {
+      "power": 53,
+      "defense": 10,
+      "value": 695
+    },
+    "acquisition": [
+      {
+        "kind": "crafting",
+        "map": "brandrgarde",
+        "label": "Brandrgarde crafting route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-045",
+    "slug": "field-tonic-3",
+    "name": "Field Tonic 3",
+    "type": "consumable",
+    "rarity": "legendary",
+    "level": 5,
+    "summary": "V1 reference consumable for planning and loot lookup.",
+    "stats": {
+      "power": 54,
+      "defense": 11,
+      "value": 710
+    },
+    "acquisition": [
+      {
+        "kind": "boss",
+        "map": "hallowgrove",
+        "label": "Hallowgrove boss route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-046",
+    "slug": "wound-salve-3",
+    "name": "Wound Salve 3",
+    "type": "consumable",
+    "rarity": "common",
+    "level": 6,
+    "summary": "V1 reference consumable for planning and loot lookup.",
+    "stats": {
+      "power": 55,
+      "defense": 12,
+      "value": 725
+    },
+    "acquisition": [
+      {
+        "kind": "chest",
+        "map": "brandrgarde",
+        "label": "Brandrgarde chest route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-047",
+    "slug": "smoke-flask-3",
+    "name": "Smoke Flask 3",
+    "type": "consumable",
+    "rarity": "uncommon",
+    "level": 7,
+    "summary": "V1 reference consumable for planning and loot lookup.",
+    "stats": {
+      "power": 56,
+      "defense": 13,
+      "value": 740
+    },
+    "acquisition": [
+      {
+        "kind": "vendor",
+        "map": "hallowgrove",
+        "label": "Hallowgrove vendor route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "item-048",
+    "slug": "ward-elixir-3",
+    "name": "Ward Elixir 3",
+    "type": "consumable",
+    "rarity": "rare",
+    "level": 8,
+    "summary": "V1 reference consumable for planning and loot lookup.",
+    "stats": {
+      "power": 57,
+      "defense": 14,
+      "value": 755
+    },
+    "acquisition": [
+      {
+        "kind": "crafting",
+        "map": "brandrgarde",
+        "label": "Brandrgarde crafting route",
+        "confidence": "community"
+      }
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "task_id": "t_774f96be",
+  "owner_release": "inputs/02-owner-confirmations/owner-release-10R-D-local-repair-20260809.md",
+  "base_url": "http://127.0.0.1:3100",
+  "timestamp_utc": "2026-08-09T05:47:15.567996+00:00",
+  "status": "PASS",
+  "metrics": {
+    "routes_expected": 58,
+    "routes_fetched": 58,
+    "json_ld_scripts": 169,
+    "placeholder_hits": 0,
+    "chinese_hits": 0,
+    "trust_section_failures": 0,
+    "metadata_failures": 0,
+    "canonical_failures": 0,
+    "faq_schema_failures": 0,
+    "finding_count": 0
+  },
+  "findings": []
+}

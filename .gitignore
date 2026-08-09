@@ -1,0 +1,74 @@
+# --- Node / package manager ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json.bak
+
+# --- Build outputs ---
+.next/
+.open-next/
+.wrangler/
+dist/
+build/
+out/
+
+# --- Next.js / OpenNext cache & artefacts ---
+next-env.d.ts
+*.tsbuildinfo
+
+# --- Local environment & credentials ---
+.env
+.env.*
+.env.local
+.env.development
+.env.production
+!.env.example
+credentials/
+/root/.hermes/credentials/
+
+# --- ShipSolo project artefacts (process outputs, NOT source) ---
+# ShipSolo project control board + Kanban items live locally and are produced by
+# the automation factory; they are not part of the shipped codebase.
+/project-control.md
+/kanban-plan.md
+/evidence/
+/handoffs/
+/logs/
+/outputs/00-kanban/
+/outputs/04-compliance/live-recheck/
+/outputs/05-copy-repair/
+/outputs/09-qa/
+/outputs/06-design/live-audit/
+/outputs/06-design/qa-shots/
+/outputs/06-design/manifest.json
+/outputs/06-design/checksums.json
+/outputs/06-design/mistfall-hunter-06R*-design-rev-*.tar.gz
+
+# --- OS / editor noise ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Local tooling caches ---
+.eslintcache
+.parcel-cache/
+.turbo/
+
+# --- Test coverage ---
+coverage/
+*.lcov
+
+# --- Worktree backups (left behind by previous re-QA / repair lanes) ---
+.next.bak-*/
+.open-next.bak-*/
+
+# Note: this .gitignore is synthesised by the ShipSolo main assistant
+# from public Next.js 15 + OpenNext 1.6 templates plus ShipSolo's implicit
+# "single source of truth" rule. It is NOT a literal ShipSolo skill entry.
+# All exceptions must be re-justified in commit messages.

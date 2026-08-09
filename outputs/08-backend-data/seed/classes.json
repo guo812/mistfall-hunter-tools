@@ -1,0 +1,74 @@
+[
+  {
+    "id": "mercenary",
+    "name": "Mercenary",
+    "role": "frontline",
+    "summary": "durable melee pressure",
+    "stances": [
+      "assault",
+      "guard"
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "sorcerer",
+    "name": "Sorcerer",
+    "role": "burst",
+    "summary": "ranged spell pressure",
+    "stances": [
+      "assault",
+      "guard"
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "blackarrow",
+    "name": "Blackarrow",
+    "role": "ranged",
+    "summary": "precision damage",
+    "stances": [
+      "assault",
+      "guard"
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "shadowstrix",
+    "name": "Shadowstrix",
+    "role": "skirmisher",
+    "summary": "mobility and stealth",
+    "stances": [
+      "assault",
+      "guard"
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "seer",
+    "name": "Seer",
+    "role": "support",
+    "summary": "utility and team sustain",
+    "stances": [
+      "assault",
+      "guard"
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  },
+  {
+    "id": "withered-knight",
+    "name": "Withered Knight",
+    "role": "tank",
+    "summary": "durability and survival",
+    "stances": [
+      "assault",
+      "guard"
+    ],
+    "lastVerified": "2026-08-08",
+    "provenanceId": "seed-v1-editorial-2026-08-08"
+  }
+]

@@ -1,0 +1,313 @@
+{
+  "task_id": "t_c1f9e153",
+  "owner_release": "inputs/02-owner-confirmations/owner-release-10R4-readonly-rechecks-20260809.md",
+  "base_url": "http://127.0.0.1:3199",
+  "build_id": "mJ8NG4CAuq0ehggfgSzoV",
+  "timestamp_utc": "2026-08-09T08:25:08.206998+00:00",
+  "banned_token_patterns": [
+    "\\[DATA-PENDING",
+    "DATA[-_ ]?PENDING",
+    "\\[DATA[:\\-]",
+    "\\bTBD\\b",
+    "\\bTODO\\b",
+    "\\bFIXME\\b",
+    "\\blorem ipsum\\b",
+    "\\bSAMPLE\\b",
+    "\\bXXX\\b",
+    "\\bplaceholder\\b",
+    "\\bTBC\\b",
+    "\\bCOMING SOON\\b",
+    "\\bUNDER CONSTRUCTION\\b",
+    "\\bN/A\\b",
+    "[\\u4e00-\\u9fff]"
+  ],
+  "status": "PASS",
+  "metrics": {
+    "routes_expected": 58,
+    "routes_fetched": 58,
+    "json_ld_scripts": 169,
+    "json_ld_parse_errors": 0,
+    "placeholder_hits_visible": 0,
+    "placeholder_hits_jsonld": 0,
+    "chinese_hits": 0,
+    "trust_section_failures": 0,
+    "metadata_failures": 0,
+    "canonical_failures": 0,
+    "faq_schema_failures": 0,
+    "h1_failures": 0,
+    "route_stats": {
+      "/": {
+        "words_visible": 1053,
+        "json_ld_scripts": 3,
+        "faq_questions": 4
+      },
+      "/bosses/cursed-moonwane": {
+        "words_visible": 2303,
+        "json_ld_scripts": 3,
+        "faq_questions": 4
+      },
+      "/bosses/einherjar": {
+        "words_visible": 2312,
+        "json_ld_scripts": 3,
+        "faq_questions": 4
+      },
+      "/bosses/salmar": {
+        "words_visible": 2300,
+        "json_ld_scripts": 3,
+        "faq_questions": 4
+      },
+      "/build-planner": {
+        "words_visible": 693,
+        "json_ld_scripts": 3,
+        "faq_questions": 4
+      },
+      "/builds/blackarrow": {
+        "words_visible": 2400,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/builds/mercenary": {
+        "words_visible": 2252,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/builds/seer": {
+        "words_visible": 2440,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/builds/shadowstrix": {
+        "words_visible": 2378,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/builds/sorcerer": {
+        "words_visible": 2318,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/builds/withered-knight": {
+        "words_visible": 2367,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/checklist": {
+        "words_visible": 714,
+        "json_ld_scripts": 3,
+        "faq_questions": 4
+      },
+      "/class-quiz": {
+        "words_visible": 777,
+        "json_ld_scripts": 3,
+        "faq_questions": 4
+      },
+      "/classes/blackarrow": {
+        "words_visible": 2354,
+        "json_ld_scripts": 3,
+        "faq_questions": 4
+      },
+      "/classes/mercenary": {
+        "words_visible": 2357,
+        "json_ld_scripts": 3,
+        "faq_questions": 4
+      },
+      "/classes/seer": {
+        "words_visible": 2275,
+        "json_ld_scripts": 3,
+        "faq_questions": 4
+      },
+      "/classes/shadowstrix": {
+        "words_visible": 2292,
+        "json_ld_scripts": 3,
+        "faq_questions": 4
+      },
+      "/classes/sorcerer": {
+        "words_visible": 2250,
+        "json_ld_scripts": 3,
+        "faq_questions": 4
+      },
+      "/classes/withered-knight": {
+        "words_visible": 2271,
+        "json_ld_scripts": 3,
+        "faq_questions": 4
+      },
+      "/codes/how-to-redeem": {
+        "words_visible": 2113,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/codes/rewards": {
+        "words_visible": 2118,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/codes/twitch-drops": {
+        "words_visible": 2149,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/guides/auction-house": {
+        "words_visible": 2143,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/guides/camp-upgrades": {
+        "words_visible": 2179,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/guides/controller-vs-kbm": {
+        "words_visible": 2145,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/guides/dual-weapon-stances": {
+        "words_visible": 2119,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/guides/duo": {
+        "words_visible": 2096,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/guides/extraction": {
+        "words_visible": 2379,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/guides/faq": {
+        "words_visible": 2127,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/guides/first-extraction": {
+        "words_visible": 2329,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/guides/getting-started": {
+        "words_visible": 2191,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/guides/gold-farming": {
+        "words_visible": 2142,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/guides/keys-treasure": {
+        "words_visible": 2137,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/guides/leveling": {
+        "words_visible": 2144,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/guides/pc-settings": {
+        "words_visible": 2131,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/guides/ps5-settings": {
+        "words_visible": 2147,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/guides/pvp-survival": {
+        "words_visible": 2106,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/guides/scavenger-squads": {
+        "words_visible": 2109,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/guides/solo-survival": {
+        "words_visible": 2100,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/guides/tips": {
+        "words_visible": 2150,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/guides/xbox-settings": {
+        "words_visible": 2546,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/items": {
+        "words_visible": 1180,
+        "json_ld_scripts": 4,
+        "faq_questions": 4
+      },
+      "/loot-finder": {
+        "words_visible": 1183,
+        "json_ld_scripts": 3,
+        "faq_questions": 4
+      },
+      "/map": {
+        "words_visible": 1043,
+        "json_ld_scripts": 3,
+        "faq_questions": 4
+      },
+      "/maps/brandrgarde": {
+        "words_visible": 2257,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/maps/hallowgrove": {
+        "words_visible": 2290,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/matchups": {
+        "words_visible": 716,
+        "json_ld_scripts": 3,
+        "faq_questions": 4
+      },
+      "/settings": {
+        "words_visible": 734,
+        "json_ld_scripts": 3,
+        "faq_questions": 4
+      },
+      "/squad-builder": {
+        "words_visible": 756,
+        "json_ld_scripts": 3,
+        "faq_questions": 4
+      },
+      "/tier-list": {
+        "words_visible": 661,
+        "json_ld_scripts": 4,
+        "faq_questions": 4
+      },
+      "/tier-list/beginner": {
+        "words_visible": 2520,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/tier-list/duo": {
+        "words_visible": 2202,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/tier-list/solo": {
+        "words_visible": 2275,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      },
+      "/tier-list/trio": {
+        "words_visible": 2473,
+        "json_ld_scripts": 3,
+        "faq_questions": 3
+      }
+    },
+    "finding_count": 0
+  },
+  "findings": []
+}

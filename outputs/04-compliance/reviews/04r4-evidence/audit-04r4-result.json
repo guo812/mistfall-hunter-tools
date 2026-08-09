@@ -1,0 +1,441 @@
+{
+ "routes": {
+  "/": {
+   "status": 200,
+   "len": 36249,
+   "jsonld_count": 3
+  },
+  "/class-quiz": {
+   "status": 200,
+   "len": 27770,
+   "jsonld_count": 3
+  },
+  "/settings": {
+   "status": 200,
+   "len": 27782,
+   "jsonld_count": 3
+  },
+  "/tier-list": {
+   "status": 200,
+   "len": 27804,
+   "jsonld_count": 4
+  },
+  "/loot-finder": {
+   "status": 200,
+   "len": 46500,
+   "jsonld_count": 3
+  },
+  "/items": {
+   "status": 200,
+   "len": 59441,
+   "jsonld_count": 4
+  },
+  "/checklist": {
+   "status": 200,
+   "len": 27351,
+   "jsonld_count": 3
+  },
+  "/build-planner": {
+   "status": 200,
+   "len": 26150,
+   "jsonld_count": 3
+  },
+  "/squad-builder": {
+   "status": 200,
+   "len": 27437,
+   "jsonld_count": 3
+  },
+  "/matchups": {
+   "status": 200,
+   "len": 27305,
+   "jsonld_count": 3
+  },
+  "/map": {
+   "status": 200,
+   "len": 36594,
+   "jsonld_count": 3
+  },
+  "/classes/mercenary": {
+   "status": 200,
+   "len": 53984,
+   "jsonld_count": 3
+  },
+  "/classes/sorcerer": {
+   "status": 200,
+   "len": 51416,
+   "jsonld_count": 3
+  },
+  "/classes/blackarrow": {
+   "status": 200,
+   "len": 53658,
+   "jsonld_count": 3
+  },
+  "/classes/shadowstrix": {
+   "status": 200,
+   "len": 52936,
+   "jsonld_count": 3
+  },
+  "/classes/seer": {
+   "status": 200,
+   "len": 52101,
+   "jsonld_count": 3
+  },
+  "/classes/withered-knight": {
+   "status": 200,
+   "len": 52484,
+   "jsonld_count": 3
+  },
+  "/builds/mercenary": {
+   "status": 200,
+   "len": 52407,
+   "jsonld_count": 3
+  },
+  "/builds/sorcerer": {
+   "status": 200,
+   "len": 53027,
+   "jsonld_count": 3
+  },
+  "/builds/blackarrow": {
+   "status": 200,
+   "len": 54948,
+   "jsonld_count": 3
+  },
+  "/builds/shadowstrix": {
+   "status": 200,
+   "len": 54170,
+   "jsonld_count": 3
+  },
+  "/builds/seer": {
+   "status": 200,
+   "len": 54103,
+   "jsonld_count": 3
+  },
+  "/builds/withered-knight": {
+   "status": 200,
+   "len": 53934,
+   "jsonld_count": 3
+  },
+  "/tier-list/solo": {
+   "status": 200,
+   "len": 50434,
+   "jsonld_count": 3
+  },
+  "/tier-list/trio": {
+   "status": 200,
+   "len": 52977,
+   "jsonld_count": 3
+  },
+  "/tier-list/duo": {
+   "status": 200,
+   "len": 48612,
+   "jsonld_count": 3
+  },
+  "/tier-list/beginner": {
+   "status": 200,
+   "len": 54063,
+   "jsonld_count": 3
+  },
+  "/maps/hallowgrove": {
+   "status": 200,
+   "len": 50955,
+   "jsonld_count": 3
+  },
+  "/maps/brandrgarde": {
+   "status": 200,
+   "len": 50772,
+   "jsonld_count": 3
+  },
+  "/bosses/cursed-moonwane": {
+   "status": 200,
+   "len": 52267,
+   "jsonld_count": 3
+  },
+  "/bosses/salmar": {
+   "status": 200,
+   "len": 52247,
+   "jsonld_count": 3
+  },
+  "/bosses/einherjar": {
+   "status": 200,
+   "len": 52763,
+   "jsonld_count": 3
+  },
+  "/guides/getting-started": {
+   "status": 200,
+   "len": 47708,
+   "jsonld_count": 3
+  },
+  "/guides/first-extraction": {
+   "status": 200,
+   "len": 49284,
+   "jsonld_count": 3
+  },
+  "/guides/extraction": {
+   "status": 200,
+   "len": 50241,
+   "jsonld_count": 3
+  },
+  "/guides/tips": {
+   "status": 200,
+   "len": 47141,
+   "jsonld_count": 3
+  },
+  "/guides/faq": {
+   "status": 200,
+   "len": 44372,
+   "jsonld_count": 3
+  },
+  "/guides/dual-weapon-stances": {
+   "status": 200,
+   "len": 46057,
+   "jsonld_count": 3
+  },
+  "/guides/camp-upgrades": {
+   "status": 200,
+   "len": 47304,
+   "jsonld_count": 3
+  },
+  "/guides/scavenger-squads": {
+   "status": 200,
+   "len": 46173,
+   "jsonld_count": 3
+  },
+  "/guides/leveling": {
+   "status": 200,
+   "len": 44324,
+   "jsonld_count": 3
+  },
+  "/guides/keys-treasure": {
+   "status": 200,
+   "len": 45532,
+   "jsonld_count": 3
+  },
+  "/guides/pvp-survival": {
+   "status": 200,
+   "len": 44658,
+   "jsonld_count": 3
+  },
+  "/guides/pc-settings": {
+   "status": 200,
+   "len": 45140,
+   "jsonld_count": 3
+  },
+  "/guides/ps5-settings": {
+   "status": 200,
+   "len": 46102,
+   "jsonld_count": 3
+  },
+  "/guides/xbox-settings": {
+   "status": 200,
+   "len": 51903,
+   "jsonld_count": 3
+  },
+  "/guides/controller-vs-kbm": {
+   "status": 200,
+   "len": 46912,
+   "jsonld_count": 3
+  },
+  "/guides/auction-house": {
+   "status": 200,
+   "len": 45514,
+   "jsonld_count": 3
+  },
+  "/guides/gold-farming": {
+   "status": 200,
+   "len": 45457,
+   "jsonld_count": 3
+  },
+  "/guides/duo": {
+   "status": 200,
+   "len": 42892,
+   "jsonld_count": 3
+  },
+  "/guides/solo-survival": {
+   "status": 200,
+   "len": 45893,
+   "jsonld_count": 3
+  },
+  "/codes/rewards": {
+   "status": 200,
+   "len": 44906,
+   "jsonld_count": 3
+  },
+  "/codes/how-to-redeem": {
+   "status": 200,
+   "len": 44429,
+   "jsonld_count": 3
+  },
+  "/codes/twitch-drops": {
+   "status": 200,
+   "len": 46255,
+   "jsonld_count": 3
+  },
+  "/about": {
+   "status": 200,
+   "len": 15769,
+   "jsonld_count": 2
+  },
+  "/privacy": {
+   "status": 200,
+   "len": 21884,
+   "jsonld_count": 1
+  },
+  "/terms": {
+   "status": 200,
+   "len": 18778,
+   "jsonld_count": 1
+  },
+  "/contact": {
+   "status": 200,
+   "len": 12321,
+   "jsonld_count": 1
+  }
+ },
+ "jsonld_total": 169,
+ "jsonld_placeholder_pages": [],
+ "placeholder_pages": [
+  "/loot-finder",
+  "/items"
+ ],
+ "cjk_pages": [],
+ "trust_checks": {
+  "/privacy": {
+   "status": 200,
+   "missing_phrases": [],
+   "html_len": 21884
+  },
+  "/terms": {
+   "status": 200,
+   "missing_phrases": [],
+   "html_len": 18778
+  },
+  "/about": {
+   "status": 200,
+   "missing_phrases": [],
+   "html_len": 15769
+  },
+  "/contact": {
+   "status": 200,
+   "missing_phrases": [],
+   "html_len": 12321
+  }
+ },
+ "emails": [
+  "contact@mistfallhunter.co"
+ ],
+ "analytics_scripts": [
+  "/",
+  "/class-quiz",
+  "/settings",
+  "/checklist",
+  "/classes/mercenary",
+  "/classes/blackarrow",
+  "/classes/seer",
+  "/classes/withered-knight",
+  "/builds/seer",
+  "/builds/withered-knight",
+  "/tier-list/solo",
+  "/tier-list/beginner",
+  "/maps/hallowgrove",
+  "/bosses/einherjar",
+  "/guides/getting-started",
+  "/guides/first-extraction",
+  "/guides/extraction",
+  "/guides/tips",
+  "/guides/faq",
+  "/guides/dual-weapon-stances",
+  "/guides/camp-upgrades",
+  "/guides/scavenger-squads",
+  "/guides/leveling",
+  "/guides/keys-treasure",
+  "/guides/pvp-survival",
+  "/guides/pc-settings",
+  "/guides/ps5-settings",
+  "/guides/xbox-settings",
+  "/guides/controller-vs-kbm",
+  "/guides/auction-house",
+  "/guides/gold-farming",
+  "/guides/duo",
+  "/guides/solo-survival",
+  "/codes/rewards",
+  "/codes/how-to-redeem",
+  "/codes/twitch-drops"
+ ],
+ "canonical_ok": 58,
+ "canonical_fail": [],
+ "status_fail": [],
+ "footer_links": {
+  "/about": true,
+  "/privacy": true,
+  "/terms": true,
+  "/contact": true
+ },
+ "footer_unofficial": true,
+ "forbidden_expr": {
+  "/": [
+   "not affiliated with, endorsed by, or sponsored by"
+  ],
+  "/class-quiz": [],
+  "/settings": [],
+  "/tier-list": [],
+  "/loot-finder": [],
+  "/items": [],
+  "/checklist": [],
+  "/build-planner": [],
+  "/squad-builder": [],
+  "/matchups": [],
+  "/map": [],
+  "/classes/mercenary": [],
+  "/classes/sorcerer": [],
+  "/classes/blackarrow": [],
+  "/classes/shadowstrix": [],
+  "/classes/seer": [],
+  "/classes/withered-knight": [],
+  "/builds/mercenary": [],
+  "/builds/sorcerer": [],
+  "/builds/blackarrow": [],
+  "/builds/shadowstrix": [],
+  "/builds/seer": [],
+  "/builds/withered-knight": [],
+  "/tier-list/solo": [],
+  "/tier-list/trio": [],
+  "/tier-list/duo": [],
+  "/tier-list/beginner": [],
+  "/maps/hallowgrove": [],
+  "/maps/brandrgarde": [],
+  "/bosses/cursed-moonwane": [],
+  "/bosses/salmar": [],
+  "/bosses/einherjar": [],
+  "/guides/getting-started": [],
+  "/guides/first-extraction": [],
+  "/guides/extraction": [],
+  "/guides/tips": [],
+  "/guides/faq": [],
+  "/guides/dual-weapon-stances": [],
+  "/guides/camp-upgrades": [],
+  "/guides/scavenger-squads": [],
+  "/guides/leveling": [],
+  "/guides/keys-treasure": [],
+  "/guides/pvp-survival": [],
+  "/guides/pc-settings": [],
+  "/guides/ps5-settings": [],
+  "/guides/xbox-settings": [],
+  "/guides/controller-vs-kbm": [],
+  "/guides/auction-house": [],
+  "/guides/gold-farming": [],
+  "/guides/duo": [],
+  "/guides/solo-survival": [],
+  "/codes/rewards": [],
+  "/codes/how-to-redeem": [],
+  "/codes/twitch-drops": [],
+  "/about": [
+   "not affiliated with, endorsed by, or sponsored by"
+  ],
+  "/privacy": [],
+  "/terms": [
+   "official site",
+   "not affiliated with, endorsed by, or sponsored by"
+  ],
+  "/contact": []
+ }
+}

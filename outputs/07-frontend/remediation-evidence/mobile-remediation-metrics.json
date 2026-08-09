@@ -1,0 +1,171 @@
+{
+  "base_url": "http://127.0.0.1:3008",
+  "viewports": {
+    "360": {
+      "mobile_nav": [
+        "Home",
+        "Tools",
+        "Guides",
+        "Quiz",
+        "More"
+      ],
+      "bottom_target_rects": [
+        {
+          "text": "Home",
+          "width": 72,
+          "height": 63
+        },
+        {
+          "text": "Tools",
+          "width": 72,
+          "height": 63
+        },
+        {
+          "text": "Guides",
+          "width": 72,
+          "height": 63
+        },
+        {
+          "text": "Quiz",
+          "width": 72,
+          "height": 63
+        },
+        {
+          "text": "More",
+          "width": 72,
+          "height": 63
+        }
+      ],
+      "bottom_nav_rect": {
+        "top": 736,
+        "height": 64
+      },
+      "body_padding_bottom": 80,
+      "header": {
+        "text": "\u2630GuidesTier ListClassesBuildsAboutMISTFALL HUNTER TOOLSGuidesTier ListClassesClass QuizBuildsPlay on Steam",
+        "height": 60
+      },
+      "squad_restored": {
+        "mode": "trio",
+        "primary": "Mercenary",
+        "secondary": "Sorcerer",
+        "third": "Seer"
+      }
+    },
+    "390": {
+      "mobile_nav": [
+        "Home",
+        "Tools",
+        "Guides",
+        "Quiz",
+        "More"
+      ],
+      "bottom_target_rects": [
+        {
+          "text": "Home",
+          "width": 78,
+          "height": 63
+        },
+        {
+          "text": "Tools",
+          "width": 78,
+          "height": 63
+        },
+        {
+          "text": "Guides",
+          "width": 78,
+          "height": 63
+        },
+        {
+          "text": "Quiz",
+          "width": 78,
+          "height": 63
+        },
+        {
+          "text": "More",
+          "width": 78,
+          "height": 63
+        }
+      ],
+      "bottom_nav_rect": {
+        "top": 736,
+        "height": 64
+      },
+      "body_padding_bottom": 80,
+      "header": {
+        "text": "\u2630GuidesTier ListClassesBuildsAboutMISTFALL HUNTER TOOLSGuidesTier ListClassesClass QuizBuildsPlay on Steam",
+        "height": 60
+      },
+      "squad_restored": {
+        "mode": "trio",
+        "primary": "Mercenary",
+        "secondary": "Sorcerer",
+        "third": "Seer"
+      }
+    },
+    "430": {
+      "mobile_nav": [
+        "Home",
+        "Tools",
+        "Guides",
+        "Quiz",
+        "More"
+      ],
+      "bottom_target_rects": [
+        {
+          "text": "Home",
+          "width": 86,
+          "height": 63
+        },
+        {
+          "text": "Tools",
+          "width": 86,
+          "height": 63
+        },
+        {
+          "text": "Guides",
+          "width": 86,
+          "height": 63
+        },
+        {
+          "text": "Quiz",
+          "width": 86,
+          "height": 63
+        },
+        {
+          "text": "More",
+          "width": 86,
+          "height": 63
+        }
+      ],
+      "bottom_nav_rect": {
+        "top": 736,
+        "height": 64
+      },
+      "body_padding_bottom": 80,
+      "header": {
+        "text": "\u2630GuidesTier ListClassesBuildsAboutMISTFALL HUNTER TOOLSGuidesTier ListClassesClass QuizBuildsPlay on Steam",
+        "height": 60
+      },
+      "squad_restored": {
+        "mode": "trio",
+        "primary": "Mercenary",
+        "secondary": "Sorcerer",
+        "third": "Seer"
+      }
+    }
+  },
+  "functional_smoke": {
+    "third_class": "Seer",
+    "mode": "trio",
+    "share_url": "http://127.0.0.1:3008/squad-builder?mode=trio&classes=mercenary%2Csorcerer%2Cseer",
+    "evaluation": "Trio evaluation \u00b7 100/100: Mercenary + Sorcerer + Seer cover frontline, DPS, support. All three core roles are covered. Assign the frontline call, pressure angle, and reset decision before queueing.",
+    "reload_restoration": {
+      "mode": "trio",
+      "primary": "Mercenary",
+      "secondary": "Sorcerer",
+      "third": "Seer"
+    },
+    "status": "PASS"
+  }
+}

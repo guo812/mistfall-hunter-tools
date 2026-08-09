@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0-local",
+  "storageBoundary": "anonymous client-side tool drafts/results use localStorage only; no user data is posted",
+  "routes": [
+    {"route":"/class-quiz","data":"classes.json","input":"five local answers","output":"recommended class + rationale","event":"quiz_completed","fallback":"show all classes"},
+    {"route":"/settings","data":"local rules only","input":"platform, resolution, local GPU preset","output":"settings recommendation","event":"settings_generated","fallback":"generic settings"},
+    {"route":"/tier-list","data":"frontend editorial ranking","input":"mode","output":"ranked classes","event":"tool_used","fallback":"show methodology"},
+    {"route":"/loot-finder","data":"items.json","input":"query, optional map","output":"matched acquisition paths","event":"tool_used","fallback":"local static seed"},
+    {"route":"/items","data":"items.json","input":"filters, cursor","output":"browseable item list","event":"tool_used","fallback":"local static seed"},
+    {"route":"/checklist","data":"local checklist","input":"checked item ids","output":"progress","event":"checklist_completed","fallback":"in-memory checklist"},
+    {"route":"/build-planner","data":"talent-trees.json + items.json","input":"class, stance, talent ids, loadout","output":"build summary + local share state","event":"build_shared","fallback":"read-only build template"},
+    {"route":"/squad-builder","data":"classes.json","input":"two or three class ids","output":"role coverage + synergy rationale","event":"squad_built","fallback":"manual class comparison"},
+    {"route":"/matchups","data":"classes.json + frontend editorial matchup copy","input":"from, to, solo|trio","output":"matchup panel","event":"matchup_viewed","fallback":"Pending community report"},
+    {"route":"/map","data":"map-pois.json","input":"map, layer filters","output":"POI markers + detail","event":"tool_used","fallback":"static marker list"}
+  ],
+  "prohibited": ["login","OAuth","payments","paywalls","server-side user profiles","PII collection"]
+}

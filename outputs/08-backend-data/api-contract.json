@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "contractVersion": "1.0.0-local",
+  "basePath": "/api/v1",
+  "auth": {"required": false, "accounts": "not implemented by owner release", "pii": "not accepted"},
+  "rateLimit": {"policy": "best-effort abuse protection; read requests fail open to static seed", "response": "429 only when a static fallback cannot be served"},
+  "endpoints": [
+    {"method":"GET","path":"/items","query":{"q":"string?","type":"weapon|armor|gem|consumable?","rarity":"common|uncommon|rare|epic|legendary?","cursor":"string?","limit":"1..50?"},"success":"ListResponse<Item>","fallback":"static seed"},
+    {"method":"GET","path":"/items/{slug}","success":"DetailResponse<Item>","errors":["NOT_FOUND"]},
+    {"method":"GET","path":"/loot-finder","query":{"q":"string (minLength 2)","map":"hallowgrove|brandrgarde?"},"success":"ListResponse<Item>","errors":["INVALID_QUERY","NOT_FOUND"]},
+    {"method":"GET","path":"/map/pois","query":{"map":"hallowgrove|brandrgarde","category":"extraction|boss|loot|poi?"},"success":"ListResponse<MapPoi>","fallback":"static seed"},
+    {"method":"GET","path":"/classes","success":"ListResponse<HunterClass>"},
+    {"method":"GET","path":"/classes/{classId}/talents","success":"DetailResponse<TalentTree>","errors":["NOT_FOUND"]},
+    {"method":"GET","path":"/health","success":{"status":"ok|degraded","storage":"static-seed|d1","remoteConfigured":"boolean","remoteProbe":"not-run"}}
+  ],
+  "eventBoundary": {"accepted": false, "note":"Analytics are frontend consent-gated. Do not send PII, image content, filenames, raw share URLs, or GPU model strings to any backend endpoint."}
+}
