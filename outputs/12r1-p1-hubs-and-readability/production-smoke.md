@@ -1,12 +1,11 @@
-# 12R1 P1 Hubs + Readability evidence
+# 12R1 P1 Hubs + Readability — Final Production Evidence
 
-## Production URL
-https://mistfallhunter.co/
+Production URL: https://mistfallhunter.co/
+Worker Version: caca3901-9c9f-4791-a504-250f50b3b657
+Branch: release/11r4-growth-p0
+Commit: 3008e4b feat(seo+p1): 6 hubs + readability improvements
 
-## Worker version
-caca3901-9c9f-4791-a504-250f50b3b657
-
-## Hub pages (200)
+## Hub routes online (HTTP 200)
 - /classes 200
 - /builds 200
 - /maps 200
@@ -14,18 +13,25 @@ caca3901-9c9f-4791-a504-250f50b3b657
 - /guides 200
 - /codes 200
 - /codes/rewards 200
+
+## Inner pages online (HTTP 200)
 - /classes/mercenary 200
+- /builds/mercenary 200
 - /bosses/cursed-moonwane 200
 - /maps/hallowgrove 200
 - /guides/getting-started 200
 - /tier-list 200
 - /build-planner 200
 - /map 200
-- /privacy 200
-- /terms 200
-- /contact 200
 
-## Hub info-cards (per page)
+## SEO signals
+- sitemap URL count: 61
+- sitemap excludes /privacy /terms /contact: 0 entries
+- sitemap lastmod dynamic: <lastmod>2026-08-11T15:13:13.813Z</lastmod>
+- /privacy meta robots: <meta name="robots" content="noindex, follow"/>
+- /codes/rewards title: <title>Mistfall Hunter Codes &amp; Rewards — No Active Codes (Aug 2026)</title>
+
+## Hub info-cards
 - /classes 3 info-cards
 - /builds 3 info-cards
 - /maps 3 info-cards
@@ -33,27 +39,19 @@ caca3901-9c9f-4791-a504-250f50b3b657
 - /guides 3 info-cards
 - /codes 3 info-cards
 
-## SEO controls
-- sitemap.xml excludes /privacy, /terms, /contact (entries = 0)
-0
-- sitemap lastmod is dynamic (every request):
-<lastmod>2026-08-11T15:11:18.522Z</lastmod>
-- /privacy meta robots:
-<meta name="robots" content="noindex, follow"/>
-- /codes/rewards title:
-<title>Mistfall Hunter Codes &amp; Rewards — No Active Codes (Aug 2026)</title>
+## Article visuals (portrait / phase-svg / route-svg / decision-svg)
+- /classes/mercenary visual=1
+- /builds/mercenary visual=1
+- /bosses/cursed-moonwane visual=1
+- /maps/hallowgrove visual=1
+- /guides/getting-started visual=1
 
-## Article visuals (each renders portrait/diagram svg)
-- /classes/mercenary visual count 1
-- /builds/mercenary visual count 1
-- /bosses/cursed-moonwane visual count 1
-- /maps/hallowgrove visual count 1
-- /guides/getting-started visual count 1
+## Concurrency (n=20 rounds × 10 URLs = 200 requests)
+- failures: 0
+- all 200 (verified by curl loop)
 
-## Concurrency (n=20 rounds, 10 URLs each = 200 requests, 0 failures)
-verified by curl loop above
-
-## www subdomain (out-of-scope for code; CF zone needs www custom domain)
-- http://www.mistfallhunter.co/  -> 520 (Worker does not bind www)
+## www subdomain (platform action required)
+- http://www.mistfallhunter.co/  -> 520 (CF zone not bound to www)
 - https://www.mistfallhunter.co/ -> 522 (same)
-- middleware already redirects www -> apex once www is bound (middleware.ts)
+- middleware in middleware.ts already does www -> apex 308 once www is bound
+- required owner action: add www as Custom Domain on the Worker (or as Route)
