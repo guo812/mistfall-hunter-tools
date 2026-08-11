@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug?: st
   const trust = trustPages[path];
   const title = frozen?.title || trust?.title || route?.title || route?.h1;
   const description = frozen?.meta || trust?.meta || route?.answer;
-  const socialImage = `/og?path=${encodeURIComponent(path)}`;
+  const socialImage = `/images/og/${path === '/' ? 'home' : path.slice(1).replaceAll('/', '--')}.png`;
   const imageAlt = `${title} | Mistfall Hunter Tools`;
   return {
     title,

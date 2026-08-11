@@ -84,7 +84,8 @@ def main() -> int:
         if og:
             image_status, image_headers, image_body = fetch(og)
             image_ok = image_status == 200 and header(image_headers, "content-type") == "image/png" and image_body.startswith(b"\x89PNG\r\n\x1a\n")
-        passed = status == 200 and bool(og and tw) and og_type == "website" and image_ok and not schema_error
+        social_paths_ok = bool(og and tw and og.startswith(HTTPS_ORIGIN + "/images/og/") and tw.startswith(HTTPS_ORIGIN + "/images/og/"))
+        passed = status == 200 and social_paths_ok and og_type == "website" and image_ok and not schema_error
         if not passed:
             failures.append(path)
         rows.append({"path": path, "status": status, "og_image": og, "twitter_image": tw, "og_type": og_type, "image_ok": image_ok, "schema_types": schemas, "schema_error": schema_error, "pass": passed})

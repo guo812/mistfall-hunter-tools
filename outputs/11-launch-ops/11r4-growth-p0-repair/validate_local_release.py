@@ -54,8 +54,8 @@ def main() -> int:
         og_image = meta(markup, "og:image")
         twitter_image = meta(markup, "twitter:image", "name")
         og_type = meta(markup, "og:type")
-        og_ok = bool(og_image and og_image.startswith("https://mistfallhunter.co/og?path="))
-        twitter_ok = bool(twitter_image and twitter_image.startswith("https://mistfallhunter.co/og?path="))
+        og_ok = bool(og_image and og_image.startswith("https://mistfallhunter.co/images/og/"))
+        twitter_ok = bool(twitter_image and twitter_image.startswith("https://mistfallhunter.co/images/og/"))
         image_status = None
         image_type = None
         if og_image:
