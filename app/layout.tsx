@@ -19,6 +19,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <head>
         <meta name="google-site-verification" content="Dnjb2JemYHtDyQPbzM-RMpIkIINPtcF1unhsK5QrVvQ" />
+        <meta name="msvalidate.01" content="2A456917B5F44DA906CE3003D77A9BA5" />
       </head>
       <body>
         {/* Plausible: project-specific privacy-friendly analytics loader, per owner-provided snippet. */}

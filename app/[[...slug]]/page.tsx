@@ -28,7 +28,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug?: st
   const trust = trustPages[path];
   const title = frozen?.title || trust?.title || route?.title || route?.h1;
   const description = frozen?.meta || trust?.meta || route?.answer;
-  return { title, description, alternates: { canonical: path }, openGraph: { title, description, url: path } };
+  const socialImage = `/og?path=${encodeURIComponent(path)}`;
+  const imageAlt = `${title} | Mistfall Hunter Tools`;
+  return {
+    title,
+    description,
+    alternates: { canonical: path },
+    openGraph: { title, description, url: path, type: 'website', images: [{ url: socialImage, width: 1200, height: 630, alt: imageAlt }] },
+    twitter: { card: 'summary_large_image', title, description, images: [{ url: socialImage, alt: imageAlt }] },
+  };
 }
 
 function Header() {

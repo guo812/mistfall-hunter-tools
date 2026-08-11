@@ -1,0 +1,932 @@
+{
+  "audit": "11R4 local metadata/schema validation",
+  "origin": "http://127.0.0.1:3114",
+  "route_count": 58,
+  "pass_count": 58,
+  "failure_paths": [],
+  "records": [
+    {
+      "path": "/",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2F",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2F",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "WebSite",
+        "FAQPage",
+        "Organization"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/class-quiz",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fclass-quiz",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fclass-quiz",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "WebApplication",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/settings",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fsettings",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fsettings",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "WebApplication",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/tier-list",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Ftier-list",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Ftier-list",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "WebApplication",
+        "FAQPage",
+        "BreadcrumbList",
+        "ItemList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/loot-finder",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Floot-finder",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Floot-finder",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "WebApplication",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/items",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fitems",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fitems",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "WebApplication",
+        "FAQPage",
+        "BreadcrumbList",
+        "ItemList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/checklist",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fchecklist",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fchecklist",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "WebApplication",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/build-planner",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fbuild-planner",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fbuild-planner",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "WebApplication",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/squad-builder",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fsquad-builder",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fsquad-builder",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "WebApplication",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/matchups",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fmatchups",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fmatchups",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "WebApplication",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/map",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fmap",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fmap",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "WebApplication",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/classes/mercenary",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fclasses%2Fmercenary",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fclasses%2Fmercenary",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/classes/sorcerer",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fclasses%2Fsorcerer",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fclasses%2Fsorcerer",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/classes/blackarrow",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fclasses%2Fblackarrow",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fclasses%2Fblackarrow",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/classes/shadowstrix",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fclasses%2Fshadowstrix",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fclasses%2Fshadowstrix",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/classes/seer",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fclasses%2Fseer",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fclasses%2Fseer",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/classes/withered-knight",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fclasses%2Fwithered-knight",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fclasses%2Fwithered-knight",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/builds/mercenary",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fbuilds%2Fmercenary",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fbuilds%2Fmercenary",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/builds/sorcerer",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fbuilds%2Fsorcerer",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fbuilds%2Fsorcerer",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/builds/blackarrow",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fbuilds%2Fblackarrow",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fbuilds%2Fblackarrow",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/builds/shadowstrix",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fbuilds%2Fshadowstrix",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fbuilds%2Fshadowstrix",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/builds/seer",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fbuilds%2Fseer",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fbuilds%2Fseer",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/builds/withered-knight",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fbuilds%2Fwithered-knight",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fbuilds%2Fwithered-knight",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/tier-list/solo",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Ftier-list%2Fsolo",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Ftier-list%2Fsolo",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/tier-list/trio",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Ftier-list%2Ftrio",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Ftier-list%2Ftrio",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/tier-list/duo",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Ftier-list%2Fduo",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Ftier-list%2Fduo",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/tier-list/beginner",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Ftier-list%2Fbeginner",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Ftier-list%2Fbeginner",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/maps/hallowgrove",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fmaps%2Fhallowgrove",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fmaps%2Fhallowgrove",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/maps/brandrgarde",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fmaps%2Fbrandrgarde",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fmaps%2Fbrandrgarde",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/bosses/cursed-moonwane",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fbosses%2Fcursed-moonwane",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fbosses%2Fcursed-moonwane",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/bosses/salmar",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fbosses%2Fsalmar",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fbosses%2Fsalmar",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/bosses/einherjar",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fbosses%2Feinherjar",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fbosses%2Feinherjar",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/guides/getting-started",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fgetting-started",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fgetting-started",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/guides/first-extraction",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fguides%2Ffirst-extraction",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fguides%2Ffirst-extraction",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/guides/extraction",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fextraction",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fextraction",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/guides/tips",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fguides%2Ftips",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fguides%2Ftips",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/guides/faq",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fguides%2Ffaq",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fguides%2Ffaq",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/guides/dual-weapon-stances",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fdual-weapon-stances",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fdual-weapon-stances",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/guides/camp-upgrades",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fcamp-upgrades",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fcamp-upgrades",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/guides/scavenger-squads",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fscavenger-squads",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fscavenger-squads",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/guides/leveling",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fleveling",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fleveling",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/guides/keys-treasure",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fkeys-treasure",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fkeys-treasure",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/guides/pvp-survival",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fpvp-survival",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fpvp-survival",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/guides/pc-settings",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fpc-settings",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fpc-settings",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/guides/ps5-settings",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fps5-settings",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fps5-settings",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/guides/xbox-settings",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fxbox-settings",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fxbox-settings",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/guides/controller-vs-kbm",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fcontroller-vs-kbm",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fcontroller-vs-kbm",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/guides/auction-house",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fauction-house",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fauction-house",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/guides/gold-farming",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fgold-farming",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fgold-farming",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/guides/duo",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fduo",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fduo",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/guides/solo-survival",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fsolo-survival",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fguides%2Fsolo-survival",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/codes/rewards",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fcodes%2Frewards",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fcodes%2Frewards",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/codes/how-to-redeem",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fcodes%2Fhow-to-redeem",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fcodes%2Fhow-to-redeem",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/codes/twitch-drops",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fcodes%2Ftwitch-drops",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fcodes%2Ftwitch-drops",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fabout",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fabout",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article",
+        "Organization"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fprivacy",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fprivacy",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/terms",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fterms",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fterms",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article"
+      ],
+      "schema_error": null,
+      "pass": true
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "og_image": "https://mistfallhunter.co/og?path=%2Fcontact",
+      "twitter_image": "https://mistfallhunter.co/og?path=%2Fcontact",
+      "og_type": "website",
+      "image_status": 200,
+      "image_type": "image/png",
+      "schema_types": [
+        "Article"
+      ],
+      "schema_error": null,
+      "pass": true
+    }
+  ]
+}
