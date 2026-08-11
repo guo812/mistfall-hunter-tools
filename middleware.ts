@@ -9,9 +9,16 @@ function arrivedOverHttp(request: NextRequest) {
 }
 
 export function middleware(request: NextRequest) {
-  // Keep local previews and any non-canonical host untouched; 11R4 only owns
-  // canonical HTTP → HTTPS consolidation for the public apex.
-  if (request.nextUrl.hostname !== 'mistfallhunter.co' || !arrivedOverHttp(request)) return NextResponse.next();
+  const host = request.nextUrl.hostname.toLowerCase();
+  // Public canonical is the HTTPS apex. Consolidate both www variants in one hop,
+  // while keeping local preview hosts untouched.
+  if (host === 'www.mistfallhunter.co') {
+    const url = request.nextUrl.clone();
+    url.hostname = 'mistfallhunter.co';
+    url.protocol = 'https:';
+    return NextResponse.redirect(url, 308);
+  }
+  if (host !== 'mistfallhunter.co' || !arrivedOverHttp(request)) return NextResponse.next();
 
   const url = request.nextUrl.clone();
   url.protocol = 'https:';
