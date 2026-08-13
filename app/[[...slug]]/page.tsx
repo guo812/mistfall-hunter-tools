@@ -9,7 +9,7 @@ import items from '@/public/data/items.json';
 
 const siteUrl = 'https://mistfallhunter.co';
 const steam = 'https://store.steampowered.com/app/3282300/Mistfall_Hunter/';
-const toolPaths = new Set(['/class-quiz', '/settings', '/tier-list', '/loot-finder', '/items', '/checklist', '/build-planner', '/squad-builder', '/matchups', '/map']);
+const toolPaths = new Set(['/class-quiz', '/settings', '/tier-list', '/loot-finder', '/items', '/checklist', '/build-planner', '/affix-optimizer', '/squad-builder', '/matchups', '/map']);
 const nonIndexable = new Set(['/privacy', '/terms', '/contact']);
 
 type Item = { name: string; type: string; rarity: string; level: number; summary: string; acquisition: { label: string }[] };
@@ -42,7 +42,7 @@ function Header() {
   return <><header className="shell nav">
     <details className="mobile-menu"><summary aria-label="Open site menu"><span aria-hidden="true">☰</span></summary><nav aria-label="Mobile menu"><Link href="/class-quiz">Find My Class</Link><Link href="/tier-list">Tier List</Link><Link href="/classes">Classes</Link><Link href="/builds">Builds</Link><Link href="/maps">Maps</Link><Link href="/bosses">Bosses</Link><Link href="/guides">Guides</Link><Link href="/codes">Codes</Link><Link href="/about">About</Link></nav></details>
     <Link className="brand" href="/">MISTFALL HUNTER TOOLS</Link>
-    <nav className="navlinks" aria-label="Main navigation"><Link href="/class-quiz">Find My Class</Link><Link href="/tier-list">Tier List</Link><details className="nav-group"><summary>Tools</summary><div className="nav-popover"><Link href="/build-planner">Build Planner</Link><Link href="/squad-builder">Squad Builder</Link><Link href="/loot-finder">Loot Finder</Link><Link href="/map">Interactive Map</Link></div></details><details className="nav-group"><summary>Hubs</summary><div className="nav-popover"><Link href="/classes">Classes Hub</Link><Link href="/builds">Builds Hub</Link><Link href="/maps">Maps Hub</Link><Link href="/bosses">Bosses Hub</Link><Link href="/guides">Guides Hub</Link><Link href="/codes">Codes Hub</Link></div></details></nav>
+    <nav className="navlinks" aria-label="Main navigation"><Link href="/class-quiz">Find My Class</Link><Link href="/tier-list">Tier List</Link><details className="nav-group"><summary>Tools</summary><div className="nav-popover"><Link href="/build-planner">Build Planner</Link><Link href="/affix-optimizer">Affix Optimizer</Link><Link href="/squad-builder">Squad Builder</Link><Link href="/loot-finder">Loot Finder</Link><Link href="/map">Interactive Map</Link></div></details><details className="nav-group"><summary>Hubs</summary><div className="nav-popover"><Link href="/classes">Classes Hub</Link><Link href="/builds">Builds Hub</Link><Link href="/maps">Maps Hub</Link><Link href="/bosses">Bosses Hub</Link><Link href="/guides">Guides Hub</Link><Link href="/codes">Codes Hub</Link></div></details></nav>
     <a className="button steam steam-top" href={steam} rel="noreferrer">Play on Steam</a>
   </header><nav className="mobile-nav" aria-label="Mobile navigation"><Link href="/">Home</Link><Link href="/class-quiz">Quiz</Link><Link href="/tier-list">Tier</Link><Link href="/guides">Guides</Link><Link href="/build-planner">Build</Link></nav></>;
 }
@@ -132,6 +132,7 @@ function Home({ copy }: { copy: CopyRoute }) {
     { href: '/class-quiz', title: 'Find Your Class', desc: 'Answer five questions and get a practical build direction.', tag: 'Decision path' },
     { href: '/tier-list', title: 'Compare the Meta', desc: 'Solo, Duo, Trio and Beginner class rankings.', tag: 'Reference' },
     { href: '/build-planner', title: 'Build Your Hunter', desc: 'Choose a class, specialization and a shareable loadout.', tag: 'Decision path' },
+    { href: '/affix-optimizer', title: 'Validate Your Affixes', desc: 'Check whether a legal loadout can reach your affix goals.', tag: 'Decision path' },
     { href: '/map', title: 'Plan Your Exit', desc: 'POI layers and an extraction overlay to plan backward.', tag: 'Decision path' },
     { href: '/squad-builder', title: 'Build a Squad', desc: 'Trio and Duo comps with role coverage check.', tag: 'Decision path' },
     { href: '/loot-finder', title: 'Find Loot', desc: 'Search any item for every acquisition path.', tag: 'Reference' }
