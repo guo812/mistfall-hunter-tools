@@ -88,6 +88,7 @@ function CopySections({ copy }: { copy: CopyRoute }) {
         </div>
       ) : null}
       {section.bullets?.length ? <ul className="key-points">{section.bullets.map((bullet, index) => <li key={index}>{bullet}</li>)}</ul> : null}
+      {section.source ? <p className="source-link"><a href={section.source.href} rel="noreferrer">{section.source.label}</a></p> : null}
       {detail.length ? <details className="reading-detail"><summary>Read full tactical context</summary>{detail.map((paragraph, index) => <p key={index}>{paragraph}</p>)}</details> : null}
       {section.table ? <div className="table-wrap"><table><thead><tr>{section.table.headers?.map((header) => <th key={header}>{header}</th>)}</tr></thead><tbody>{section.table.rows?.map((row, index) => <tr key={index}>{row.map((cell, cellIndex) => <td key={cellIndex}>{cell}</td>)}</tr>)}</tbody></table></div> : null}
     </section>;
