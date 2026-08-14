@@ -3,13 +3,14 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ToolPanel } from '@/components/tool-panel';
 import { copyByPath, type CopyRoute } from '@/lib/copy';
+import { classBuildCopyByPath, classBuildRoutes } from '@/lib/class-build-routes';
 import { getRoute, publicPaths, type RouteInfo } from '@/lib/routes';
 import { trustPages } from '@/lib/trust-pages';
 import items from '@/public/data/items.json';
 
 const siteUrl = 'https://mistfallhunter.co';
 const steam = 'https://store.steampowered.com/app/3282300/Mistfall_Hunter/';
-const toolPaths = new Set(['/class-quiz', '/settings', '/tier-list', '/loot-finder', '/items', '/checklist', '/build-planner', '/affix-optimizer', '/squad-builder', '/matchups', '/map']);
+const toolPaths = new Set(['/class-quiz', '/settings', '/tier-list', '/loot-finder', '/items', '/checklist', '/build-planner', '/affix-optimizer', '/squad-builder', '/matchups', '/map', ...classBuildRoutes.map((route) => route.path)]);
 const nonIndexable = new Set(['/privacy', '/terms', '/contact']);
 
 type Item = { name: string; type: string; rarity: string; level: number; summary: string; acquisition: { label: string }[] };
@@ -21,7 +22,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug?: string[] }> }): Promise<Metadata> {
   const { slug } = await params;
   const path = `/${slug?.join('/') ?? ''}`;
-  const frozen = copyByPath[path];
+  const frozen = classBuildCopyByPath[path] || copyByPath[path];
   const route = getRoute(path) || getRoute('/');
   const trust = trustPages[path];
   const title = frozen?.title || trust?.title || route?.title || route?.h1;
@@ -38,17 +39,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug?: st
   };
 }
 
-function Header() {
+function Header({ hideAffixLink = false }: { hideAffixLink?: boolean }) {
   return <><header className="shell nav">
     <details className="mobile-menu"><summary aria-label="Open site menu"><span aria-hidden="true">☰</span></summary><nav aria-label="Mobile menu"><Link href="/class-quiz">Find My Class</Link><Link href="/tier-list">Tier List</Link><Link href="/classes">Classes</Link><Link href="/builds">Builds</Link><Link href="/maps">Maps</Link><Link href="/bosses">Bosses</Link><Link href="/guides">Guides</Link><Link href="/codes">Codes</Link><Link href="/about">About</Link></nav></details>
     <Link className="brand" href="/">MISTFALL HUNTER TOOLS</Link>
-    <nav className="navlinks" aria-label="Main navigation"><Link href="/class-quiz">Find My Class</Link><Link href="/tier-list">Tier List</Link><details className="nav-group"><summary>Tools</summary><div className="nav-popover"><Link href="/build-planner">Build Planner</Link><Link href="/affix-optimizer">Affix Optimizer</Link><Link href="/squad-builder">Squad Builder</Link><Link href="/loot-finder">Loot Finder</Link><Link href="/map">Interactive Map</Link></div></details><details className="nav-group"><summary>Hubs</summary><div className="nav-popover"><Link href="/classes">Classes Hub</Link><Link href="/builds">Builds Hub</Link><Link href="/maps">Maps Hub</Link><Link href="/bosses">Bosses Hub</Link><Link href="/guides">Guides Hub</Link><Link href="/codes">Codes Hub</Link></div></details></nav>
+    <nav className="navlinks" aria-label="Main navigation"><Link href="/class-quiz">Find My Class</Link><Link href="/tier-list">Tier List</Link><details className="nav-group"><summary>Tools</summary><div className="nav-popover"><Link href="/build-planner">Build Planner</Link>{!hideAffixLink ? <Link href="/affix-optimizer">Affix Optimizer</Link> : null}<Link href="/squad-builder">Squad Builder</Link><Link href="/loot-finder">Loot Finder</Link><Link href="/map">Interactive Map</Link></div></details><details className="nav-group"><summary>Hubs</summary><div className="nav-popover"><Link href="/classes">Classes Hub</Link><Link href="/builds">Builds Hub</Link><Link href="/maps">Maps Hub</Link><Link href="/bosses">Bosses Hub</Link><Link href="/guides">Guides Hub</Link><Link href="/codes">Codes Hub</Link></div></details></nav>
     <a className="button steam steam-top" href={steam} rel="noreferrer">Play on Steam</a>
   </header><nav className="mobile-nav" aria-label="Mobile navigation"><Link href="/">Home</Link><Link href="/class-quiz">Quiz</Link><Link href="/tier-list">Tier</Link><Link href="/guides">Guides</Link><Link href="/build-planner">Build</Link></nav></>;
 }
 
 function Footer() {
-  return <footer className="footer"><p>Unofficial fan resource. Not affiliated with Bellring Games or Skystone Games.</p><nav><Link href="/about">About</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><Link href="/contact">Contact</Link></nav><p>© 2026 Mistfall Hunter Tools. All game names and trademarks are property of their respective owners.</p></footer>;
+  return <footer className="footer"><p>Unofficial fan resource. Not affiliated with Bellring Games or Skystone Games.</p><nav><Link href="/about">About</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><Link href="/contact">Contact</Link></nav><p className="footer-stub">Verify in Affix Optimizer — planned for a future release.</p><p>© 2026 Mistfall Hunter Tools. All game names and trademarks are property of their respective owners.</p></footer>;
 }
 
 function JsonLd({ data }: { data: object }) { return <script type="application/ld+json">{JSON.stringify(data)}</script>; }
@@ -58,10 +59,11 @@ function Schema({ route, frozen }: { route: RouteInfo; frozen?: CopyRoute }) {
   const base = route.kind === 'home'
     ? { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Mistfall Hunter Tools', url: siteUrl, potentialAction: { '@type': 'SearchAction', target: `${siteUrl}/items?q={search_term_string}`, 'query-input': 'required name=search_term_string' } }
     : route.kind === 'tool'
-      ? { '@context': 'https://schema.org', '@type': 'WebApplication', name: route.h1, applicationCategory: 'GameApplication', operatingSystem: 'Any', isAccessibleForFree: true, url }
+      ? { '@context': 'https://schema.org', '@type': 'WebApplication', name: route.h1, applicationCategory: 'GameApplication', operatingSystem: 'Web', isAccessibleForFree: true, dateModified: frozen?.lastVerified, author: { '@type': 'Organization', name: 'Mistfall Hunter Tools' }, offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, url }
       : { '@context': 'https://schema.org', '@type': 'Article', headline: route.h1, mainEntityOfPage: url };
   const schemas: object[] = [base];
   if (frozen?.faqs?.length) schemas.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: frozen.faqs.map((faq) => ({ '@type': 'Question', name: faq.q, acceptedAnswer: { '@type': 'Answer', text: faq.a } })) });
+  if (route.path.startsWith('/build-planner/')) schemas.push({ '@context': 'https://schema.org', '@type': 'HowTo', name: `How to use ${route.h1}`, step: ['Review the route-specific skills.', 'Choose compatible planner slots and priorities.', 'Save a browser-local draft or copy its share URL.'].map((text, position) => ({ '@type': 'HowToStep', position: position + 1, text })) });
   if (route.path === '/' || route.path === '/about') schemas.push({ '@context': 'https://schema.org', '@type': 'Organization', name: 'Mistfall Hunter Tools', url: siteUrl, description: 'An unofficial fan resource with free Mistfall Hunter decision tools and guides.' });
   if (route.path !== '/' && (route.kind === 'tool' || route.kind === 'content')) schemas.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl }, { '@type': 'ListItem', position: 2, name: route.h1, item: url }] });
   if (route.path === '/items') schemas.push({ '@context': 'https://schema.org', '@type': 'ItemList', name: 'Mistfall Hunter items', numberOfItems: items.length, itemListElement: (items as Item[]).map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, description: item.summary })) });
@@ -171,6 +173,7 @@ function ArticleVisual({ route, title }: { route: RouteInfo; title: string }) {
 
 function Article({ route, copy }: { route: RouteInfo; copy: CopyRoute }) {
   const isTool = toolPaths.has(route.path);
+  const isClassBuildRoute = route.path.startsWith('/build-planner/');
   const context = articleContext(route);
   const related = copy.related?.slice(0, 3) || context.related;
   return <main className="shell"><article className="article">
@@ -183,9 +186,9 @@ function Article({ route, copy }: { route: RouteInfo; copy: CopyRoute }) {
         <div><span className="info-label">Snapshot</span><strong>{context.points.join(' · ')}</strong></div>
       </div>
       {route.path === '/guides/getting-started' ? <Link className="button primary early-tool-cta" href="/class-quiz">Take the 5-question Class Quiz</Link> : null}
-    </div><ArticleVisual route={route} title={copy.h1} /></section>
+    </div>{!isClassBuildRoute ? <ArticleVisual route={route} title={copy.h1} /> : null}</section>
     {!isTool ? <section className="quick-plan"><div><p className="label">{context.eyebrow}</p><h2>{context.title}</h2><ul>{context.points.map((point) => <li key={point}>{point}</li>)}</ul></div><Link className="button primary" href={context.cta.href}>{context.cta.label}</Link></section> : null}
-    {isTool ? <ToolPanel tool={route.path.slice(1)} /> : null}
+    {isTool ? <ToolPanel tool={isClassBuildRoute ? 'build-planner' : route.path.slice(1)} initialClass={classBuildCopyByPath[route.path]?.initialClass} initialPath={classBuildCopyByPath[route.path]?.initialPath} hideAffixLink={isClassBuildRoute} /> : null}
     <CopySections copy={copy} />
     <Faqs copy={copy} />
     {related.length ? <section className="related-block"><h2>Choose your next step</h2><div className="related-grid">{related.map((entry) => <Link className="related-card" href={entry.href} key={entry.href}><span>Next tool or guide</span><strong>{entry.label}</strong><small>Open the relevant decision path →</small></Link>)}</div></section> : null}
@@ -211,7 +214,7 @@ export default async function Page({ params }: { params: Promise<{ slug?: string
   const path = `/${slug?.join('/') ?? ''}`;
   const route = getRoute(path);
   if (!route) notFound();
-  const copy = copyByPath[path];
+  const copy = classBuildCopyByPath[path] || copyByPath[path];
   const isHub = path === '/classes' || path === '/builds' || path === '/maps' || path === '/bosses' || path === '/guides' || path === '/codes';
-  return <><Header/><Schema route={route} frozen={copy}/>{route.kind === 'home' && copy ? <Home copy={copy} /> : isHub && copy ? <Hub copy={copy} /> : route.kind === 'trust' ? <Trust route={route} /> : copy ? <Article route={route} copy={copy} /> : null}<div className="shell"><Footer/></div></>;
+  return <><Header hideAffixLink={path.startsWith('/build-planner/')}/><Schema route={route} frozen={copy}/>{route.kind === 'home' && copy ? <Home copy={copy} /> : isHub && copy ? <Hub copy={copy} /> : route.kind === 'trust' ? <Trust route={route} /> : copy ? <Article route={route} copy={copy} /> : null}<div className="shell"><Footer/></div></>;
 }

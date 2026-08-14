@@ -1,3 +1,5 @@
+import { classBuildRoutes } from '@/lib/class-build-routes';
+
 export type RouteInfo = { path: string; h1: string; answer: string; kind: 'tool'|'content'|'trust'|'home'; title?: string };
 const classes = ['mercenary','sorcerer','blackarrow','shadowstrix','seer','withered-knight'] as const;
 const pretty = (v: string) => v.split('-').map(x=>x[0].toUpperCase()+x.slice(1)).join(' ');
@@ -10,6 +12,7 @@ export const routes: RouteInfo[] = [
   {path:'/items',kind:'tool',h1:'Mistfall Hunter Items Database',answer:'Browse weapons, armor, gems and consumables with seed stats, rarity and listed acquisition notes.'},
   {path:'/checklist',kind:'tool',h1:'Mistfall Hunter Extraction Checklist',answer:'Tick off your pre-extract objectives and keep a local checklist for more deliberate runs.'},
   {path:'/build-planner',kind:'tool',h1:'Mistfall Hunter Build Planner — Classes, Paths & Shareable Builds',answer:'Plan a build from real data: 6 classes, 11 weapon paths, skill-slot picks, stance/tone/mode settings and a shareable build URL.'},
+  ...classBuildRoutes.map(({ path, h1, directAnswer, title }) => ({ path, kind: 'tool' as const, h1, answer: directAnswer, title })),
   {path:'/affix-optimizer',kind:'tool',h1:'Mistfall Hunter Affix Optimizer — Plan a Legal Affix Build',answer:'Set affix goals with target levels, choose allowed rarities and brew tier, and check whether a legal loadout can reach every goal.'},
   {path:'/squad-builder',kind:'tool',h1:'Mistfall Hunter Squad Comp Builder',answer:'Pick three classes or two for Duo, then review role coverage, gaps and a practical next step.'},
   {path:'/matchups',kind:'tool',h1:'Mistfall Hunter PvP Matchup Matrix',answer:'Select a matchup for a concise strategy frame in Solo and group play.'},

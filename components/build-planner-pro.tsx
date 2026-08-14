@@ -33,7 +33,7 @@ function decode(hash: string): { cls: string; pathKey: string; picks: Record<str
   } catch { return null; }
 }
 
-export function BuildPlannerPro({ initialClass, initialPath }: { initialClass?: string; initialPath?: string }) {
+export function BuildPlannerPro({ initialClass, initialPath, hideAffixLink = false }: { initialClass?: string; initialPath?: string; hideAffixLink?: boolean }) {
   const [data, setData] = useState<PlannerData | null>(null);
   const [cls, setCls] = useState(initialClass || 'mercenary');
   const [pathKey, setPathKey] = useState(initialPath || '');
@@ -162,7 +162,7 @@ export function BuildPlannerPro({ initialClass, initialPath }: { initialClass?: 
           {complete ? 'Copy Share URL' : `Fill all ${totalSlots} slots to share`}
         </button>
         <button type="button" className="button secondary" onClick={reset}>Reset</button>
-        <Link className="button secondary" href="/affix-optimizer">Match Affixes</Link>
+        {!hideAffixLink ? <Link className="button secondary" href="/affix-optimizer">Match Affixes</Link> : null}
         <span aria-live="polite">{notice}</span>
       </div>
       <p className="ao-hint">Tool data only, no PII — your build is saved in your browser. Skill lists come from the cleaned community dataset; if a patch changes the options, this page is re-verified.</p>
